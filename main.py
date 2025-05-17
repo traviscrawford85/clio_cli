@@ -1,78 +1,68 @@
+# main.py or clio_dashboard_app/__main__.py
+
 from textual.app import App, ComposeResult
-from textual.containers import Container, VerticalScroll
 from textual.widgets import Header, Footer, Static
-import os
-import sys
-
-
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-
+from textual.widget import Widget
 from dotenv import load_dotenv
-from typing import List
+import os
+from clio_client.clio_api_client import ClioApiClient
+from views.matters_view import MattersView
+from views.contacts_view import ContactsView
+from views.tasks_view import TasksView
 
-from clio_client import clio_api_client
-from clio_client.openapi_client.models import Matter
-from clio_client.openapi_client.api import MattersApi
+load_dotenv()  # Load .env file for token, base_url
 
-# Load environment variables from .env file
-load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
-
-def get_clio_client() -> clio_api_client.ClioApiClient:
-    """Instantiate and return a Clio API client using environment variables."""
+def get_clio_client() -> ClioApiClient:
     token = os.getenv("CLIO_API_TOKEN")
-    base_url = os.getenv("CLIO_API_BASE_URL")
+    base_url = os.getenv("CLIO_API_BASE_URL", "https://app.clio.com/api/v4")
     if not token:
-        raise EnvironmentError("CLIO_API_TOKEN not set in environment or .env file.")
-    if not base_url:
-        raise EnvironmentError("CLIO_API_BASE_URL not set in environment or .env file.")
-    return clio_api_client.ClioApiClient(
-        token=token,
-        base_url=base_url
-    )
+        raise EnvironmentError("CLIO_API_TOKEN is missing.")
+    return ClioApiClient(token=token, base_url=base_url)
 
-try:
-    clio = get_clio_client()
-    matters_api = MattersApi(clio)
-except Exception as e:
-    clio = None
-    matters_api = None
-    print(f"Failed to initialize Clio client: {e}")
 
-class MatterItem(Static):
-    """Widget to display a single Matter."""
-    def __init__(self, matter: Matter):
-        label = f"{matter.display_number} — {matter.description or 'No description'}"
-        super().__init__(f"📁 [b cyan]{label}[/]")
+class DashboardApp(App):
+    def __init__(self, client: ClioApiClient):
+        super().__init__()
+        self.client = client
+        self.current_view = "matters"
 
-class ClioMatterDashboard(App):
-    """Textual app dashboard for displaying Clio Matters."""
-    CSS_PATH = None
+    async def on_mount(self):
+        await self.switch_view("matters")
+
+    async def switch_view(self, view: str):
+        self.current_view = view
+        container = self.query_one("#main", expect_type=Widget)
+        container.remove_children()
+        if view == "matters":
+            container.mount(MattersView(self.client))
+        elif view == "contacts":
+            container.mount(ContactsView(self.client))
+        elif view == "tasks":
+            container.mount(TasksView(self.client))
 
     def compose(self) -> ComposeResult:
-        yield Header(show_clock=True)
-        yield Container(
-            VerticalScroll(
-                *[MatterItem(m) for m in self.get_matters()]
-            )
-        )
+        yield Header()
+        yield Static(id="main")
         yield Footer()
 
-    def get_matters(self) -> List[Matter]:
-        """Fetch matters from Clio API, or return empty list on error."""
-        if not matters_api:
-            print("Clio client not initialized. Set CLIO_API_TOKEN in your .env file.")
-            return []
-        try:
-            response = matters_api.matter_index()
-            return response.data or []
-        except Exception as e:
-            print(f"Error fetching matters: {e}")
-            return []
-
     def on_key(self, event):
-        """Exit the app when 'q' is pressed."""
-        if event.key == "q":
+        if event.key == "1":
+            self.call_later(lambda: self.switch_view("matters"))
+        elif event.key == "2":
+            self.call_later(lambda: self.switch_view("contacts"))
+        elif event.key == "3":
+            self.call_later(lambda: self.switch_view("tasks"))
+        elif event.key == "q":
             self.exit()
 
+
+def run_dashboard():
+    try:
+        client = get_clio_client()
+        DashboardApp(client).run()
+    except Exception as e:
+        print(f"❌ Failed to start app: {e}")
+
+
 if __name__ == "__main__":
-    ClioMatterDashboard().run()
+    run_dashboard()

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clio-dashboard-app"
+version = "0.1.0"
+description = "A Textual CLI dashboard for the Clio API"
+authors = [{ name = "Your Name" }]
+dependencies = [
+    "httpx",
+    "textual",
+    "python-dotenv",
+    "pydantic>=2.0"
+]
+
+[project.scripts]
+clio-dashboard = "clio_dashboard_app.__main__:run_dashboard"
