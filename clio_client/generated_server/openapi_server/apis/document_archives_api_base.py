@@ -1,0 +1,47 @@
+# coding: utf-8
+
+from typing import ClassVar, Dict, List, Tuple  # noqa: F401
+
+from datetime import date
+from pydantic import Field, StrictInt, StrictStr
+from typing import Any, Optional
+from typing_extensions import Annotated
+from openapi_server.models.document_archive_create_request import DocumentArchiveCreateRequest
+from openapi_server.models.document_archive_show import DocumentArchiveShow
+from openapi_server.models.error import Error
+
+
+class BaseDocumentArchivesApi:
+    subclasses: ClassVar[Tuple] = ()
+
+    def __init_subclass__(cls, **kwargs):
+        super().__init_subclass__(**kwargs)
+        BaseDocumentArchivesApi.subclasses = BaseDocumentArchivesApi.subclasses + (cls,)
+    async def document_archive_create(
+        self,
+        x_api_version: Annotated[Optional[StrictStr], Field(description="The [API minor version](#section/Minor-Versions). Default: latest version.")],
+        fields: Annotated[Optional[StrictStr], Field(description="The fields to be returned. See response samples for what fields are available. For more information see the [fields section](#section/Fields).")],
+        document_archive_create_request: Annotated[Optional[DocumentArchiveCreateRequest], Field(description="Request Body for Document Archives")],
+    ) -> DocumentArchiveShow:
+        """Outlines the parameters and data fields used when creating a new DocumentArchive"""
+        ...
+
+
+    async def document_archive_download(
+        self,
+        id: Annotated[StrictInt, Field(description="The unique identifier for the DocumentArchive.")],
+    ) -> None:
+        """Download the DocumentArchive"""
+        ...
+
+
+    async def document_archive_show(
+        self,
+        id: Annotated[StrictInt, Field(description="The unique identifier for the DocumentArchive.")],
+        if_modified_since: Annotated[Optional[date], Field(description="The server will send the requested resource with a 200 status, but only if it has been modified after the given date. (Expects an RFC 2822 timestamp).")],
+        if_none_match: Annotated[Optional[StrictStr], Field(description="The server will send the requested resource with a 200 status, but only if the existing resource's [ETag](#section/ETags) doesn't match any of the values listed.")],
+        x_api_version: Annotated[Optional[StrictStr], Field(description="The [API minor version](#section/Minor-Versions). Default: latest version.")],
+        fields: Annotated[Optional[StrictStr], Field(description="The fields to be returned. See response samples for what fields are available. For more information see the [fields section](#section/Fields).")],
+    ) -> DocumentArchiveShow:
+        """Outlines the parameters, optional and required, used when requesting the data for a single DocumentArchive"""
+        ...
