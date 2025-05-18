@@ -12,21 +12,17 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import date, datetime
-from pydantic import Field, StrictInt, StrictStr
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.grant_create_request import GrantCreateRequest
-from openapi_client.models.grant_list import GrantList
-from openapi_client.models.grant_show import GrantShow
+from clio_client.openapi_client.models.grant_create_request import GrantCreateRequest
+from clio_client.openapi_client.models.grant_list import GrantList
+from clio_client.openapi_client.models.grant_show import GrantShow
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 

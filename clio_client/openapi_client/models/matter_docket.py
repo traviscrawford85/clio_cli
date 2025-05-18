@@ -21,12 +21,12 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.calendar_entry_base import CalendarEntryBase
-from openapi_client.models.jurisdiction_base import JurisdictionBase
-from openapi_client.models.jurisdictions_to_trigger_base import JurisdictionsToTriggerBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.service_type_base import ServiceTypeBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.calendar_entry_base import CalendarEntryBase
+from clio_client.openapi_client.models.jurisdiction_base import JurisdictionBase
+from clio_client.openapi_client.models.jurisdictions_to_trigger_base import JurisdictionsToTriggerBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.service_type_base import ServiceTypeBase
+from typing import Set
 from typing_extensions import Self
 
 class MatterDocket(BaseModel):

@@ -21,10 +21,10 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.document_copy_request_data_document_category import DocumentCopyRequestDataDocumentCategory
-from openapi_client.models.document_copy_request_data_external_properties_inner import DocumentCopyRequestDataExternalPropertiesInner
-from openapi_client.models.document_copy_request_data_parent import DocumentCopyRequestDataParent
-from typing import Optional, Set
+from clio_client.openapi_client.models.document_copy_request_data_document_category import DocumentCopyRequestDataDocumentCategory
+from clio_client.openapi_client.models.document_copy_request_data_external_properties_inner import DocumentCopyRequestDataExternalPropertiesInner
+from clio_client.openapi_client.models.document_copy_request_data_parent import DocumentCopyRequestDataParent
+from typing import Set
 from typing_extensions import Self
 
 class DocumentCopyRequestData(BaseModel):

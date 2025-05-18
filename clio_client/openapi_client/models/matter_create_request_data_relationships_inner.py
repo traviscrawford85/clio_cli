@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.matter_create_request_data_relationships_inner_contact import MatterCreateRequestDataRelationshipsInnerContact
+from clio_client.openapi_client.models.matter_create_request_data_relationships_inner_contact import MatterCreateRequestDataRelationshipsInnerContact
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.comment_create_request_data_item import CommentCreateRequestDataItem
+from clio_client.openapi_client.models.comment_create_request_data_item import CommentCreateRequestDataItem
 from typing import Optional, Set
 from typing_extensions import Self
 

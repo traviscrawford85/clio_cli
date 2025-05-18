@@ -21,9 +21,9 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.matter_docket_create_request_data_jurisdiction import MatterDocketCreateRequestDataJurisdiction
-from openapi_client.models.matter_docket_create_request_data_trigger import MatterDocketCreateRequestDataTrigger
-from typing import Optional, Set
+from clio_client.openapi_client.models.matter_docket_create_request_data_jurisdiction import MatterDocketCreateRequestDataJurisdiction
+from clio_client.openapi_client.models.matter_docket_create_request_data_trigger import MatterDocketCreateRequestDataTrigger
+from typing import Set
 from typing_extensions import Self
 
 class MatterDocketCreateRequestData(BaseModel):

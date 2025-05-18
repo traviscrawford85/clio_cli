@@ -1,6 +1,7 @@
 import json
 import sys
 
+
 def find_refs(data, path=''):
     if isinstance(data, dict):
         for key, value in data.items():

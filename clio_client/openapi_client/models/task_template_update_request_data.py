@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.task_template_create_request_data_cascading_source import TaskTemplateCreateRequestDataCascadingSource
-from openapi_client.models.task_template_update_request_data_reminder_templates_inner import TaskTemplateUpdateRequestDataReminderTemplatesInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.task_template_create_request_data_cascading_source import TaskTemplateCreateRequestDataCascadingSource
+from clio_client.openapi_client.models.task_template_update_request_data_reminder_templates_inner import TaskTemplateUpdateRequestDataReminderTemplatesInner
+from typing import Set
 from typing_extensions import Self
 
 class TaskTemplateUpdateRequestData(BaseModel):

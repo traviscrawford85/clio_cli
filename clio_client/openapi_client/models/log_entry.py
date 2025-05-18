@@ -21,9 +21,9 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.polymorphic_object_base import PolymorphicObjectBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.polymorphic_object_base import PolymorphicObjectBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class LogEntry(BaseModel):

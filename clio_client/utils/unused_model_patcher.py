@@ -1,5 +1,6 @@
-import json
 import difflib
+import json
+
 
 def load_openapi(file_path):
     with open(file_path) as f:

@@ -21,25 +21,25 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.activity_calendar_entry_base import ActivityCalendarEntryBase
-from openapi_client.models.activity_description_base import ActivityDescriptionBase
-from openapi_client.models.activity_task_base import ActivityTaskBase
-from openapi_client.models.activity_text_message_conversation_base import ActivityTextMessageConversationBase
-from openapi_client.models.bill_base import BillBase
-from openapi_client.models.client_portal_base import ClientPortalBase
-from openapi_client.models.communication_base import CommunicationBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.currency_base import CurrencyBase
-from openapi_client.models.document_version_base import DocumentVersionBase
-from openapi_client.models.expense_category_base import ExpenseCategoryBase
-from openapi_client.models.legal_aid_uk_activity_base import LegalAidUkActivityBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.note_base import NoteBase
-from openapi_client.models.polymorphic_object_base import PolymorphicObjectBase
-from openapi_client.models.timer_base import TimerBase
-from openapi_client.models.user_base import UserBase
-from openapi_client.models.utbms_code_base import UtbmsCodeBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_calendar_entry_base import ActivityCalendarEntryBase
+from clio_client.openapi_client.models.activity_description_base import ActivityDescriptionBase
+from clio_client.openapi_client.models.activity_task_base import ActivityTaskBase
+from clio_client.openapi_client.models.activity_text_message_conversation_base import ActivityTextMessageConversationBase
+from clio_client.openapi_client.models.bill_base import BillBase
+from clio_client.openapi_client.models.client_portal_base import ClientPortalBase
+from clio_client.openapi_client.models.communication_base import CommunicationBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.currency_base import CurrencyBase
+from clio_client.openapi_client.models.document_version_base import DocumentVersionBase
+from clio_client.openapi_client.models.expense_category_base import ExpenseCategoryBase
+from clio_client.openapi_client.models.legal_aid_uk_activity_base import LegalAidUkActivityBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.note_base import NoteBase
+from clio_client.openapi_client.models.polymorphic_object_base import PolymorphicObjectBase
+from clio_client.openapi_client.models.timer_base import TimerBase
+from clio_client.openapi_client.models.user_base import UserBase
+from clio_client.openapi_client.models.utbms_code_base import UtbmsCodeBase
+from typing import Set
 from typing_extensions import Self
 
 class Activity(BaseModel):

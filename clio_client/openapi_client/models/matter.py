@@ -21,25 +21,25 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.account_balance_base import AccountBalanceBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.contingency_fee_base import ContingencyFeeBase
-from openapi_client.models.custom_field_set_association_base import CustomFieldSetAssociationBase
-from openapi_client.models.custom_field_value import CustomFieldValue
-from openapi_client.models.evergreen_retainer_base import EvergreenRetainerBase
-from openapi_client.models.folder_base import FolderBase
-from openapi_client.models.group_base import GroupBase
-from openapi_client.models.legal_aid_uk_matter_base import LegalAidUkMatterBase
-from openapi_client.models.matter_bill_recipient import MatterBillRecipient
-from openapi_client.models.matter_budget_base import MatterBudgetBase
-from openapi_client.models.matter_custom_rate import MatterCustomRate
-from openapi_client.models.matter_stage_base import MatterStageBase
-from openapi_client.models.practice_area_base import PracticeAreaBase
-from openapi_client.models.relationship_base import RelationshipBase
-from openapi_client.models.task_base import TaskBase
-from openapi_client.models.task_template_list_instace_base import TaskTemplateListInstaceBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.account_balance_base import AccountBalanceBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.contingency_fee_base import ContingencyFeeBase
+from clio_client.openapi_client.models.custom_field_set_association_base import CustomFieldSetAssociationBase
+from clio_client.openapi_client.models.custom_field_value import CustomFieldValue
+from clio_client.openapi_client.models.evergreen_retainer_base import EvergreenRetainerBase
+from clio_client.openapi_client.models.folder_base import FolderBase
+from clio_client.openapi_client.models.group_base import GroupBase
+from clio_client.openapi_client.models.legal_aid_uk_matter_base import LegalAidUkMatterBase
+from clio_client.openapi_client.models.matter_bill_recipient import MatterBillRecipient
+from clio_client.openapi_client.models.matter_budget_base import MatterBudgetBase
+from clio_client.openapi_client.models.matter_custom_rate import MatterCustomRate
+from clio_client.openapi_client.models.matter_stage_base import MatterStageBase
+from clio_client.openapi_client.models.practice_area_base import PracticeAreaBase
+from clio_client.openapi_client.models.relationship_base import RelationshipBase
+from clio_client.openapi_client.models.task_base import TaskBase
+from clio_client.openapi_client.models.task_template_list_instace_base import TaskTemplateListInstaceBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class Matter(BaseModel):

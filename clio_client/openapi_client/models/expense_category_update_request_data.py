@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.expense_category_create_request_data_groups_inner import ExpenseCategoryCreateRequestDataGroupsInner
-from openapi_client.models.expense_category_create_request_data_utbms_code import ExpenseCategoryCreateRequestDataUtbmsCode
-from typing import Optional, Set
+from clio_client.openapi_client.models.expense_category_create_request_data_groups_inner import ExpenseCategoryCreateRequestDataGroupsInner
+from clio_client.openapi_client.models.expense_category_create_request_data_utbms_code import ExpenseCategoryCreateRequestDataUtbmsCode
+from typing import Set
 from typing_extensions import Self
 
 class ExpenseCategoryUpdateRequestData(BaseModel):

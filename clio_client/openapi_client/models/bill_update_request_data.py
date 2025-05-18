@@ -21,10 +21,10 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.bill_update_request_data_bill_theme import BillUpdateRequestDataBillTheme
-from openapi_client.models.bill_update_request_data_discount import BillUpdateRequestDataDiscount
-from openapi_client.models.bill_update_request_data_interest import BillUpdateRequestDataInterest
-from typing import Optional, Set
+from clio_client.openapi_client.models.bill_update_request_data_bill_theme import BillUpdateRequestDataBillTheme
+from clio_client.openapi_client.models.bill_update_request_data_discount import BillUpdateRequestDataDiscount
+from clio_client.openapi_client.models.bill_update_request_data_interest import BillUpdateRequestDataInterest
+from typing import Set
 from typing_extensions import Self
 
 class BillUpdateRequestData(BaseModel):

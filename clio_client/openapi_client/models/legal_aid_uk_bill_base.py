@@ -21,7 +21,7 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 class LegalAidUkBillBase(BaseModel):

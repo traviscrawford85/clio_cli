@@ -21,10 +21,10 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.clio_creator_base import ClioCreatorBase
-from openapi_client.models.multipart import Multipart
-from openapi_client.models.multipart_header_base import MultipartHeaderBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.clio_creator_base import ClioCreatorBase
+from clio_client.openapi_client.models.multipart import Multipart
+from clio_client.openapi_client.models.multipart_header_base import MultipartHeaderBase
+from typing import Set
 from typing_extensions import Self
 
 class DocumentVersion(BaseModel):

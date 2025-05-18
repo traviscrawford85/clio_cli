@@ -21,15 +21,15 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.address_base import AddressBase
-from openapi_client.models.avatar_base import AvatarBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.custom_field_value_base import CustomFieldValueBase
-from openapi_client.models.email_address_base import EmailAddressBase
-from openapi_client.models.phone_number_base import PhoneNumberBase
-from openapi_client.models.relationship_base import RelationshipBase
-from openapi_client.models.web_site_base import WebSiteBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.address_base import AddressBase
+from clio_client.openapi_client.models.avatar_base import AvatarBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.custom_field_value_base import CustomFieldValueBase
+from clio_client.openapi_client.models.email_address_base import EmailAddressBase
+from clio_client.openapi_client.models.phone_number_base import PhoneNumberBase
+from clio_client.openapi_client.models.relationship_base import RelationshipBase
+from clio_client.openapi_client.models.web_site_base import WebSiteBase
+from typing import Set
 from typing_extensions import Self
 
 class MatterContacts(BaseModel):

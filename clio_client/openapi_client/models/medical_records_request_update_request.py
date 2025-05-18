@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.medical_records_request_update_request_data import MedicalRecordsRequestUpdateRequestData
+from clio_client.openapi_client.models.medical_records_request_update_request_data import MedicalRecordsRequestUpdateRequestData
 from typing import Optional, Set
 from typing_extensions import Self
 

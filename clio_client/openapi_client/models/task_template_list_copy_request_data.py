@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.task_template_list_copy_request_data_practice_area import TaskTemplateListCopyRequestDataPracticeArea
-from typing import Optional, Set
+from clio_client.openapi_client.models.task_template_list_copy_request_data_practice_area import TaskTemplateListCopyRequestDataPracticeArea
+from typing import Set
 from typing_extensions import Self
 
 class TaskTemplateListCopyRequestData(BaseModel):

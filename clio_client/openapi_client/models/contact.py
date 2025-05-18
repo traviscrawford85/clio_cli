@@ -21,22 +21,22 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.account_balance_base import AccountBalanceBase
-from openapi_client.models.activity_rate_base import ActivityRateBase
-from openapi_client.models.address_base import AddressBase
-from openapi_client.models.avatar_base import AvatarBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.custom_field_set_association_base import CustomFieldSetAssociationBase
-from openapi_client.models.custom_field_value import CustomFieldValue
-from openapi_client.models.email_address_base import EmailAddressBase
-from openapi_client.models.folder_base import FolderBase
-from openapi_client.models.instant_messenger_base import InstantMessengerBase
-from openapi_client.models.legal_aid_uk_contact_base import LegalAidUkContactBase
-from openapi_client.models.notification_method_base import NotificationMethodBase
-from openapi_client.models.payment_profile_base import PaymentProfileBase
-from openapi_client.models.phone_number_base import PhoneNumberBase
-from openapi_client.models.web_site_base import WebSiteBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.account_balance_base import AccountBalanceBase
+from clio_client.openapi_client.models.activity_rate_base import ActivityRateBase
+from clio_client.openapi_client.models.address_base import AddressBase
+from clio_client.openapi_client.models.avatar_base import AvatarBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.custom_field_set_association_base import CustomFieldSetAssociationBase
+from clio_client.openapi_client.models.custom_field_value import CustomFieldValue
+from clio_client.openapi_client.models.email_address_base import EmailAddressBase
+from clio_client.openapi_client.models.folder_base import FolderBase
+from clio_client.openapi_client.models.instant_messenger_base import InstantMessengerBase
+from clio_client.openapi_client.models.legal_aid_uk_contact_base import LegalAidUkContactBase
+from clio_client.openapi_client.models.notification_method_base import NotificationMethodBase
+from clio_client.openapi_client.models.payment_profile_base import PaymentProfileBase
+from clio_client.openapi_client.models.phone_number_base import PhoneNumberBase
+from clio_client.openapi_client.models.web_site_base import WebSiteBase
+from typing import Set
 from typing_extensions import Self
 
 class Contact(BaseModel):

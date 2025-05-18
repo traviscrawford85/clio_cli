@@ -21,11 +21,11 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.line_item_update_request_data_activity import LineItemUpdateRequestDataActivity
-from openapi_client.models.line_item_update_request_data_bill import LineItemUpdateRequestDataBill
-from openapi_client.models.line_item_update_request_data_discount import LineItemUpdateRequestDataDiscount
-from openapi_client.models.line_item_update_request_data_matter import LineItemUpdateRequestDataMatter
-from typing import Optional, Set
+from clio_client.openapi_client.models.line_item_update_request_data_activity import LineItemUpdateRequestDataActivity
+from clio_client.openapi_client.models.line_item_update_request_data_bill import LineItemUpdateRequestDataBill
+from clio_client.openapi_client.models.line_item_update_request_data_discount import LineItemUpdateRequestDataDiscount
+from clio_client.openapi_client.models.line_item_update_request_data_matter import LineItemUpdateRequestDataMatter
+from typing import Set
 from typing_extensions import Self
 
 class LineItemUpdateRequestData(BaseModel):

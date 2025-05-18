@@ -1,6 +1,7 @@
 import json
 import sys
 
+
 def list_schema_keys(json_file, output_file):
     with open(json_file, 'r') as f:
         data = json.load(f)

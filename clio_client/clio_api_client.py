@@ -1,57 +1,71 @@
-import httpx
+
+import logging
 from typing import List, Optional
-# Define placeholder model classes if not available elsewhere
-from typing import Any
 
-class Matter:
-    @classmethod
-    def model_validate(cls, data: Any):
-        return cls(**data)
+import httpx
+from pydantic import BaseModel
 
-    def __init__(self, **kwargs):
-        self.__dict__.update(kwargs)
+logger = logging.getLogger(__name__)
 
-class Contact:
-    @classmethod
-    def model_validate(cls, data: Any):
-        return cls(**data)
+class Matter(BaseModel):
+    id: Optional[int]
+    title: Optional[str]
+    # Add more fields as needed
 
-    def __init__(self, **kwargs):
-        self.__dict__.update(kwargs)
+class Contact(BaseModel):
+    id: Optional[int]
+    name: Optional[str]
+    # Add more fields as needed
 
-class Task:
-    @classmethod
-    def model_validate(cls, data: Any):
-        return cls(**data)
-
-    def __init__(self, **kwargs):
-        self.__dict__.update(kwargs)
-
+class Task(BaseModel):
+    id: Optional[int]
+    description: Optional[str]
+    # Add more fields as needed
 
 class ClioApiClient:
-    def __init__(self, token: str, base_url: str = "https://app.clio.com/api/v4"):
+    def __init__(self, token: str, base_url: str = "https://app.clio.com/api/v4", client: Optional[httpx.AsyncClient] = None):
         self.token = token
         self.base_url = base_url
         self.headers = {
             "Authorization": f"Bearer {self.token}",
             "Accept": "application/json"
         }
-        self.client = httpx.AsyncClient(base_url=self.base_url, headers=self.headers)
+        self.client = client or httpx.AsyncClient(
+            base_url=self.base_url,
+            headers=self.headers,
+            timeout=httpx.Timeout(10.0, connect=5.0),
+            follow_redirects=True
+        )
 
     async def get_matters(self) -> List[Matter]:
-        resp = await self.client.get("/matters")
-        resp.raise_for_status()
-        return [Matter.model_validate(item) for item in resp.json().get("data", [])]
+        try:
+            resp = await self.client.get("/matters")
+            resp.raise_for_status()
+            data = resp.json().get("data") or []
+            return [Matter.model_validate(item) for item in data]
+        except httpx.HTTPStatusError as e:
+            logger.error(f"❌ Failed to fetch matters: {e.response.status_code} {e.response.text}")
+            raise
 
     async def get_contacts(self) -> List[Contact]:
-        resp = await self.client.get("/contacts")
-        resp.raise_for_status()
-        return [Contact.model_validate(item) for item in resp.json().get("data", [])]
+        try:
+            resp = await self.client.get("/contacts")
+            resp.raise_for_status()
+            data = resp.json().get("data") or []
+            return [Contact.model_validate(item) for item in data]
+        except httpx.HTTPStatusError as e:
+            logger.error(f"❌ Failed to fetch contacts: {e.response.status_code} {e.response.text}")
+            raise
 
     async def get_tasks(self) -> List[Task]:
-        resp = await self.client.get("/tasks")
-        resp.raise_for_status()
-        return [Task.model_validate(item) for item in resp.json().get("data", [])]
+        try:
+            resp = await self.client.get("/tasks")
+            resp.raise_for_status()
+            data = resp.json().get("data") or []
+            return [Task.model_validate(item) for item in data]
+        except httpx.HTTPStatusError as e:
+            logger.error(f"❌ Failed to fetch tasks: {e.response.status_code} {e.response.text}")
+            raise
 
     async def close(self):
         await self.client.aclose()
@@ -62,8 +76,8 @@ if __name__ == "__main__":
     import asyncio
 
     async def main():
-        token = "your-access-token-here"  # replace with a real token
-        client = ClioApiClient(token)
+        token = "mock-token"  # Use .env or secure secrets in real apps
+        client = ClioApiClient(token=token, base_url="http://localhost:8000")
 
         matters = await client.get_matters()
         for m in matters:

@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.document_automation_create_request_data_document_template import DocumentAutomationCreateRequestDataDocumentTemplate
-from openapi_client.models.document_automation_create_request_data_matter import DocumentAutomationCreateRequestDataMatter
+from clio_client.openapi_client.models.document_automation_create_request_data_document_template import DocumentAutomationCreateRequestDataDocumentTemplate
+from clio_client.openapi_client.models.document_automation_create_request_data_matter import DocumentAutomationCreateRequestDataMatter
 from typing import Optional, Set
 from typing_extensions import Self
 

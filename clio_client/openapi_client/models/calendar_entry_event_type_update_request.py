@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.calendar_entry_event_type_update_request_data import CalendarEntryEventTypeUpdateRequestData
+from clio_client.openapi_client.models.calendar_entry_event_type_update_request_data import CalendarEntryEventTypeUpdateRequestData
 from typing import Optional, Set
 from typing_extensions import Self
 

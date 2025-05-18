@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.custom_field_create_request_data_picklist_options_inner import CustomFieldCreateRequestDataPicklistOptionsInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.custom_field_create_request_data_picklist_options_inner import CustomFieldCreateRequestDataPicklistOptionsInner
+from typing import Set
 from typing_extensions import Self
 
 class CustomFieldCreateRequestData(BaseModel):

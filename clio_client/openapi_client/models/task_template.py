@@ -21,12 +21,12 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.cascading_task_template_base import CascadingTaskTemplateBase
-from openapi_client.models.reminder_template_base import ReminderTemplateBase
-from openapi_client.models.task_template_list_base import TaskTemplateListBase
-from openapi_client.models.task_type_base import TaskTypeBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.cascading_task_template_base import CascadingTaskTemplateBase
+from clio_client.openapi_client.models.reminder_template_base import ReminderTemplateBase
+from clio_client.openapi_client.models.task_template_list_base import TaskTemplateListBase
+from clio_client.openapi_client.models.task_type_base import TaskTypeBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class TaskTemplate(BaseModel):

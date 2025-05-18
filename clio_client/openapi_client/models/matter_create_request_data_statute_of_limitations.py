@@ -21,8 +21,8 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.matter_create_request_data_statute_of_limitations_reminders_inner import MatterCreateRequestDataStatuteOfLimitationsRemindersInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.matter_create_request_data_statute_of_limitations_reminders_inner import MatterCreateRequestDataStatuteOfLimitationsRemindersInner
+from typing import Set
 from typing_extensions import Self
 
 class MatterCreateRequestDataStatuteOfLimitations(BaseModel):

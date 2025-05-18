@@ -20,9 +20,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.activity_description_create_request_data_rate import ActivityDescriptionCreateRequestDataRate
-from openapi_client.models.activity_description_update_request_data_groups_inner import ActivityDescriptionUpdateRequestDataGroupsInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_description_create_request_data_rate import ActivityDescriptionCreateRequestDataRate
+from clio_client.openapi_client.models.activity_description_update_request_data_groups_inner import ActivityDescriptionUpdateRequestDataGroupsInner
+from typing import Set
 from typing_extensions import Self
 
 class ActivityDescriptionUpdateRequestData(BaseModel):

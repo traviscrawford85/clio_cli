@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.matter_create_request_data_evergreen_retainer_recipients_inner import MatterCreateRequestDataEvergreenRetainerRecipientsInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.matter_create_request_data_evergreen_retainer_recipients_inner import MatterCreateRequestDataEvergreenRetainerRecipientsInner
+from typing import Set
 from typing_extensions import Self
 
 class MatterCreateRequestDataEvergreenRetainer(BaseModel):

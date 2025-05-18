@@ -1,20 +1,26 @@
 # main.py or clio_dashboard_app/__main__.py
 
-from textual.app import App, ComposeResult
-from textual.widgets import Header, Footer, Static
-from textual.widget import Widget
-from dotenv import load_dotenv
 import os
-from clio_client.clio_api_client import ClioApiClient
-from views.matters_view import MattersView
+
+from dotenv import load_dotenv
+from textual.app import App, ComposeResult
+from textual.widget import Widget
+from textual.widgets import Footer, Header, Static
+
+# Update the import below to match the actual class or function name in clio_api_client.py
+# For example, if the class is named ClioClient, use:
+# from .clio_client.clio_api_client import ClioClient
+from clio_client.clio_api_client import \
+    ClioApiClient  # <-- Ensure this class exists in clio_api_client.py
 from views.contacts_view import ContactsView
+from views.matters_view import MattersView
 from views.tasks_view import TasksView
 
 load_dotenv()  # Load .env file for token, base_url
 
 def get_clio_client() -> ClioApiClient:
     token = os.getenv("CLIO_API_TOKEN")
-    base_url = os.getenv("CLIO_API_BASE_URL", "https://app.clio.com/api/v4")
+    base_url = os.getenv("CLIO_API_BASE_URL", "http://localhost:8000")
     if not token:
         raise EnvironmentError("CLIO_API_TOKEN is missing.")
     return ClioApiClient(token=token, base_url=base_url)
@@ -26,19 +32,23 @@ class DashboardApp(App):
         self.client = client
         self.current_view = "matters"
 
-    async def on_mount(self):
-        await self.switch_view("matters")
+async def on_mount(self):
+    await self.switch_view("matters")
 
-    async def switch_view(self, view: str):
+async def switch_view(self, view: str):
+    container = self.query_one("#main", expect_type=Widget)
+    try:
         self.current_view = view
-        container = self.query_one("#main", expect_type=Widget)
         container.remove_children()
         if view == "matters":
-            container.mount(MattersView(self.client))
+            await container.mount(MattersView(self.client))
         elif view == "contacts":
-            container.mount(ContactsView(self.client))
+            await container.mount(ContactsView(self.client))
         elif view == "tasks":
-            container.mount(TasksView(self.client))
+            await container.mount(TasksView(self.client))
+    except Exception as e:
+        await container.mount(Static(f"Failed to load {view} view: {e}"))
+
 
     def compose(self) -> ComposeResult:
         yield Header()

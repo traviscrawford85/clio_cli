@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.multipart_header_base import MultipartHeaderBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.multipart_header_base import MultipartHeaderBase
+from typing import Set
 from typing_extensions import Self
 
 class Multipart(BaseModel):

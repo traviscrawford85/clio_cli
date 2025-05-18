@@ -21,12 +21,12 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.activity_base import ActivityBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.notification_event_subscriber_base import NotificationEventSubscriberBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_base import ActivityBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.notification_event_subscriber_base import NotificationEventSubscriberBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class Note(BaseModel):

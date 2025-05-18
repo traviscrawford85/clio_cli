@@ -12,22 +12,19 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import date, datetime
-from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.calendar_entry_create_request import CalendarEntryCreateRequest
-from openapi_client.models.calendar_entry_list import CalendarEntryList
-from openapi_client.models.calendar_entry_show import CalendarEntryShow
-from openapi_client.models.calendar_entry_update_request import CalendarEntryUpdateRequest
+from pydantic import StrictBool
+from clio_client.openapi_client.models.calendar_entry_create_request import CalendarEntryCreateRequest
+from clio_client.openapi_client.models.calendar_entry_list import CalendarEntryList
+from clio_client.openapi_client.models.calendar_entry_show import CalendarEntryShow
+from clio_client.openapi_client.models.calendar_entry_update_request import CalendarEntryUpdateRequest
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 

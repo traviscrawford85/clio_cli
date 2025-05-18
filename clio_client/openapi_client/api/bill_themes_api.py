@@ -12,21 +12,17 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import datetime
-from pydantic import Field, StrictInt, StrictStr
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.bill_theme_list import BillThemeList
-from openapi_client.models.bill_theme_show import BillThemeShow
-from openapi_client.models.bill_theme_update_request import BillThemeUpdateRequest
+from clio_client.openapi_client.models.bill_theme_list import BillThemeList
+from clio_client.openapi_client.models.bill_theme_show import BillThemeShow
+from clio_client.openapi_client.models.bill_theme_update_request import BillThemeUpdateRequest
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 

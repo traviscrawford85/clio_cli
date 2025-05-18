@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.line_item_update_request_data import LineItemUpdateRequestData
+from clio_client.openapi_client.models.line_item_update_request_data import LineItemUpdateRequestData
 from typing import Optional, Set
 from typing_extensions import Self
 

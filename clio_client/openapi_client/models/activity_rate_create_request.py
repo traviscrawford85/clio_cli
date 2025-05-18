@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.activity_rate_create_request_data import ActivityRateCreateRequestData
+from clio_client.openapi_client.models.activity_rate_create_request_data import ActivityRateCreateRequestData
 from typing import Optional, Set
 from typing_extensions import Self
 

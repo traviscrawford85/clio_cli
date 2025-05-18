@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.contact_create_request_data_custom_field_values_inner_custom_field import ContactCreateRequestDataCustomFieldValuesInnerCustomField
+from clio_client.openapi_client.models.contact_create_request_data_custom_field_values_inner_custom_field import ContactCreateRequestDataCustomFieldValuesInnerCustomField
 from typing import Optional, Set
 from typing_extensions import Self
 

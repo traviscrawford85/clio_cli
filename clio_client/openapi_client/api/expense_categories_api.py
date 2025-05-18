@@ -12,23 +12,19 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import date, datetime
-from pydantic import Field, StrictInt, StrictStr, field_validator
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.expense_category_create_request import ExpenseCategoryCreateRequest
-from openapi_client.models.expense_category_list import ExpenseCategoryList
-from openapi_client.models.expense_category_show import ExpenseCategoryShow
-from openapi_client.models.expense_category_update_request import ExpenseCategoryUpdateRequest
-from openapi_client.models.lauk_expense_category_list import LaukExpenseCategoryList
+from clio_client.openapi_client.models.expense_category_create_request import ExpenseCategoryCreateRequest
+from clio_client.openapi_client.models.expense_category_list import ExpenseCategoryList
+from clio_client.openapi_client.models.expense_category_show import ExpenseCategoryShow
+from clio_client.openapi_client.models.expense_category_update_request import ExpenseCategoryUpdateRequest
+from clio_client.openapi_client.models.lauk_expense_category_list import LaukExpenseCategoryList
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 

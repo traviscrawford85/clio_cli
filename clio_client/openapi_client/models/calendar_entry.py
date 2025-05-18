@@ -21,17 +21,17 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.activity_base import ActivityBase
-from openapi_client.models.attendee_base import AttendeeBase
-from openapi_client.models.calendar_base import CalendarBase
-from openapi_client.models.calendar_entry_base import CalendarEntryBase
-from openapi_client.models.calendar_entry_event_type_base import CalendarEntryEventTypeBase
-from openapi_client.models.conference_meeting_base import ConferenceMeetingBase
-from openapi_client.models.external_property_base import ExternalPropertyBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.matter_docket_base import MatterDocketBase
-from openapi_client.models.reminder_base import ReminderBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_base import ActivityBase
+from clio_client.openapi_client.models.attendee_base import AttendeeBase
+from clio_client.openapi_client.models.calendar_base import CalendarBase
+from clio_client.openapi_client.models.calendar_entry_base import CalendarEntryBase
+from clio_client.openapi_client.models.calendar_entry_event_type_base import CalendarEntryEventTypeBase
+from clio_client.openapi_client.models.conference_meeting_base import ConferenceMeetingBase
+from clio_client.openapi_client.models.external_property_base import ExternalPropertyBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.matter_docket_base import MatterDocketBase
+from clio_client.openapi_client.models.reminder_base import ReminderBase
+from typing import Set
 from typing_extensions import Self
 
 class CalendarEntry(BaseModel):

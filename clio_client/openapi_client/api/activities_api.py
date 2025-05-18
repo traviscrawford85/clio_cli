@@ -21,14 +21,16 @@ from datetime import date, datetime
 from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from openapi_client.models.activity_create_request import ActivityCreateRequest
-from openapi_client.models.activity_list import ActivityList
-from openapi_client.models.activity_show import ActivityShow
-from openapi_client.models.activity_update_request import ActivityUpdateRequest
+from clio_client.openapi_client.models.activity_create_request import ActivityCreateRequest
+from clio_client.openapi_client.models.activity_list import ActivityList
+from clio_client.openapi_client.models.activity_show import ActivityShow
+from clio_client.openapi_client.models.activity_update_request import ActivityUpdateRequest
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
-from openapi_client.rest import RESTResponseType
+from clio_client.openapi_client.api_client import ApiClient
+from clio_client.openapi_client.api_response import ApiResponse
+
+from clio_client.openapi_client.models.activity_create_request import ActivityCreateRequest
+from clio_client.openapi_client.api_client import ApiClient
 
 
 class ActivitiesApi:
@@ -40,7 +42,7 @@ class ActivitiesApi:
 
     def __init__(self, api_client=None) -> None:
         if api_client is None:
-            api_client = ApiClient.get_default()
+            api_client = ApiClient()
         self.api_client = api_client
 
 
@@ -1538,7 +1540,7 @@ class ActivitiesApi:
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
-        )
+        ).data
 
 
     @validate_call
@@ -1880,7 +1882,7 @@ class ActivitiesApi:
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
-        )
+        ).data
 
 
     @validate_call

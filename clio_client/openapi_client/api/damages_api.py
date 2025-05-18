@@ -12,22 +12,18 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import date, datetime
-from pydantic import Field, StrictInt, StrictStr
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.damage_create_request import DamageCreateRequest
-from openapi_client.models.damage_list import DamageList
-from openapi_client.models.damage_show import DamageShow
-from openapi_client.models.damage_update_request import DamageUpdateRequest
+from clio_client.openapi_client.models.damage_create_request import DamageCreateRequest
+from clio_client.openapi_client.models.damage_list import DamageList
+from clio_client.openapi_client.models.damage_show import DamageShow
+from clio_client.openapi_client.models.damage_update_request import DamageUpdateRequest
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 

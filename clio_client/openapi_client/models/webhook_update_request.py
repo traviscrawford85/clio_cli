@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.webhook_update_request_data import WebhookUpdateRequestData
+from clio_client.openapi_client.models.webhook_update_request_data import WebhookUpdateRequestData
 from typing import Optional, Set
 from typing_extensions import Self
 

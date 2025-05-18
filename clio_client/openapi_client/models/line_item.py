@@ -21,13 +21,13 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.activity_base import ActivityBase
-from openapi_client.models.bill_base import BillBase
-from openapi_client.models.discount_base import DiscountBase
-from openapi_client.models.line_item_totals_base import LineItemTotalsBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_base import ActivityBase
+from clio_client.openapi_client.models.bill_base import BillBase
+from clio_client.openapi_client.models.discount_base import DiscountBase
+from clio_client.openapi_client.models.line_item_totals_base import LineItemTotalsBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class LineItem(BaseModel):

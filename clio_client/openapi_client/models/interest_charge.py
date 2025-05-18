@@ -21,10 +21,10 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.balance_base import BalanceBase
-from openapi_client.models.bill_base import BillBase
-from openapi_client.models.matter_base import MatterBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.balance_base import BalanceBase
+from clio_client.openapi_client.models.bill_base import BillBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from typing import Set
 from typing_extensions import Self
 
 class InterestCharge(BaseModel):

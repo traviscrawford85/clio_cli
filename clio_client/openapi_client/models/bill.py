@@ -21,22 +21,22 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.address_base import AddressBase
-from openapi_client.models.balance_base import BalanceBase
-from openapi_client.models.bank_account_base import BankAccountBase
-from openapi_client.models.bill_base import BillBase
-from openapi_client.models.bill_theme_base import BillThemeBase
-from openapi_client.models.billing_setting_base import BillingSettingBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.currency_base import CurrencyBase
-from openapi_client.models.discount_base import DiscountBase
-from openapi_client.models.group_base import GroupBase
-from openapi_client.models.interest_base import InterestBase
-from openapi_client.models.legal_aid_uk_bill_base import LegalAidUkBillBase
-from openapi_client.models.matter_balance_base import MatterBalanceBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.address_base import AddressBase
+from clio_client.openapi_client.models.balance_base import BalanceBase
+from clio_client.openapi_client.models.bank_account_base import BankAccountBase
+from clio_client.openapi_client.models.bill_base import BillBase
+from clio_client.openapi_client.models.bill_theme_base import BillThemeBase
+from clio_client.openapi_client.models.billing_setting_base import BillingSettingBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.currency_base import CurrencyBase
+from clio_client.openapi_client.models.discount_base import DiscountBase
+from clio_client.openapi_client.models.group_base import GroupBase
+from clio_client.openapi_client.models.interest_base import InterestBase
+from clio_client.openapi_client.models.legal_aid_uk_bill_base import LegalAidUkBillBase
+from clio_client.openapi_client.models.matter_balance_base import MatterBalanceBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class Bill(BaseModel):

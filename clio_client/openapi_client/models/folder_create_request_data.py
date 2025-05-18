@@ -20,10 +20,10 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.folder_create_request_data_document_category import FolderCreateRequestDataDocumentCategory
-from openapi_client.models.folder_create_request_data_external_properties_inner import FolderCreateRequestDataExternalPropertiesInner
-from openapi_client.models.folder_create_request_data_parent import FolderCreateRequestDataParent
-from typing import Optional, Set
+from clio_client.openapi_client.models.folder_create_request_data_document_category import FolderCreateRequestDataDocumentCategory
+from clio_client.openapi_client.models.folder_create_request_data_external_properties_inner import FolderCreateRequestDataExternalPropertiesInner
+from clio_client.openapi_client.models.folder_create_request_data_parent import FolderCreateRequestDataParent
+from typing import Set
 from typing_extensions import Self
 
 class FolderCreateRequestData(BaseModel):

@@ -21,8 +21,8 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.medical_bill_update_request_data_payers_inner import MedicalBillUpdateRequestDataPayersInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.medical_bill_update_request_data_payers_inner import MedicalBillUpdateRequestDataPayersInner
+from typing import Set
 from typing_extensions import Self
 
 class MedicalBillUpdateRequestData(BaseModel):

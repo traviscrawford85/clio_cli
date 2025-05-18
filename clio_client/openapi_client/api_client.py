@@ -28,17 +28,12 @@ from typing import Tuple, Optional, List, Dict, Union
 from pydantic import SecretStr
 
 from openapi_client.configuration import Configuration
-from openapi_client.api_response import ApiResponse, T as ApiResponseT
-import openapi_client.models
+from clio_client.openapi_client.api_response import ApiResponse, T as ApiResponseT
+import clio_client.openapi_client.models
 from openapi_client import rest
 from openapi_client.exceptions import (
     ApiValueError,
-    ApiException,
-    BadRequestException,
-    UnauthorizedException,
-    ForbiddenException,
-    NotFoundException,
-    ServiceException
+    ApiException
 )
 
 RequestSerialized = Tuple[str, str, Dict[str, str], Optional[str], List[str]]
@@ -450,7 +445,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(openapi_client.models, klass)
+                klass = getattr(clio_client.openapi_client.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

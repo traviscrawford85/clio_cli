@@ -21,8 +21,8 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.matter_create_request_data_task_template_list_instances_inner_task_template_list import MatterCreateRequestDataTaskTemplateListInstancesInnerTaskTemplateList
-from typing import Optional, Set
+from clio_client.openapi_client.models.matter_create_request_data_task_template_list_instances_inner_task_template_list import MatterCreateRequestDataTaskTemplateListInstancesInnerTaskTemplateList
+from typing import Set
 from typing_extensions import Self
 
 class MatterCreateRequestDataTaskTemplateListInstancesInner(BaseModel):

@@ -21,9 +21,9 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.medical_records_request_update_request_data_medical_bills_inner import MedicalRecordsRequestUpdateRequestDataMedicalBillsInner
-from openapi_client.models.medical_records_request_update_request_data_medical_records_inner import MedicalRecordsRequestUpdateRequestDataMedicalRecordsInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.medical_records_request_update_request_data_medical_bills_inner import MedicalRecordsRequestUpdateRequestDataMedicalBillsInner
+from clio_client.openapi_client.models.medical_records_request_update_request_data_medical_records_inner import MedicalRecordsRequestUpdateRequestDataMedicalRecordsInner
+from typing import Set
 from typing_extensions import Self
 
 class MedicalRecordsRequestUpdateRequestData(BaseModel):

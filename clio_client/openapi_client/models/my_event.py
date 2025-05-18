@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.event_base import EventBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.event_base import EventBase
+from typing import Set
 from typing_extensions import Self
 
 class MyEvent(BaseModel):

@@ -21,8 +21,8 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.picklist_option_base import PicklistOptionBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.picklist_option_base import PicklistOptionBase
+from typing import Set
 from typing_extensions import Self
 
 class CustomField(BaseModel):

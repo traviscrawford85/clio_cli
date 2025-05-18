@@ -21,11 +21,11 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.conversation_membership import ConversationMembership
-from openapi_client.models.conversation_message_base import ConversationMessageBase
-from openapi_client.models.document_base import DocumentBase
-from openapi_client.models.matter_base import MatterBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.conversation_membership import ConversationMembership
+from clio_client.openapi_client.models.conversation_message_base import ConversationMessageBase
+from clio_client.openapi_client.models.document_base import DocumentBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from typing import Set
 from typing_extensions import Self
 
 class Conversation(BaseModel):

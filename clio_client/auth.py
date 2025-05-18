@@ -1,7 +1,8 @@
 import os
+from datetime import datetime, timedelta
+
 import requests
 from dotenv import load_dotenv
-from datetime import datetime, timedelta
 
 load_dotenv()
 

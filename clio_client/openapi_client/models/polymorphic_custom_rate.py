@@ -21,10 +21,10 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.polymorphic_custom_rate_activity_description_base import PolymorphicCustomRateActivityDescriptionBase
-from openapi_client.models.polymorphic_custom_rate_group_base import PolymorphicCustomRateGroupBase
-from openapi_client.models.polymorphic_custom_rate_user_base import PolymorphicCustomRateUserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.polymorphic_custom_rate_activity_description_base import PolymorphicCustomRateActivityDescriptionBase
+from clio_client.openapi_client.models.polymorphic_custom_rate_group_base import PolymorphicCustomRateGroupBase
+from clio_client.openapi_client.models.polymorphic_custom_rate_user_base import PolymorphicCustomRateUserBase
+from typing import Set
 from typing_extensions import Self
 
 class PolymorphicCustomRate(BaseModel):

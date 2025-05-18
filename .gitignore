@@ -1,5 +1,13 @@
 venv/
 .venv/
+.venv-client/
+.venv-mock/
 __pycache__/
 *.py[cod]
 *.pyo
+configs/
+clio-api-documentation-client/
+generated_server/
+clean_openapi.yaml
+final_openapi.yaml
+fix_enums_and_tags.py

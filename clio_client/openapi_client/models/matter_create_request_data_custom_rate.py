@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.matter_create_request_data_custom_rate_rates_inner import MatterCreateRequestDataCustomRateRatesInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.matter_create_request_data_custom_rate_rates_inner import MatterCreateRequestDataCustomRateRatesInner
+from typing import Set
 from typing_extensions import Self
 
 class MatterCreateRequestDataCustomRate(BaseModel):

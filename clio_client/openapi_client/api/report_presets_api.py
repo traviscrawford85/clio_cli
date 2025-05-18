@@ -12,23 +12,20 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import date, datetime
-from pydantic import Field, StrictBool, StrictInt, StrictStr, field_validator
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.report_preset_create_request import ReportPresetCreateRequest
-from openapi_client.models.report_preset_list import ReportPresetList
-from openapi_client.models.report_preset_show import ReportPresetShow
-from openapi_client.models.report_preset_update_request import ReportPresetUpdateRequest
-from openapi_client.models.report_show import ReportShow
+from pydantic import StrictBool
+from clio_client.openapi_client.models.report_preset_create_request import ReportPresetCreateRequest
+from clio_client.openapi_client.models.report_preset_list import ReportPresetList
+from clio_client.openapi_client.models.report_preset_show import ReportPresetShow
+from clio_client.openapi_client.models.report_preset_update_request import ReportPresetUpdateRequest
+from clio_client.openapi_client.models.report_show import ReportShow
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 

@@ -21,11 +21,11 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.report_create_request_data_client import ReportCreateRequestDataClient
-from openapi_client.models.report_create_request_data_matter import ReportCreateRequestDataMatter
-from openapi_client.models.report_create_request_data_originating_attorney import ReportCreateRequestDataOriginatingAttorney
-from openapi_client.models.report_create_request_data_practice_area import ReportCreateRequestDataPracticeArea
-from typing import Optional, Set
+from clio_client.openapi_client.models.report_create_request_data_client import ReportCreateRequestDataClient
+from clio_client.openapi_client.models.report_create_request_data_matter import ReportCreateRequestDataMatter
+from clio_client.openapi_client.models.report_create_request_data_originating_attorney import ReportCreateRequestDataOriginatingAttorney
+from clio_client.openapi_client.models.report_create_request_data_practice_area import ReportCreateRequestDataPracticeArea
+from typing import Set
 from typing_extensions import Self
 
 class ReportCreateRequestData(BaseModel):

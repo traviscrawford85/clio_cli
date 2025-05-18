@@ -21,10 +21,10 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.activity_description_rate_base import ActivityDescriptionRateBase
-from openapi_client.models.group_base import GroupBase
-from openapi_client.models.utbms_code_base import UtbmsCodeBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_description_rate_base import ActivityDescriptionRateBase
+from clio_client.openapi_client.models.group_base import GroupBase
+from clio_client.openapi_client.models.utbms_code_base import UtbmsCodeBase
+from typing import Set
 from typing_extensions import Self
 
 class ActivityDescription(BaseModel):

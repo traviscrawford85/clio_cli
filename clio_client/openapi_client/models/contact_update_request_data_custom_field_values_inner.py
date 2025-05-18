@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.contact_update_request_data_custom_field_values_inner_custom_field import ContactUpdateRequestDataCustomFieldValuesInnerCustomField
-from typing import Optional, Set
+from clio_client.openapi_client.models.contact_update_request_data_custom_field_values_inner_custom_field import ContactUpdateRequestDataCustomFieldValuesInnerCustomField
+from typing import Set
 from typing_extensions import Self
 
 class ContactUpdateRequestDataCustomFieldValuesInner(BaseModel):

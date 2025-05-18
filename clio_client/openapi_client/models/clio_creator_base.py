@@ -21,7 +21,7 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from typing import Optional, Set
+from typing import Set
 from typing_extensions import Self
 
 class ClioCreatorBase(BaseModel):

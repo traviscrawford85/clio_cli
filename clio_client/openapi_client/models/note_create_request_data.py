@@ -21,10 +21,10 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.note_create_request_data_contact import NoteCreateRequestDataContact
-from openapi_client.models.note_create_request_data_matter import NoteCreateRequestDataMatter
-from openapi_client.models.note_create_request_data_notification_event_subscribers_inner import NoteCreateRequestDataNotificationEventSubscribersInner
-from typing import Optional, Set
+from clio_client.openapi_client.models.note_create_request_data_contact import NoteCreateRequestDataContact
+from clio_client.openapi_client.models.note_create_request_data_matter import NoteCreateRequestDataMatter
+from clio_client.openapi_client.models.note_create_request_data_notification_event_subscribers_inner import NoteCreateRequestDataNotificationEventSubscribersInner
+from typing import Set
 from typing_extensions import Self
 
 class NoteCreateRequestData(BaseModel):

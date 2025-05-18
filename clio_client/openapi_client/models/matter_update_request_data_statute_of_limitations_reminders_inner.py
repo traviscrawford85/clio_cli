@@ -20,8 +20,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.matter_update_request_data_statute_of_limitations_reminders_inner_notification_method import MatterUpdateRequestDataStatuteOfLimitationsRemindersInnerNotificationMethod
-from typing import Optional, Set
+from clio_client.openapi_client.models.matter_update_request_data_statute_of_limitations_reminders_inner_notification_method import MatterUpdateRequestDataStatuteOfLimitationsRemindersInnerNotificationMethod
+from typing import Set
 from typing_extensions import Self
 
 class MatterUpdateRequestDataStatuteOfLimitationsRemindersInner(BaseModel):

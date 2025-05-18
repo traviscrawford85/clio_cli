@@ -21,10 +21,10 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.task_create_request_data_matter import TaskCreateRequestDataMatter
-from openapi_client.models.task_create_request_data_task_type import TaskCreateRequestDataTaskType
-from openapi_client.models.task_update_request_data_assignee import TaskUpdateRequestDataAssignee
-from typing import Optional, Set
+from clio_client.openapi_client.models.task_create_request_data_matter import TaskCreateRequestDataMatter
+from clio_client.openapi_client.models.task_create_request_data_task_type import TaskCreateRequestDataTaskType
+from clio_client.openapi_client.models.task_update_request_data_assignee import TaskUpdateRequestDataAssignee
+from typing import Set
 from typing_extensions import Self
 
 class TaskUpdateRequestData(BaseModel):

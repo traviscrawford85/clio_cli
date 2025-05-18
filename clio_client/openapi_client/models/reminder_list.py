@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.reminder import Reminder
+from clio_client.openapi_client.models.reminder import Reminder
 from typing import Optional, Set
 from typing_extensions import Self
 

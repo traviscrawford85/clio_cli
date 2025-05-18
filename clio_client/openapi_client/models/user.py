@@ -21,14 +21,14 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.account_base import AccountBase
-from openapi_client.models.activity_description_base import ActivityDescriptionBase
-from openapi_client.models.avatar_base import AvatarBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.group_base import GroupBase
-from openapi_client.models.job_title_base import JobTitleBase
-from openapi_client.models.notification_method_base import NotificationMethodBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.account_base import AccountBase
+from clio_client.openapi_client.models.activity_description_base import ActivityDescriptionBase
+from clio_client.openapi_client.models.avatar_base import AvatarBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.group_base import GroupBase
+from clio_client.openapi_client.models.job_title_base import JobTitleBase
+from clio_client.openapi_client.models.notification_method_base import NotificationMethodBase
+from typing import Set
 from typing_extensions import Self
 
 class User(BaseModel):

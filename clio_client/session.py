@@ -1,10 +1,13 @@
 import json
 import os
 from datetime import datetime, timedelta
-from openapi_client import ApiClient, Configuration
-from openapi_client.api import MattersApi, ContactsApi
-from .config import TOKEN_STORE_PATH, CLIO_API_HOST
+
+from clio_client.openapi_client import ApiClient, Configuration
+from clio_client.openapi_client.api import ContactsApi, MattersApi
+
 from .auth import refresh_token
+from .config import CLIO_API_HOST, TOKEN_STORE_PATH
+
 
 class ClioSession:
     def __init__(self, token_store_path: str = TOKEN_STORE_PATH):

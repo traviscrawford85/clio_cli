@@ -1,0 +1,12 @@
+project_name_override: clio_client
+package_name_override: clio_client
+field_constraints: true
+use_pydantic_v2: true
+allow_version_override: true
+include_required: true
+collapse_aliases: true
+openapi_paths: by-path
+http_timeout: 15
+use_enum_prefix: false
+use_path_prefixes_for_endpoint_names: true
+literal_enums: true

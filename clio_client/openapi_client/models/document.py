@@ -21,16 +21,16 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.clio_creator_base import ClioCreatorBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.document_category_base import DocumentCategoryBase
-from openapi_client.models.document_version import DocumentVersion
-from openapi_client.models.document_version_base import DocumentVersionBase
-from openapi_client.models.external_property_base import ExternalPropertyBase
-from openapi_client.models.group_base import GroupBase
-from openapi_client.models.linked_folder_base import LinkedFolderBase
-from openapi_client.models.matter_base import MatterBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.clio_creator_base import ClioCreatorBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.document_category_base import DocumentCategoryBase
+from clio_client.openapi_client.models.document_version import DocumentVersion
+from clio_client.openapi_client.models.document_version_base import DocumentVersionBase
+from clio_client.openapi_client.models.external_property_base import ExternalPropertyBase
+from clio_client.openapi_client.models.group_base import GroupBase
+from clio_client.openapi_client.models.linked_folder_base import LinkedFolderBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from typing import Set
 from typing_extensions import Self
 
 class Document(BaseModel):

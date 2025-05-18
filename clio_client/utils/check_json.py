@@ -1,5 +1,6 @@
 import json
 
+
 def check_json_load(path):
     try:
         with open(path, 'r', encoding='utf-8') as f:

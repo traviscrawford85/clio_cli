@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.report_schedule import ReportSchedule
+from clio_client.openapi_client.models.report_schedule import ReportSchedule
 from typing import Optional, Set
 from typing_extensions import Self
 

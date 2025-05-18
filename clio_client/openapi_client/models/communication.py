@@ -21,15 +21,15 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.activity_base import ActivityBase
-from openapi_client.models.communication_eml_file_base import CommunicationEmlFileBase
-from openapi_client.models.document_base import DocumentBase
-from openapi_client.models.external_property_base import ExternalPropertyBase
-from openapi_client.models.matter_base import MatterBase
-from openapi_client.models.notification_event_subscriber_base import NotificationEventSubscriberBase
-from openapi_client.models.participant import Participant
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.activity_base import ActivityBase
+from clio_client.openapi_client.models.communication_eml_file_base import CommunicationEmlFileBase
+from clio_client.openapi_client.models.document_base import DocumentBase
+from clio_client.openapi_client.models.external_property_base import ExternalPropertyBase
+from clio_client.openapi_client.models.matter_base import MatterBase
+from clio_client.openapi_client.models.notification_event_subscriber_base import NotificationEventSubscriberBase
+from clio_client.openapi_client.models.participant import Participant
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class Communication(BaseModel):

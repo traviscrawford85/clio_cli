@@ -21,10 +21,10 @@ import json
 from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.allocation_base import AllocationBase
-from openapi_client.models.contact_base import ContactBase
-from openapi_client.models.user_base import UserBase
-from typing import Optional, Set
+from clio_client.openapi_client.models.allocation_base import AllocationBase
+from clio_client.openapi_client.models.contact_base import ContactBase
+from clio_client.openapi_client.models.user_base import UserBase
+from typing import Set
 from typing_extensions import Self
 
 class CreditMemo(BaseModel):

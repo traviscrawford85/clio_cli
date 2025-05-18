@@ -12,20 +12,16 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-import warnings
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from datetime import date
-from pydantic import Field, StrictStr
-from typing import Optional
-from typing_extensions import Annotated
-from openapi_client.models.timer_create_request import TimerCreateRequest
-from openapi_client.models.timer_show import TimerShow
+from clio_client.openapi_client.models.timer_create_request import TimerCreateRequest
+from clio_client.openapi_client.models.timer_show import TimerShow
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
+from clio_client.openapi_client.api_client import ApiClient, RequestSerialized
+from clio_client.openapi_client.api_response import ApiResponse
 from openapi_client.rest import RESTResponseType
 
 
