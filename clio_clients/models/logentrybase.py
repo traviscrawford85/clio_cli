@@ -5,9 +5,7 @@ from __future__ import annotations
 
 from typing import Optional
 
-from clio_clients.models.type.type19 import (
-    Type19,
-)  # Assuming Type19 is defined in this module
+from clio_clients.models.type.type19 import Type19  # Assuming Type19 is defined in this module
 from pydantic import BaseModel, Field
 
 

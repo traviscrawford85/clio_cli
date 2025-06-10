@@ -10,17 +10,9 @@ class CustomFieldExtended(BaseModel):
     pass
 
 class AccountBalance_base(BaseModel):
-    balance: float = None
-    id: int = None
-    name: str = None
-    type: str = None
+    balance: float = None    id: int = None    name: str = None    type: str = None
 class Account_base(BaseModel):
-    created_at: str = None
-    etag: str = None
-    id: int = None
-    name: str = None
-    state: str = None
-    updated_at: str = None
+    created_at: str = None    etag: str = None    id: int = None    name: str = None    state: str = None    updated_at: str = None
 class Activity(BaseModel):
     pass
 
@@ -28,29 +20,13 @@ class ActivityDescription(BaseModel):
     pass
 
 class ActivityDescriptionRate_base(BaseModel):
-    amount: float = None
-    hierarchy: str = None
-    non_billable_amount: float = None
-    type: str = None
+    amount: float = None    hierarchy: str = None    non_billable_amount: float = None    type: str = None
 class ActivityDescription_List(BaseModel):
     data: List[ActivityDescription]
 class ActivityDescription_Show(BaseModel):
     data: ActivityDescription
 class ActivityDescription_base(BaseModel):
-    accessible_to_user: bool = None
-    category_type: str = None
-    created_at: str = None
-    default: bool = None
-    etag: str = None
-    id: int = None
-    name: str = None
-    type: str = None
-    updated_at: str = None
-    utbms_activity_id: int = None
-    utbms_task_id: int = None
-    utbms_task_name: str = None
-    visible_to_co_counsel: bool = None
-    xero_service_code: str = None
+    accessible_to_user: bool = None    category_type: str = None    created_at: str = None    default: bool = None    etag: str = None    id: int = None    name: str = None    type: str = None    updated_at: str = None    utbms_activity_id: int = None    utbms_task_id: int = None    utbms_task_name: str = None    visible_to_co_counsel: bool = None    xero_service_code: str = None
 class ActivityRate(BaseModel):
     pass
 
@@ -59,64 +35,21 @@ class ActivityRate_List(BaseModel):
 class ActivityRate_Show(BaseModel):
     data: ActivityRate
 class ActivityRate_base(BaseModel):
-    co_counsel_contact_id: int = None
-    contact_id: int = None
-    created_at: str = None
-    etag: str = None
-    flat_rate: bool = None
-    id: int = None
-    rate: float = None
-    updated_at: str = None
+    co_counsel_contact_id: int = None    contact_id: int = None    created_at: str = None    etag: str = None    flat_rate: bool = None    id: int = None    rate: float = None    updated_at: str = None
 class Activity_CalendarEntry_base(BaseModel):
-    calendar_owner_id: int = None
-    etag: str = None
-    id: str = None
+    calendar_owner_id: int = None    etag: str = None    id: str = None
 class Activity_List(BaseModel):
     data: List[Activity]
 class Activity_Show(BaseModel):
     data: dict
 class Activity_Task_base(BaseModel):
-    etag: str = None
-    id: int = None
+    etag: str = None    id: int = None
 class Activity_TextMessageConversation_base(BaseModel):
-    etag: str = None
-    id: int = None
+    etag: str = None    id: int = None
 class Activity_base(BaseModel):
-    billed: bool = None
-    contingency_fee: bool = None
-    created_at: str = None
-    date: str = None
-    etag: str = None
-    flat_rate: bool = None
-    id: int = None
-    no_charge: bool = None
-    non_billable: bool = None
-    non_billable_total: float = None
-    note: str = None
-    on_bill: bool = None
-    price: float = None
-    quantity: float = None
-    quantity_in_hours: float = None
-    quantity_redacted: bool = None
-    reference: str = None
-    rounded_quantity: float = None
-    rounded_quantity_in_hours: float = None
-    tax_setting: str = None
-    total: float = None
-    type: str = None
-    updated_at: str = None
+    billed: bool = None    contingency_fee: bool = None    created_at: str = None    date: str = None    etag: str = None    flat_rate: bool = None    id: int = None    no_charge: bool = None    non_billable: bool = None    non_billable_total: float = None    note: str = None    on_bill: bool = None    price: float = None    quantity: float = None    quantity_in_hours: float = None    quantity_redacted: bool = None    reference: str = None    rounded_quantity: float = None    rounded_quantity_in_hours: float = None    tax_setting: str = None    total: float = None    type: str = None    updated_at: str = None
 class Address_base(BaseModel):
-    city: str = None
-    country: str = None
-    created_at: str = None
-    etag: str = None
-    id: int = None
-    name: str = None
-    postal_code: str = None
-    primary: bool = None
-    province: str = None
-    street: str = None
-    updated_at: str = None
+    city: str = None    country: str = None    created_at: str = None    etag: str = None    id: int = None    name: str = None    postal_code: str = None    primary: bool = None    province: str = None    street: str = None    updated_at: str = None
 class Allocation(BaseModel):
     pass
 

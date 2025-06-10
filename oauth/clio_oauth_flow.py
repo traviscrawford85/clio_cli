@@ -1,10 +1,12 @@
 
 import os
-import requests
 import time
-from fastapi.responses import RedirectResponse
+
+import requests
 from fastapi import FastAPI, Request
-from oauth.token_store import save_token_data, load_token_data
+from fastapi.responses import RedirectResponse
+
+from oauth.token_store import load_token_data, save_token_data
 
 app = FastAPI()
 

@@ -3,11 +3,19 @@
 
 from __future__ import annotations
 
-from clio_clients.models.taskbase import TaskBase
+from typing import (
+    Optional,  # Ensure this is present if Optional is used in TaskBase or Task
+)
+
+from clio_clients.models.priority.priority1 import Priority1
+from clio_clients.models.task_base import TaskBase  # Ensure this path is correct
+
+# If TaskBase or Task uses any other models/enums (e.g., Status2), import them here:
+# from clio_clients.models.status.status2 import Status2
 
 
 class Task(TaskBase):
     pass
 
 
-Task.model_rebuild()  # <-- Add this at the end of the file
+Task.model_rebuild()

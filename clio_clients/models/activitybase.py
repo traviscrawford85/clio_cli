@@ -7,6 +7,8 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+from clio_clients.models.taxsetting import TaxSetting
+
 
 class ActivityBase(BaseModel):
     billed: Optional[bool] = Field(

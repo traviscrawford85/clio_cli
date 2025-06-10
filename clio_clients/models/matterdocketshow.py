@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+from clio_clients.models.matterdocket import MatterDocket  # Adjust the import path if needed
 from pydantic import BaseModel
 
 

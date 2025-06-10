@@ -1,7 +1,9 @@
 
+from datetime import date, datetime
+from typing import Any, List, Optional
+
 from pydantic import BaseModel
-from typing import Optional, Any, List
-from datetime import datetime, date
+
 
 class CustomFieldValueExtended(BaseModel):
     pass

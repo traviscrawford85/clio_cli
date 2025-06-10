@@ -14,7 +14,8 @@ from clio_sdk.api.billable_matters_api import BillableMattersApi
 from clio_sdk.api.billing_settings_api import BillingSettingsApi
 from clio_sdk.api.bills_api import BillsApi
 from clio_sdk.api.calendar_entries_api import CalendarEntriesApi
-from clio_sdk.api.calendar_entry_event_types_api import CalendarEntryEventTypesApi
+from clio_sdk.api.calendar_entry_event_types_api import \
+    CalendarEntryEventTypesApi
 from clio_sdk.api.calendar_visibilities_api import CalendarVisibilitiesApi
 from clio_sdk.api.calendars_api import CalendarsApi
 from clio_sdk.api.civil_certificated_rates_api import CivilCertificatedRatesApi
@@ -28,7 +29,8 @@ from clio_sdk.api.contacts_api import ContactsApi
 from clio_sdk.api.conversation_messages_api import ConversationMessagesApi
 from clio_sdk.api.conversations_api import ConversationsApi
 from clio_sdk.api.credit_memos_api import CreditMemosApi
-from clio_sdk.api.criminal_controlled_rates_api import CriminalControlledRatesApi
+from clio_sdk.api.criminal_controlled_rates_api import \
+    CriminalControlledRatesApi
 from clio_sdk.api.currencies_api import CurrenciesApi
 from clio_sdk.api.custom_actions_api import CustomActionsApi
 from clio_sdk.api.custom_field_sets_api import CustomFieldSetsApi
@@ -49,7 +51,8 @@ from clio_sdk.api.grants_api import GrantsApi
 from clio_sdk.api.groups_api import GroupsApi
 from clio_sdk.api.interest_charges_api import InterestChargesApi
 from clio_sdk.api.jurisdictions_api import JurisdictionsApi
-from clio_sdk.api.jurisdictions_to_triggers_api import JurisdictionsToTriggersApi
+from clio_sdk.api.jurisdictions_to_triggers_api import \
+    JurisdictionsToTriggersApi
 from clio_sdk.api.line_items_api import LineItemsApi
 from clio_sdk.api.log_entries_api import LogEntriesApi
 from clio_sdk.api.matter_contacts_api import MatterContactsApi
@@ -61,7 +64,8 @@ from clio_sdk.api.medical_records_api import MedicalRecordsApi
 from clio_sdk.api.medical_records_details_api import MedicalRecordsDetailsApi
 from clio_sdk.api.my_events_api import MyEventsApi
 from clio_sdk.api.notes_api import NotesApi
-from clio_sdk.api.outstanding_client_balances_api import OutstandingClientBalancesApi
+from clio_sdk.api.outstanding_client_balances_api import \
+    OutstandingClientBalancesApi
 from clio_sdk.api.phone_numbers_api import PhoneNumbersApi
 from clio_sdk.api.practice_areas_api import PracticeAreasApi
 from clio_sdk.api.related_contacts_api import RelatedContactsApi
@@ -83,4 +87,3 @@ from clio_sdk.api.users_api import UsersApi
 from clio_sdk.api.utbms_codes_api import UtbmsCodesApi
 from clio_sdk.api.utbms_sets_api import UtbmsSetsApi
 from clio_sdk.api.webhooks_api import WebhooksApi
-

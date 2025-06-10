@@ -27,10 +27,7 @@ from clio_sdk import rest
 from clio_sdk.api_response import ApiResponse
 from clio_sdk.api_response import T as ApiResponseT
 from clio_sdk.configuration import Configuration
-from clio_sdk.exceptions import (
-    ApiException,
-    ApiValueError,
-)
+from clio_sdk.exceptions import ApiException, ApiValueError
 from dateutil.parser import parse
 from pydantic import SecretStr
 
