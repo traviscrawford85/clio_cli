@@ -3,18 +3,9 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.customfieldvaluebase import CustomFieldValueBase
+from clio_clients.models.customfieldvalueextended import CustomFieldValueExtended
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .customfieldvaluebase import CustomFieldValueBase
-from .customfieldvalueextended import CustomFieldValueExtended
 
 class CustomFieldValue(CustomFieldValueBase, CustomFieldValueExtended):
     pass

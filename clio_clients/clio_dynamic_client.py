@@ -1,16 +1,15 @@
-import yaml
-import httpx
-from typing import Any, Dict, Optional, List
 import logging
-from pydantic import BaseModel
+import re
+from typing import Any, Dict, List, Optional
+
+import httpx
+import yaml
+from clio_clients.models.contact import Contact
+from clio_clients.models.matter import Matter
+from clio_clients.models.task import Task
+from database.token_storage import load_token_data
 from openapi_schemas_pydantic import construct_open_api_with_schema_class
 from openapi_schemas_pydantic.v3_1_0 import OpenAPI
-from clio_clients.models.task import Task
-from clio_clients.models.matter import Matter
-from clio_clients.models.contact import Contact
-from urllib.parse import urlencode
-import re
-from database.token_storage import load_token_data
 
 logger = logging.getLogger(__name__)
 

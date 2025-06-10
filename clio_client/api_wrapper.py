@@ -1,12 +1,12 @@
-from typing import Any, Optional
+from typing import Any
 
-from clio_client.clio_sdk import ApiClient
-from clio_client.clio_sdk.exceptions import UnauthorizedException
-from clio_client.clio_generated_client.models import Matter, Contact, Activity, Task
 from clio_client.clio_generated_client.api.matters.matterindex import MatterIndexParams
-from clio_client.clio_sdk.api.contacts_api import ContactIndexParams
+from clio_client.clio_generated_client.models import Activity, Contact, Matter, Task
+from clio_client.clio_sdk import ApiClient
 from clio_client.clio_sdk.api.activities_api import ActivityIndexParams
+from clio_client.clio_sdk.api.contacts_api import ContactIndexParams
 from clio_client.clio_sdk.api.tasks_api import TaskIndexParams
+from clio_client.clio_sdk.exceptions import UnauthorizedException
 
 
 class ClioApiWrapper:

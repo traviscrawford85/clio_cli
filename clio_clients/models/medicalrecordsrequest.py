@@ -3,17 +3,11 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from typing import List, Optional
 
-from pydantic import BaseModel
+from clio_clients.models.medicalrecordsrequestbase import MedicalRecordsRequestBase
 from pydantic import Field
 
-from .medicalrecordsrequestbase import MedicalRecordsRequestBase
 
 class MedicalRecordsRequest(MedicalRecordsRequestBase):
     matter: Optional[MatterBase] = None

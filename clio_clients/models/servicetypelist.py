@@ -3,15 +3,10 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
 from typing import List
-from typing import Optional
 
-from pydantic import BaseModel
-from pydantic import Field
+from pydantic import BaseModel, Field
+
 
 class ServiceTypeList(BaseModel):
     data: List[ServiceType] = Field(..., description="ServiceType List Response")

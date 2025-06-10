@@ -3,17 +3,11 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from typing import List, Optional
 
-from pydantic import BaseModel
+from clio_clients.models.billbase import BillBase
 from pydantic import Field
 
-from .billbase import BillBase
 
 class Bill(BillBase):
     balances: Optional[List[BalanceBase]] = Field(None, description="Balance")

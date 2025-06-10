@@ -3,18 +3,9 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.userbase import UserBase
+from clio_clients.models.usershow import UserShow
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .userbase import UserBase
-from .usershow import UserShow
 
 class User(UserBase, UserShow):
     pass

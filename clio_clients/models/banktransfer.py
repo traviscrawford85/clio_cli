@@ -3,17 +3,10 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
 from typing import Optional
 
-from pydantic import BaseModel
-from pydantic import Field
+from clio_clients.models.banktransferbase import BankTransferBase
 
-from .banktransferbase import BankTransferBase
 
 class BankTransfer(BankTransferBase):
     client: Optional[ContactBase] = None

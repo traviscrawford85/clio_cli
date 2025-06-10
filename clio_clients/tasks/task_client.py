@@ -1,13 +1,12 @@
-import httpx
-import os
 import logging
+import os
 from typing import Optional
-from pydantic import RootModel
 
-from openapi_schemas_pydantic import construct_open_api_with_schema_class
-from clio_clients.models.task import Task
+import httpx
 from app.core.token_store import get_clio_token
+from clio_clients.models.task import Task
 from dotenv import load_dotenv
+from pydantic import RootModel
 
 # Load environment variables from .env at project root
 load_dotenv(

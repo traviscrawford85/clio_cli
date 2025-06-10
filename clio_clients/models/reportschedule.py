@@ -3,17 +3,8 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.reportschedulebase import ReportScheduleBase
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .reportschedulebase import ReportScheduleBase
 
 class ReportSchedule(ReportScheduleBase):
     pass

@@ -2,8 +2,9 @@
 import json
 import os
 from datetime import datetime, timedelta
+
 import requests
-from clio_client.clio_sdk import Configuration, ApiClient
+from clio_client.clio_sdk import ApiClient, Configuration
 
 
 class ClioSession:

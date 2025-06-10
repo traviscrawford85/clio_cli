@@ -1,6 +1,5 @@
 from clio_clients.base import AuthenticatedClient
 from clio_clients.models.usershow import UserShow
-import httpx
 
 
 async def user_who_am_i(client: AuthenticatedClient) -> UserShow:

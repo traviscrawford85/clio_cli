@@ -1,5 +1,4 @@
 import re
-import sys
 from pathlib import Path
 
 INPUT_FILE = Path("clio_clients/generated_models_fixed.py")

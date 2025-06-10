@@ -3,17 +3,8 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.laukcivilcontrolledratebase import LaukCivilControlledRateBase
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .laukcivilcontrolledratebase import LaukCivilControlledRateBase
 
 class LaukCivilControlledRate(LaukCivilControlledRateBase):
     pass

@@ -1,8 +1,8 @@
-from openapi_schemas_pydantic import OpenAPI
 import yaml
+from openapi_schemas_pydantic import OpenAPI
 
 # Load your spec
-with open("openapi_sdk.yaml", "r") as f:
+with open("openapi_sdk.yaml") as f:
     spec_dict = yaml.safe_load(f)
 
 # Validate using Pydantic models

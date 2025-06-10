@@ -3,20 +3,7 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
-
-from pydantic import BaseModel
-from pydantic import Field
-
-from .taskbase import TaskBase
-from .taskshow import TaskShow
-from .priority.priority1 import Priority1  # <-- Ensure this import is present
-from clio_clients.models.status.status2 import Status2
+from clio_clients.models.taskbase import TaskBase
 
 
 class Task(TaskBase):

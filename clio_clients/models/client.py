@@ -3,18 +3,9 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.clientbase import ClientBase
+from clio_clients.models.clientshow import ClientShow
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .clientbase import ClientBase
-from .clientshow import ClientShow
 
 class Client(ClientBase, ClientShow):
     pass

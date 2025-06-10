@@ -3,18 +3,9 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.activitybase import ActivityBase
+from clio_clients.models.activityshow import ActivityShow
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .activitybase import ActivityBase
-from .activityshow import ActivityShow
 
 class Activity(ActivityBase, ActivityShow):
     pass

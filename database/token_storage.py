@@ -2,8 +2,9 @@ import time
 from contextlib import contextmanager
 
 import requests
-from .db import SessionLocal  # relative import
+
 from .clio_token import ClioToken  # relative import
+from .db import SessionLocal  # relative import
 
 
 @contextmanager

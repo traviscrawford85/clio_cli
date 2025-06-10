@@ -1,16 +1,18 @@
+import logging
+
 from textual.app import App
 from textual.containers import Container
 from textual.widget import Widget
-from textual.widgets import Header, Footer, Static
-from views.tasks_view import TasksView
-from views.matters_view import MattersView
+from textual.widgets import Footer, Header, Static
+from utils.clean_strings import safe_unicode  # Add this import
 from views.contacts_view import ContactsView
-import logging
+from views.matters_view import MattersView
+from views.tasks_view import TasksView
 
 logger = logging.getLogger(__name__)
 
 
-class DashboardApp(App):
+class DashboardApp(App[Widget]):
     CSS_PATH = None  # or point to your .tcss file
     BINDINGS = [
         ("1", "switch('matters')", "Matters"),
@@ -47,9 +49,12 @@ class DashboardApp(App):
                 await container.mount(Static(f"Unknown view '{view}'"))
         except Exception as e:
             logger.exception("Error mounting view '%s'", view)
-            await container.mount(Static(f"⚠️ Failed to load {view}: {e}"))
+            # Sanitize the error message before displaying
+            await container.mount(Static(safe_unicode(f"⚠️ Failed to load {view}: {e}")))
 
-    def on_key(self, event):
+    from textual.events import Key
+
+    def on_key(self, event: Key):
         key = event.key
         logger.debug("Key pressed: %s", key)
         if key == "1":

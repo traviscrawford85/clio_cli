@@ -1,5 +1,5 @@
 import http.server
-import json
+import logging
 import os
 import socketserver
 import webbrowser
@@ -7,9 +7,8 @@ from datetime import datetime, timedelta
 from urllib.parse import parse_qs, urlparse
 
 import httpx
-from dotenv import load_dotenv
-import logging
 from database.token_storage import save_token_data
+from dotenv import load_dotenv
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -96,7 +95,7 @@ class OAuthHandler(http.server.BaseHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
         self.wfile.write(
-            "✅ Clio Authorization Complete! You can close this tab.".encode("utf-8")
+            "✅ Clio Authorization Complete! You can close this tab.".encode()
         )
         logger.info("Access and refresh tokens saved to database")
 

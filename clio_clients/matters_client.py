@@ -1,8 +1,10 @@
 # Copilot: This module defines the MattersClient class for interacting with Clio's Matters API.
 # filepath: /home/sysadmin01/clio_slack_agent/clio_clients/matters_client.py
-from .base import BaseClioClient
 from typing import List, Optional
+
 from clio_clients.models.matter import Matter
+
+from .base import BaseClioClient
 
 
 class ClioMattersClient(BaseClioClient):

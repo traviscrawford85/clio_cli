@@ -3,17 +3,12 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
 from typing import Optional
+
 from clio_clients.models.type.type19 import (
     Type19,
 )  # Assuming Type19 is defined in this module
-from pydantic import BaseModel
-from pydantic import Field
+from pydantic import BaseModel, Field
 
 
 class LogEntryBase(BaseModel):

@@ -1,10 +1,11 @@
 import logging
+
+from clio_clients.clio_dynamic_client import ClioDynamicClient
+from clio_clients.models.task import Task
 from textual.app import ComposeResult
 from textual.containers import VerticalScroll
 from textual.widget import Widget
 from textual.widgets import Static
-from clio_clients.models.task import Task
-from clio_clients.clio_dynamic_client import ClioDynamicClient
 
 logger = logging.getLogger(__name__)
 

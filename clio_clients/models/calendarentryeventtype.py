@@ -3,17 +3,8 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.calendarentryeventtypebase import CalendarEntryEventTypeBase
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .calendarentryeventtypebase import CalendarEntryEventTypeBase
 
 class CalendarEntryEventType(CalendarEntryEventTypeBase):
     pass

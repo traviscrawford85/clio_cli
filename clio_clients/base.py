@@ -1,7 +1,8 @@
 # clio_clients/base.py
 import os
-import httpx
 from typing import Optional
+
+import httpx
 
 
 class BaseClioClient:

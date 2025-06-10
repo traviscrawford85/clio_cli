@@ -3,18 +3,9 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.documentbase import DocumentBase
+from clio_clients.models.documentshow import DocumentShow
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .documentbase import DocumentBase
-from .documentshow import DocumentShow
 
 class Document(DocumentBase, DocumentShow):
     pass

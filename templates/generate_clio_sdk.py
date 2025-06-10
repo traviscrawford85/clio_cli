@@ -8,7 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 def load_openapi(path: str):
-    with open(path, "r") as f:
+    with open(path) as f:
         if path.endswith(".yaml") or path.endswith(".yml"):
             return yaml.safe_load(f)
         return json.load(f)

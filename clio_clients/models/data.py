@@ -3,18 +3,9 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.instantmessengerbase import InstantMessengerBase
 
-from pydantic import BaseModel
-from pydantic import Field
-
-from .contactbase import ContactBase
-from .instantmessengerbase import InstantMessengerBase
 
 class Data(ContactBase, InstantMessengerBase):
     pass

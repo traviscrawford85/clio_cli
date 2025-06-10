@@ -3,17 +3,11 @@
 
 from __future__ import annotations
 
-from decimal import Decimal
-from enum import Enum
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Optional
+from typing import List, Optional
 
-from pydantic import BaseModel
+from clio_clients.models.conversationbase import ConversationBase
 from pydantic import Field
 
-from .conversationbase import ConversationBase
 
 class Conversation(ConversationBase):
     documents: Optional[List[DocumentBase]] = Field(None, description="Document")

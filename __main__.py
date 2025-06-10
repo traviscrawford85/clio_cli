@@ -1,9 +1,10 @@
 import logging
 import os
-from dotenv import load_dotenv
-from clio_clients.clio_dynamic_client import ClioDynamicClient
+
 from app import DashboardApp
+from clio_clients.clio_dynamic_client import ClioDynamicClient
 from database.db import initialize_database
+from dotenv import load_dotenv
 
 logging.basicConfig(
     level=logging.DEBUG,

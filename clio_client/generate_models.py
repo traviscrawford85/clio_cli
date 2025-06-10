@@ -1,6 +1,6 @@
-from datamodel_code_generator import InputFileType, generate
-import os
 from pathlib import Path
+
+from datamodel_code_generator import InputFileType, generate
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OPENAPI_FILE = BASE_DIR / "../openapi.yaml"

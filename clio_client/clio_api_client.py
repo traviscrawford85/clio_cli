@@ -1,9 +1,10 @@
 import logging
+
+from clio_client.api_wrapper import ApiClientWrapper
 from clio_client.clio_sdk.api import ContactsApi, MattersApi, TasksApi
 from clio_client.clio_sdk.exceptions import ApiException
-from clio_client.api_wrapper import ApiClientWrapper
-from clio_client.session import ClioSession
 from clio_client.clio_sdk.models import Contact, Matter, Task
+from clio_client.session import ClioSession
 
 logger = logging.getLogger(__name__)
 

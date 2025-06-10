@@ -1,7 +1,9 @@
 # filepath: /home/sysadmin01/clio_slack_agent/clio_clients/tasks.py
-from .base import BaseClioClient
 from typing import List, Optional
+
 from clio_clients.models.task import Task
+
+from .base import BaseClioClient
 
 
 class ClioTaskClient(BaseClioClient):
