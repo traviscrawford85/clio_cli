@@ -1,14 +1,9 @@
-import subprocess
-import sys
+import os
 
+from dotenv import load_dotenv
 
-def run(cmd: list[str]):
-    print(f"Running: {' '.join(cmd)}")
-    subprocess.check_call(cmd)
+# Load .env.codex instead of .env
+load_dotenv(dotenv_path=".env.codex")
 
-
-if __name__ == "__main__":
-    run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
-    run(
-        [sys.executable, "-m", "pip", "install", "-e", "."]
-    )  # if your project has setup.py or pyproject.toml
+# Optionally print or verify loaded values
+print("Codex environment loaded")

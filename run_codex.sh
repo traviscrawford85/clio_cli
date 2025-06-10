@@ -1,8 +1,11 @@
 #!/bin/bash
-echo "🔧 Installing dependencies..."
+set -e
+
+# Activate virtual environment or set up env
+source .venv/bin/activate
+
+# Install requirements
 pip install -r requirements.txt
 
-echo "⚙️  Setting up environment for Codex..."
+# Run Python setup script
 python setup_codex.py
-
-echo "🚀 Ready to run Codex workflows!"
