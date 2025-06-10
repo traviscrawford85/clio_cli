@@ -863,9 +863,13 @@ class EmailAddress_base(BaseModel):
     primary: bool = None
     updated_at: str = None
 class Error(BaseModel):
-    error: ErrorDetail
+    error: "ErrorDetail"
 class ErrorDetail(BaseModel):
-    message: str    type: str
+    message: str = None
+    type: str = None
+
+
+Error.update_forward_refs()
 class EventMetrics(BaseModel):
     pass
 

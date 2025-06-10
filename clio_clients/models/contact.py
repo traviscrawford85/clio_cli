@@ -17,6 +17,6 @@ class Contact(ContactBase, ContactShow):
     pass
 
 
-# Rebuild models to resolve forward references
-Contact.model_rebuild()
-ContactShow.model_rebuild()
+# Resolve forward references for Pydantic v1
+ContactShow.update_forward_refs(Contact=Contact)
+Contact.update_forward_refs()

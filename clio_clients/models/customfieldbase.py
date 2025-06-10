@@ -5,6 +5,9 @@ from __future__ import annotations
 
 from typing import Optional
 
+from clio_clients.models.fieldtype1 import FieldType1
+from clio_clients.models.parenttype.parenttype1 import ParentType1
+
 from pydantic import BaseModel, Field
 
 

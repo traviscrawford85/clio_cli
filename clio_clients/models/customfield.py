@@ -3,9 +3,16 @@
 
 from __future__ import annotations
 
+from typing import List, Optional
+
 from clio_clients.models.customfieldbase import CustomFieldBase
-from clio_clients.models.customfieldextended import CustomFieldExtended
+from clio_clients.models.picklistoption import PicklistOption
 
 
-class CustomField(CustomFieldBase, CustomFieldExtended):
-    pass
+class CustomField(CustomFieldBase):
+    """Merge base and extended custom field attributes."""
+
+    picklist_options: Optional[List[PicklistOption]] = None
+
+
+CustomField.update_forward_refs()

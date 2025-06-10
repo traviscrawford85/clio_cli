@@ -8,14 +8,18 @@ from typing import (
 )
 
 from clio_clients.models.priority.priority1 import Priority1
-from clio_clients.models.task_base import TaskBase  # Ensure this path is correct
+# Import the generated base model
+from clio_clients.models.taskbase import TaskBase
 
 # If TaskBase or Task uses any other models/enums (e.g., Status2), import them here:
 # from clio_clients.models.status.status2 import Status2
 
 
 class Task(TaskBase):
+    """Concrete Task model that resolves forward references."""
+
     pass
 
 
-Task.model_rebuild()
+# Pydantic v1 compatibility
+Task.update_forward_refs()
