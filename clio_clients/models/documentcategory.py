@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.documentcategorybase import DocumentCategoryBase
+from .documentcategorybase import DocumentCategoryBase
 
 class DocumentCategory(DocumentCategoryBase):
     pass

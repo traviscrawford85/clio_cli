@@ -1,0 +1,32 @@
+
+import httpx
+from typing import Any, Dict, Optional, AsyncIterator
+from pydantic import BaseModel
+from .utils import PaginatedResponse
+
+class {{ classname | pascalcase }}Api:
+    """{{ description }}"""
+
+    def __init__(self, client: httpx.AsyncClient):
+        self.client = client
+
+    {% for op in operations %}
+    async def {{ op.operation_id | lower }}(
+        self{% if op.request_body %}, data: {{ op.request_model|default('BaseModel') }}{% endif %}{% for param in op.parameters %}, {{ param.name }}: {{ param.type|default('str') }}{% endfor %}
+    ) -> {{ op.response_model|default('Any') }}:
+        """{{ op.summary }}{% if op.x_action %} (Custom Action){% endif %}"""
+        url = f"{{ op.path.replace('{', '{') }}"
+        params: Dict[str, Any] = {
+            {% for param in op.parameters if param.in == 'query' %}
+            "{{ param.name }}": {{ param.name }},
+            {% endfor %}
+        }
+
+        response = await self.client.{{ op.method.lower() }}(
+            url,
+            {% if op.request_body %}json=data.dict(),{% endif %}
+            params=params if params else None
+        )
+        response.raise_for_status()
+        return {{ op.response_model|default('response.json()') }}.parse_obj(response.json())
+    {% endfor %}

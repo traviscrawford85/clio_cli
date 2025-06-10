@@ -1,0 +1,8 @@
+from typing import List
+from models.cache_{{ tag | lower }} import {{ tag }}CacheModel
+from db import SessionLocal
+
+async def handle_{{ endpoints[0].operation_id }}():
+    db = SessionLocal()
+    # Add logic to fetch or cache data
+    return db.query({{ tag }}CacheModel).all()

@@ -1,0 +1,13 @@
+{# Loop through each tag group and its operations #}
+{% for tag_group in tag_groups %}
+# {{ tag_group.name }} APIs
+
+{% for tag in tag_group.tags %}
+{% for operation in operations_by_tag[tag] %}
+def {{ operation.name }}(...):
+    """{{ operation.description }}"""
+    ...
+{% endfor %}
+{% endfor %}
+
+{% endfor %}

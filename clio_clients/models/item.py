@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.itembase import ItemBase
+from .itembase import ItemBase
 
 class Item(ItemBase):
     contact: Optional[ContactBase] = None

@@ -1,0 +1,27 @@
+from clio_sdk.interfaces.i_{{ resource }}_service import I{{ class_name }}Service
+from clio_sdk.unified_models.{{ resource }} import {{ class_name }}, {{ class_name }}UpdateInputModel
+from clio_sdk.unified_adapters import get_adapter
+from clio_sdk.queries.{{ resource }} import get_{{ resource }}_by_id, list_{{ resource }}s, build_full_update_request
+from clio_sdk.client import ClioClient
+from typing import List, Optional
+
+
+class {{ class_name }}Service(I{{ class_name }}Service):
+    def __init__(self, client: ClioClient):
+        self.client = client
+        self.adapter = get_adapter("{{ resource }}")
+
+    async def get_{{ resource }}(self, {{ resource }}_id: int) -> Optional[{{ class_name }}]:
+        data = await get_{{ resource }}_by_id({{ resource }}_id)
+        if data:
+            return self.adapter["from_clio"](data)
+        return None
+
+    async def list_{{ resource }}s(self) -> List[{{ class_name }}]:
+        raw = await list_{{ resource }}s()
+        return [self.adapter["from_clio"](item) for item in raw]
+
+    async def update_{{ resource }}(self, {{ resource }}_id: int, update: {{ class_name }}UpdateInputModel) -> bool:
+        req = build_full_update_request(update)
+        resp = await self.client.patch(f"/{{ resource }}s/{{ '{{' }}{{ resource }}_id{{ '}}' }}", data=req.model_dump())
+        return bool(resp)

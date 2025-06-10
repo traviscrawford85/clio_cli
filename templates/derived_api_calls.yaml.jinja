@@ -1,0 +1,11 @@
+
+# Auto-generated derived_api_calls.yaml
+{% for tag, ops in tag_to_operations.items() %}
+{{ tag }}:
+  {% for op in ops %}
+  - operationId: {{ op.operation_id }}
+    method: {{ op.method }}
+    path: "{{ op.path }}"
+    summary: "{{ op.summary }}"
+  {% endfor %}
+{% endfor %}

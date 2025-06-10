@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.medicalbillbase import MedicalBillBase
+from .medicalbillbase import MedicalBillBase
 
 class MedicalBill(MedicalBillBase):
     liens: Optional[List[LienBase]] = Field(None, description="Lien")

@@ -1,0 +1,12 @@
+
+class ClioAPIError(Exception):
+    """Base exception for Clio SDK errors."""
+
+class UnauthorizedError(ClioAPIError):
+    """401 Unauthorized"""
+
+class ForbiddenError(ClioAPIError):
+    """403 Forbidden"""
+
+class ValidationError(ClioAPIError):
+    """422 Unprocessable Entity"""

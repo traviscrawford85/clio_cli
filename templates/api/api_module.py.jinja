@@ -1,0 +1,21 @@
+""" {{ tag_group.name }} API Module """
+
+from clio_sdk.http import request
+from clio_sdk.models import *
+from typing import Any
+
+{% for tag in tag_group.tags %}
+# Tag: {{ tag }}
+{% for op in operations_by_tag.get(tag, []) %}
+def {{ op.operation_id|replace('#', '_')|lower }}(
+    {{ op.signature }}
+) -> Any:
+    """{{ op.summary }}{{ '\\n' if op.description else '' }}{{ op.description or '' }}"""
+    return request(
+        method="{{ op.method }}",
+        path=f"{{ op.path }}",
+        {{ op.request_args }}
+    )
+
+{% endfor %}
+{% endfor %}

@@ -1,0 +1,20 @@
+resources = [
+    "matter",
+    "contact",
+    "client",
+    "calendar",
+    "task",
+    "activity",
+    "document",
+    "note",
+    "custom_field",
+    "custom_field_value",
+    "webhook",
+    "user",
+    "report",
+    "statute",
+]
+
+resources_template = env.get_template("utils/resources.py.jinja")
+resources_output = resources_template.render(resources=resources)
+(Path(output_dir) / "utils" / "resources.py").write_text(resources_output)

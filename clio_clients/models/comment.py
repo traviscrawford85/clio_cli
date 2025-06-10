@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.commentbase import CommentBase
+from .commentbase import CommentBase
 
 class Comment(CommentBase):
     creator: Optional[UserBase] = None

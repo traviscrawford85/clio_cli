@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.jurisdictionbase import JurisdictionBase
+from .jurisdictionbase import JurisdictionBase
 
 class Jurisdiction(JurisdictionBase):
     service_types: Optional[List[ServiceTypeBase]] = Field(

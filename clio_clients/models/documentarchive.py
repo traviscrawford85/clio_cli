@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.documentarchivebase import DocumentArchiveBase
+from .documentarchivebase import DocumentArchiveBase
 
 class DocumentArchive(DocumentArchiveBase):
     pass

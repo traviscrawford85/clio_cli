@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.myeventbase import MyEventBase
+from .myeventbase import MyEventBase
 
 class MyEvent(MyEventBase):
     event: Optional[EventBase] = None

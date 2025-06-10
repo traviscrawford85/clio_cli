@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.laukcivilcontrolledratebase import LaukCivilControlledRateBase
+from .laukcivilcontrolledratebase import LaukCivilControlledRateBase
 
 class LaukCivilControlledRate(LaukCivilControlledRateBase):
     pass

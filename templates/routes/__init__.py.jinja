@@ -1,0 +1,11 @@
+{% for tag in tags %}
+from .{{ tag }}_api import router as {{ tag }}_api_router
+from .{{ tag }}_admin import router as {{ tag }}_admin_router
+{% endfor %}
+
+__all__ = [
+    {% for tag in tags %}
+    "{{ tag }}_api_router",
+    "{{ tag }}_admin_router",
+    {% endfor %}
+]

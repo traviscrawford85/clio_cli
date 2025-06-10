@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.billbase import BillBase
+from .billbase import BillBase
 
 class Bill(BillBase):
     balances: Optional[List[BalanceBase]] = Field(None, description="Balance")

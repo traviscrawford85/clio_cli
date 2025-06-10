@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.documenttemplatebase import DocumentTemplateBase
+from .documenttemplatebase import DocumentTemplateBase
 
 class DocumentTemplate(DocumentTemplateBase):
     document_category: Optional[DocumentCategoryBase] = None

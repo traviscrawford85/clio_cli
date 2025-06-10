@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.documentversionbase import DocumentVersionBase
+from .documentversionbase import DocumentVersionBase
 
 class DocumentVersion(DocumentVersionBase):
     creator: Optional[ClioCreatorBase] = None

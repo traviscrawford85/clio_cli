@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.tasktemplatebase import TaskTemplateBase
+from .tasktemplatebase import TaskTemplateBase
 
 class TaskTemplate(TaskTemplateBase):
     assignee: Optional[UserBase] = None

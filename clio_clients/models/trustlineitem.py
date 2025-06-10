@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.trustlineitembase import TrustLineItemBase
+from .trustlineitembase import TrustLineItemBase
 
 class TrustLineItem(TrustLineItemBase):
     bill: Optional[BillBase] = None

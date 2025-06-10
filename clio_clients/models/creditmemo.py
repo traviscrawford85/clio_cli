@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.creditmemobase import CreditMemoBase
+from .creditmemobase import CreditMemoBase
 
 class CreditMemo(CreditMemoBase):
     allocations: Optional[List[AllocationBase]] = Field(None, description="Allocation")

@@ -1,0 +1,10 @@
+
+from pydantic import BaseModel
+from typing import Optional
+
+class {{ tag }}Model(BaseModel):
+    id: Optional[int]
+    name: str  # TODO: customize fields for {{ tag }}
+
+    class Config:
+        orm_mode: True

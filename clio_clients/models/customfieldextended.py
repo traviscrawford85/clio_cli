@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.customfieldbase import CustomFieldBase
+from .customfieldbase import CustomFieldBase
 
 class CustomFieldExtended(CustomFieldBase):
     picklist_options: Optional[List[PicklistOption]] = None

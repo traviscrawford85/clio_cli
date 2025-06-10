@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.utbmssetbase import UtbmsSetBase
+from .utbmssetbase import UtbmsSetBase
 
 class UtbmsSet(UtbmsSetBase):
     pass

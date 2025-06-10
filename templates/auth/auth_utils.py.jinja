@@ -1,0 +1,21 @@
+from datetime import datetime, timedelta
+import json
+from pathlib import Path
+
+TOKEN_FILE = Path("~/.clio_tokens.json").expanduser()
+
+def store_tokens(access_token: str, refresh_token: str, expires_in: int):
+    expires_at = datetime.utcnow() + timedelta(seconds=expires_in)
+    token_data = {
+        "access_token": access_token,
+        "refresh_token": refresh_token,
+        "expires_at": expires_at.isoformat(),
+    }
+    with TOKEN_FILE.open("w") as f:
+        json.dump(token_data, f, indent=2)
+
+def load_tokens():
+    if not TOKEN_FILE.exists():
+        return None
+    with TOKEN_FILE.open() as f:
+        return json.load(f)

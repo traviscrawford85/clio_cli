@@ -1,0 +1,9 @@
+
+# Auto-generated derived_api_groupings.yaml (suggest logical clusters)
+{% for group, tags in groupings.items() %}
+{{ group }}:
+  tags:
+  {% for tag in tags %}
+    - "{{ tag }}"
+  {% endfor %}
+{% endfor %}

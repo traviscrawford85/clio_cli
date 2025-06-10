@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.jurisdictionstotriggerbase import JurisdictionsToTriggerBase
+from .jurisdictionstotriggerbase import JurisdictionsToTriggerBase
 
 class JurisdictionsToTrigger(JurisdictionsToTriggerBase):
     pass

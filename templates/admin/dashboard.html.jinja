@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user }}</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/admin/clients">Clients</a></li>
+            <li><a href="/admin/matters">Matters</a></li>
+            <li><a href="/admin/logs">Logs</a></li>
+            <li><a href="/admin/validate">Validate</a></li>
+            <li><a href="/admin/duplicates">Duplicates</a></li>
+            <li><a href="/docs/schema" target="_blank">📄 View Database Schema</a></li>
+            <li><a href="/docs/index" target="_blank">📚 SDK Docs</a></li>
+            <li><a href="/admin/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <p>This is the admin dashboard. Choose a section from the menu.</p>
+    </section>
+</body>
+</html>

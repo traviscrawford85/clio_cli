@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.cliopaymentspaymentbase import ClioPaymentsPaymentBase
+from .cliopaymentspaymentbase import ClioPaymentsPaymentBase
 
 class ClioPaymentsPayment(ClioPaymentsPaymentBase):
     allocations: Optional[List[AllocationBase]] = Field(None, description="Allocation")

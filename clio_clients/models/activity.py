@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.activitybase import ActivityBase
-from clio_clients.models.activityshow import ActivityShow
+from .activitybase import ActivityBase
+from .activityshow import ActivityShow
 
 class Activity(ActivityBase, ActivityShow):
     pass

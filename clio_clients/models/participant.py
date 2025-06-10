@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.participantbase import ParticipantBase
+from .participantbase import ParticipantBase
 
 class Participant(ParticipantBase):
     avatar: Optional[AvatarBase] = None

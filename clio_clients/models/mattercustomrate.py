@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.mattercustomratebase import MatterCustomRateBase
+from .mattercustomratebase import MatterCustomRateBase
 
 class MatterCustomRate(MatterCustomRateBase):
     rates: Optional[List[PolymorphicCustomRate]] = Field(

@@ -1,0 +1,27 @@
+from fastapi import APIRouter, Depends, Query, Path, Body
+from clio_sdk import ClioSDK
+from clio_sdk_w_fastapi.dependencies import get_sdk
+
+router = APIRouter()
+
+{% for op in operations %}
+@router.{{ op.method.lower() }}("{{ op.path }}")
+async def {{ op.operation_id | snakecase }}(
+    sdk: ClioSDK = Depends(get_sdk),
+    {% for param in op.parameters %}
+    {{ param.name }}: {{ param.type_hint }} = {{ param.default }},
+    {% endfor %}
+    {% if op.request_body %}
+    data: {{ op.request_model }} = Body(...),
+    {% endif %}
+):
+    """{{ op.summary or op.description }}"""
+    return await sdk.{{ op.tag | snakecase }}.{{ op.operation_id | snakecase }}(
+        {% for param in op.parameters %}
+        {{ param.name }}={{ param.name }},
+        {% endfor %}
+        {% if op.request_body %}
+        data=data,
+        {% endif %}
+    )
+{% endfor %}

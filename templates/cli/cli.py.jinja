@@ -1,0 +1,51 @@
+
+import typer
+import asyncio
+from httpx import AsyncClient
+from clio_sdk import ClioSDK
+
+app = typer.Typer(help="CLI for Clio custom actions")
+
+client = AsyncClient(base_url="https://api.clio.com", headers={"Authorization": "Bearer <your-token>"})
+sdk = ClioSDK(client)
+
+{% for action in actions %}
+@app.command()
+def {{ action.operation_id|replace("_", "-") }}(
+    {% for param in action.parameters %}
+    {{ param.name }}: {{ param.type|default('str') }} = typer.Option(..., help="{{ param.name }}")
+    {% endfor %}
+):
+    """{{ action.summary }}"""
+    async def run():
+        result = await sdk.actions.{{ action.operation_id|lower }}(
+            {% for param in action.parameters %}
+            {{ param.name }}={{ param.name }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        )
+        print(result)
+    asyncio.run(run())
+{% endfor %}
+
+if __name__ == "__main__":
+    app()
+
+@app.command("oauth-login")
+def oauth_login(
+    provider: str = typer.Option("clio", help="OAuth provider: clio or qbo"),
+    auth_code: str = typer.Option(..., help="OAuth authorization code"),
+    client_id: str = typer.Option(..., help="OAuth client ID"),
+    client_secret: str = typer.Option(..., help="OAuth client secret"),
+    redirect_uri: str = typer.Option(..., help="OAuth redirect URI"),
+):
+    """Login and store OAuth token"""
+    from clio_sdk.oauth import OAuthClient
+    oauth = OAuthClient(
+        client_id=client_id,
+        client_secret=client_secret,
+        redirect_uri=redirect_uri,
+        provider=provider
+    )
+    token = oauth.get_access_token(auth_code=auth_code)
+    print(f"Access Token: {token}")
+    # TODO: Save token securely or use with ClioSDK

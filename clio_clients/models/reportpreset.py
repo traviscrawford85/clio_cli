@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.reportpresetbase import ReportPresetBase
+from .reportpresetbase import ReportPresetBase
 
 class ReportPreset(ReportPresetBase):
     report_schedule: Optional[ReportScheduleBase] = None

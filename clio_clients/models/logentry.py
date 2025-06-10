@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.logentrybase import LogEntryBase
+from .logentrybase import LogEntryBase
 
 class LogEntry(LogEntryBase):
     item: Optional[PolymorphicObjectBase] = None

@@ -1,0 +1,50 @@
+from typing import Optional
+from {{ clio_model_module }} import {{ clio_model_name }}
+from {{ unified_model_module }} import {{ unified_model_name }}
+from clio_sdk.adapter_factory.transformer import register_transformer
+
+from typing import Any, Dict, Optional
+
+
+class {{ resource.capitalize() }}Transformer:
+    @staticmethod
+    def from_clio(data: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        return {
+        {% for field in model_fields %}
+            "{{ field.name }}": {% if field.is_nested %}
+            {
+            {% for sub in field.subfields %}
+                "{{ sub.name }}": data.get("{{ field.source_key }}", {}).get("{{ sub.source_key }}"),
+            {% endfor %}
+            }
+            {% else %}
+            data.get("{{ field.source_key }}")
+            {% endif %},
+        {% endfor %}
+        }
+
+    @staticmethod
+    def transform_{{ resource }}_fields(data: dict, context: Optional[dict] = None) -> dict:
+        if not isinstance(data, dict):
+            raise ValueError("Expected data to be a dictionary")
+        return {
+            {% for field in model_fields %}
+            "{{ field.name }}": {% if field.is_nested %}
+            {
+                {% for sub in field.subfields %}
+                "{{ sub.name }}": data.get("{{ field.source_key }}", {}).get("{{ sub.source_key }}"),
+                {% endfor %}
+            }
+            {% else %}
+            data.get("{{ field.source_key }}")
+            {% endif %},
+            {% endfor %}
+        }
+
+register_transformer("{{ resource }}", {{ resource.capitalize() }}Transformer.transform_{{ resource }}_fields)
+
+context = {
+    "resource": resource,
+    "resource_name": resource.capitalize(),
+    ...
+}

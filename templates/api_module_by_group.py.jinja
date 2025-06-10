@@ -1,0 +1,12 @@
+"""{{ tag_group.name }} API Module"""
+
+{% for tag in tag_group.tags %}
+# Tag: {{ tag }}
+{% for op in operations_by_tag.get(tag, []) %}
+def {{ op.operation_id|replace('#', '_')|lower }}():
+    """{{ op.summary }}"""
+    # Endpoint: {{ op.method }} {{ op.path }}
+    pass
+
+{% endfor %}
+{% endfor %}

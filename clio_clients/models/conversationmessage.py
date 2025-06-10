@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.conversationmessagebase import ConversationMessageBase
+from .conversationmessagebase import ConversationMessageBase
 
 class ConversationMessage(ConversationMessageBase):
     conversation: Optional[ConversationBase] = None

@@ -1,0 +1,11 @@
+from fastapi import APIRouter
+from services.{{ tag | lower }}_service import *
+
+router = APIRouter(prefix="/admin/{{ tag | lower }}", tags=["{{ tag }} Admin"])
+
+{% for ep in endpoints %}
+@router.{{ ep.method.lower() }}("{{ ep.path }}")
+async def {{ ep.operation_id }}():
+    # Example call to service
+    return await handle_{{ ep.operation_id }}()
+{% endfor %}

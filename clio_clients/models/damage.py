@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.damagebase import DamageBase
+from .damagebase import DamageBase
 
 class Damage(DamageBase):
     matter: Optional[MatterBase] = None

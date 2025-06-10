@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.communicationbase import CommunicationBase
+from .communicationbase import CommunicationBase
 
 class Communication(CommunicationBase):
     communication_eml_file: Optional[CommunicationEmlFileBase] = None

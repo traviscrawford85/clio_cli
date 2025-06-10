@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.medicalrecordsrequestbase import MedicalRecordsRequestBase
+from .medicalrecordsrequestbase import MedicalRecordsRequestBase
 
 class MedicalRecordsRequest(MedicalRecordsRequestBase):
     matter: Optional[MatterBase] = None

@@ -1,0 +1,9 @@
+# Auto-generated x-tagGroups for OpenAPI extension
+x-tagGroups:
+{% for group in tag_groups %}
+  - name: "{{ group.name }}"
+    tags:
+    {% for tag in group.tags %}
+      - "{{ tag }}"
+    {% endfor %}
+{% endfor %}

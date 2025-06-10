@@ -1,0 +1,47 @@
+import http.server
+import socketserver
+import webbrowser
+from urllib.parse import urlparse, parse_qs
+import httpx
+
+CLIENT_ID = "{{ client_id }}"
+CLIENT_SECRET = "{{ client_secret }}"
+REDIRECT_URI = "{{ redirect_uri }}"
+TOKEN_URL = "{{ token_url }}"
+
+class OAuthHandler(http.server.BaseHTTPRequestHandler):
+    def do_GET(self):
+        query = parse_qs(urlparse(self.path).query)
+        code = query.get("code", [None])[0]
+        if not code:
+            self.send_error(400, "Missing code")
+            return
+
+        tokens = self.exchange_code_for_tokens(code)
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"✅ Authorization successful. You can close this tab.")
+
+    def exchange_code_for_tokens(self, code):
+        response = httpx.post(
+            TOKEN_URL,
+            data={
+                "grant_type": "authorization_code",
+                "client_id": CLIENT_ID,
+                "client_secret": CLIENT_SECRET,
+                "redirect_uri": REDIRECT_URI,
+                "code": code,
+            },
+            headers={"Accept": "application/json"},
+        )
+        response.raise_for_status()
+        return response.json()
+
+def run_oauth_flow():
+    url = (
+        f"https://app.clio.com/oauth/authorize?response_type=code"
+        f"&client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&scope=all"
+    )
+    webbrowser.open(url)
+    with socketserver.TCPServer(("127.0.0.1", 8001), OAuthHandler) as httpd:
+        httpd.handle_request()

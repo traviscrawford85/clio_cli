@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.reminderbase import ReminderBase
+from .reminderbase import ReminderBase
 
 class Reminder(ReminderBase):
     notification_method: Optional[NotificationMethodBase] = None

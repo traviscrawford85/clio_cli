@@ -9,11 +9,9 @@ from typing import Any
 from typing import Dict
 from typing import List
 from typing import Optional
-from clio_clients.models.priority.priority1 import Priority1
-from clio_clients.models.status.status2 import Status2
+
 from pydantic import BaseModel
 from pydantic import Field
-
 
 class TaskBase(BaseModel):
     completed_at: Optional[str] = Field(

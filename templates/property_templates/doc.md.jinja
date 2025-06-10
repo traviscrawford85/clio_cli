@@ -1,0 +1,19 @@
+
+# {{ tag }} API
+
+## Standard Operations
+{% for op in operations if not op.x_action %}
+### {{ op.method }} {{ op.path }}
+**operationId**: `{{ op.operation_id }}`  
+**Summary**: {{ op.summary }}
+---
+{% endfor %}
+
+## Custom Actions
+{% for op in operations if op.x_action %}
+### {{ op.method }} {{ op.path }}
+**operationId**: `{{ op.operation_id }}`  
+**Summary**: {{ op.summary }}  
+**Note**: Custom system-triggering action
+---
+{% endfor %}

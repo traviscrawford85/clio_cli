@@ -1,0 +1,10 @@
+{% macro render_tag_groups(tag_groups) %}
+x-tagGroups:
+{% for group in tag_groups %}
+  - name: "{{ group.name }}"
+    tags:
+    {% for tag in group.tags %}
+      - "{{ tag }}"
+    {% endfor %}
+{% endfor %}
+{% endmacro %}

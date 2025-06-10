@@ -13,8 +13,5 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from .task import Task  # Import Task model from the appropriate module
-
-
 class TaskList(BaseModel):
     data: List[Task] = Field(..., description="Task List Response")

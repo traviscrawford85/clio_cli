@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.calendarentrybase import CalendarEntryBase
+from .calendarentrybase import CalendarEntryBase
 
 class CalendarEntry(CalendarEntryBase):
     attendees: Optional[List[AttendeeBase]] = Field(None, description="Attendee")

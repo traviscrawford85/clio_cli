@@ -1,0 +1,14 @@
+
+from typing import Any, Dict
+from clio_sdk.models.{{ tag_snake }}_admin_model import {{ tag }}Model
+
+def from_clio(data: Dict[str, Any]) -> {{ tag }}Model:
+    """Converts raw Clio API data into a {{ tag }}Model."""
+    return {{ tag }}Model(
+        id=data.get("id"),
+        name=data.get("name")  # TODO: Map additional fields
+    )
+
+def to_clio(model: {{ tag }}Model) -> Dict[str, Any]:
+    """Converts a {{ tag }}Model into a Clio-compatible dictionary."""
+    return model.dict(exclude_unset=True)

@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.folderbase import FolderBase
+from .folderbase import FolderBase
 
 class Folder(FolderBase):
     contact: Optional[ContactBase] = None

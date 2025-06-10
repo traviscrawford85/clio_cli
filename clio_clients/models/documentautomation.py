@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.documentautomationbase import DocumentAutomationBase
+from .documentautomationbase import DocumentAutomationBase
 
 class DocumentAutomation(DocumentAutomationBase):
     document_template: Optional[DocumentTemplateBase] = None

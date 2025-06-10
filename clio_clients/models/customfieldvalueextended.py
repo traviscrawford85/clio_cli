@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.customfieldvaluebase import CustomFieldValueBase
+from .customfieldvaluebase import CustomFieldValueBase
 
 class CustomFieldValueExtended(CustomFieldValueBase):
     custom_field: Optional[CustomField] = None

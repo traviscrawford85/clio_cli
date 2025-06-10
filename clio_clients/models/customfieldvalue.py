@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.customfieldvaluebase import CustomFieldValueBase
-from clio_clients.models.customfieldvalueextended import CustomFieldValueExtended
+from .customfieldvaluebase import CustomFieldValueBase
+from .customfieldvalueextended import CustomFieldValueExtended
 
 class CustomFieldValue(CustomFieldValueBase, CustomFieldValueExtended):
     pass

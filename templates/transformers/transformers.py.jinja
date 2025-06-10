@@ -1,0 +1,15 @@
+"""Auto-generated transformers for {{ tag }}."""
+
+from clio_sdk.utils.sanitizers import sanitize_string  # Assumes you have this utility
+
+{% set sanitize_fields = ['name', 'description', 'notes', 'message'] %}
+
+{% for model in models %}
+def to_{{ model.name | snakecase }}(dto: {{ model.name }}) -> {{ model.name }}:
+    """Transforms OpenAPI {{ model.name }} DTO to Clio-native model, with sanitization."""
+    return {{ model.name }}(
+        {% for field in model.fields %}
+        {{ field.name }}={% if field.name in sanitize_fields %}sanitize_string(dto.{{ field.name }}){% else %}dto.{{ field.name }}{% endif %},
+        {% endfor %}
+    )
+{% endfor %}

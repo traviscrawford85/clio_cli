@@ -17,7 +17,10 @@ logger = logging.getLogger(__name__)
 
 class ClioDynamicClient:
     def __init__(
-        self, spec_path: str, clio_user_id: str = "default", base_url: str = "https://api.clio.com/v4"
+        self,
+        spec_path: str,
+        clio_user_id: str = "default",
+        base_url: str = "https://app.clio.com/api/v4",
     ):
         logger.debug("Loading OpenAPI spec from %s", spec_path)
         with open(spec_path) as f:
@@ -87,17 +90,20 @@ class ClioDynamicClient:
 
         return response.json()
 
-    async def list_tasks(self, limit=5) -> List[Task]:
-        logger.debug("Fetching tasks")
-        raw = await self.call("listTasks", query_params={"limit": limit})
-        return [Task.model_validate(t) for t in raw["data"]]
-
     async def list_matters(self, limit=5) -> List[Matter]:
         logger.debug("Fetching matters")
-        raw = await self.call("listMatters", query_params={"limit": limit})
+        raw = await self.call("Matter#index", query_params={"limit": limit})
+        logger.debug("Raw matters response: %s", raw)
         return [Matter.model_validate(m) for m in raw["data"]]
+
+    async def list_tasks(self, limit=5) -> List[Task]:
+        logger.debug("Fetching tasks")
+        raw = await self.call("Task#index", query_params={"limit": limit})
+        logger.debug("Raw tasks response: %s", raw)
+        return [Task.model_validate(t) for t in raw["data"]]
 
     async def list_contacts(self, limit=5) -> List[Contact]:
         logger.debug("Fetching contacts")
-        raw = await self.call("listContacts", query_params={"limit": limit})
+        raw = await self.call("Contact#index", query_params={"limit": limit})
+        logger.debug("Raw contacts response: %s", raw)
         return [Contact.model_validate(c) for c in raw["data"]]

@@ -13,8 +13,5 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from .servicetype import ServiceType
-
-
 class ServiceTypeShow(BaseModel):
     data: ServiceType

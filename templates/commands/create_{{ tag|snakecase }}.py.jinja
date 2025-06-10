@@ -1,0 +1,30 @@
+"""
+This file defines the commands interface for creating and modifying {{ tag }}-related data in Clio.
+
+It wraps low-level clio_client operations (e.g., {{ tag|snakecase }}create.sync_detailed) and exposes a simpler,
+developer-friendly function like `create_{{ tag|snakecase }}()` that accepts an SDK-level model.
+
+Copilot Prompt:
+- Wrap the clio_client function for {{ tag }} creation.
+- Accept a `clio_sdk.models.{{ tag|snakecase }}.{{ tag|pascalcase }}` as input, adapt it into a clio_client JSON body using an adapter.
+- Call the clio_client function, check for successful responses, and return the SDK-level model.
+- If errors occur, raise helpful exceptions to aid debugging.
+- This module should only contain "write" or "mutating" operations (POST, PUT, PATCH, DELETE).
+"""
+
+from clio_client.models.{{ tag|snakecase }}create_json_body import {{ tag|pascalcase }}createJsonBody
+from clio_client.{{ tag|snakecase }}s.{{ tag|snakecase }}create import sync_detailed as raw_create_{{ tag|snakecase }}
+from clio_sdk.adapters.{{ tag|snakecase }} import from_{{ tag|snakecase }}show
+from clio_sdk.models.{{ tag|snakecase }} import {{ tag|pascalcase }}
+from clio_sdk.utils.client import get_client
+
+
+def create_{{ tag|snakecase }}({{ tag|snakecase }}: {{ tag|pascalcase }}) -> {{ tag|pascalcase }}:
+    json_body = {{ tag|pascalcase }}createJsonBody(
+        # TODO: Map each field from the SDK model to clio_client model
+        # Example: field1={{ tag|snakecase }}.field1,
+    )
+    resp = raw_create_{{ tag|snakecase }}(client=get_client(), body=json_body)
+    if resp.status_code == 201:
+        return from_{{ tag|snakecase }}show(resp.parsed)
+    raise Exception(f"{{ tag|pascalcase }} creation failed: {resp.status_code}")

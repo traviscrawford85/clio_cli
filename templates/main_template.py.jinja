@@ -1,0 +1,23 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+# Import generated routers
+{% for tag in tags %}
+from .routes import {{ tag.lower().replace(' ', '_') }}
+{% endfor %}
+
+app = FastAPI(title="{{ sdk_name }} API")
+
+# CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include routers
+{% for tag in tags %}
+app.include_router({{ tag.lower().replace(' ', '_') }}.router, prefix="/api")
+{% endfor %}

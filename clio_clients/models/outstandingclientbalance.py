@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.outstandingclientbalancebase import OutstandingClientBalanceBase
+from .outstandingclientbalancebase import OutstandingClientBalanceBase
 
 class OutstandingClientBalance(OutstandingClientBalanceBase):
     contact: Optional[ContactBase] = None

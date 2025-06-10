@@ -1,0 +1,21 @@
+from fastapi import APIRouter, Depends, Path, Query, Body
+from typing import Any, Optional
+from pydantic import BaseModel
+from auth.dependencies import require_jwt_user
+
+router = APIRouter()
+
+{% for op in operations %}
+@router.{{ op.method|lower }}("{{ op.path }}", response_model={{ op.response_model|default("Any") }})
+async def {{ op.operation_id|lower }}(
+    {% for param in op.parameters %}
+    {{ param.name }}: {{ param.type|default("str") }} = {{ "Path" if param.in == "path" else "Query" }}(...),
+    {% endfor %}
+    {% if op.request_body %}
+    data: {{ op.request_model|default("BaseModel") }} = Body(...),
+    {% endif %}
+    user: str = Depends(require_jwt_user)
+) -> {{ op.response_model|default("Any") }}:
+    """{{ op.summary or op.operation_id }}"""
+    return {"message": "{{ op.operation_id }} called"}
+{% endfor %}

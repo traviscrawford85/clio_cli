@@ -1,0 +1,5 @@
+{% if property.is_list and property.inner_property.is_model %}
+List[{{ property.inner_property.get_type_string() }}]
+{% else %}
+{{ property.get_type_string() }}
+{% endif %}

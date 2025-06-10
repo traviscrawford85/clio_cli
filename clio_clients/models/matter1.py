@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.matterbase import MatterBase
-from clio_clients.models.mattershow import MatterShow
+from .matterbase import MatterBase
+from .mattershow import MatterShow
 
 class Matter1(MatterBase, MatterShow):
     pass

@@ -13,8 +13,5 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.user import User  # Import the User model from the same package
-
-
 class UserList(BaseModel):
     data: List[User] = Field(..., description="User List Response")

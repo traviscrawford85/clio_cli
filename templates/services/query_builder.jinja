@@ -1,0 +1,8 @@
+from typing import Any, Dict
+
+class {{ resource|capitalize }}Query:
+    def __init__(self, **kwargs):
+        self.filters = kwargs
+
+    def to_params(self) -> Dict[str, Any]:
+        return self.filters

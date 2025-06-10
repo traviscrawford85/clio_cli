@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.documentbase import DocumentBase
-from clio_clients.models.documentshow import DocumentShow
+from .documentbase import DocumentBase
+from .documentshow import DocumentShow
 
 class Document(DocumentBase, DocumentShow):
     pass

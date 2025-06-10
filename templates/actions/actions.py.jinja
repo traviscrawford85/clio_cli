@@ -1,0 +1,22 @@
+
+from typing import Any
+import httpx
+{% for tag in tags %}
+from .{{ tag.module }}_api import {{ tag.classname }}Api
+{% endfor %}
+
+class Actions:
+    def __init__(self, client: httpx.AsyncClient):
+        {% for tag in tags %}
+        self.{{ tag.module }} = {{ tag.classname }}Api(client)
+        {% endfor %}
+
+    {% for action in actions %}
+    async def {{ action.operation_id|lower }}(
+        self{% for param in action.parameters %}, {{ param.name }}: {{ param.type|default('str') }}{% endfor %}
+    ) -> Any:
+        """{{ action.summary }}"""
+        return await self.{{ action.module }}.{{ action.operation_id|lower }}(
+            {% for param in action.parameters %}{{ param.name }}={{ param.name }}{% if not loop.last %}, {% endif %}{% endfor %}
+        )
+    {% endfor %}

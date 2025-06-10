@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.picklistoptionbase import PicklistOptionBase
+from .picklistoptionbase import PicklistOptionBase
 
 class PicklistOption(PicklistOptionBase):
     pass

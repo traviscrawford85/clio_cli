@@ -1,0 +1,20 @@
+from typing import Any, List, Dict
+from clio_sdk.services.{{ tag|snakecase }}_service import I{{ tag|pascalcase }}Service
+
+class {{ tag|pascalcase }}AdminService(I{{ tag|pascalcase }}Service):
+    """Service logic for managing {{ tag }} data."""
+
+    def __init__(self, db: Any, sdk: "{{ tag|pascalcase }}Api"):
+        self.db = db
+        self.sdk = sdk
+
+    async def list_items(self) -> List[Dict[str, Any]]:
+        # Example: pull from API, cache locally
+        response = await self.sdk.list_{{ tag|lower }}s()
+        return response
+
+    async def get_item(self, item_id: int) -> Dict[str, Any]:
+        # Example: fallback to API
+        return await self.sdk.get_{{ tag|lower }}(id=item_id)
+
+    # ...implement other interface methods as needed...

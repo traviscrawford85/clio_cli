@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.calendarbase import CalendarBase
+from .calendarbase import CalendarBase
 
 class Calendar(CalendarBase):
     pass

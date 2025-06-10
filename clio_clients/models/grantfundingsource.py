@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.grantfundingsourcebase import GrantFundingSourceBase
+from .grantfundingsourcebase import GrantFundingSourceBase
 
 class GrantFundingSource(GrantFundingSourceBase):
     grants: Optional[List[GrantBase]] = Field(None, description="Grant")

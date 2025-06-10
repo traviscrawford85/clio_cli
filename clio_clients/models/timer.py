@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.timerbase import TimerBase
+from .timerbase import TimerBase
 
 class Timer(TimerBase):
     activity: Optional[ActivityBase] = None

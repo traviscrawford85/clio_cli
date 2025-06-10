@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.notebase import NoteBase
+from .notebase import NoteBase
 
 class Note(NoteBase):
     pass

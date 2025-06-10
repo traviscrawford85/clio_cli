@@ -9,10 +9,9 @@ from typing import Any
 from typing import Dict
 from typing import List
 from typing import Optional
-from clio_clients.models.subscriptiontype1 import SubscriptionType1
+
 from pydantic import BaseModel
 from pydantic import Field
-
 
 class UserBase(BaseModel):
     account_owner: Optional[bool] = Field(

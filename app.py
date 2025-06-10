@@ -1,21 +1,32 @@
-import logging
 from textual.app import App
+from textual.containers import Container
 from textual.widget import Widget
 from textual.widgets import Header, Footer, Static
 from views.tasks_view import TasksView
 from views.matters_view import MattersView
 from views.contacts_view import ContactsView
+import logging
 
 logger = logging.getLogger(__name__)
 
 
 class DashboardApp(App):
-    CSS = ""  # Add any styling if needed
+    CSS_PATH = None  # or point to your .tcss file
+    BINDINGS = [
+        ("1", "switch('matters')", "Matters"),
+        ("2", "switch('contacts')", "Contacts"),
+        ("3", "switch('tasks')", "Tasks"),
+        ("q", "quit", "Quit"),
+    ]
 
     def __init__(self, client):
         super().__init__()
         self.client = client
-        self.current_view = "matters"
+
+    def compose(self):
+        yield Header()
+        yield Container(id="main")
+        yield Footer()
 
     async def on_mount(self):
         logger.debug("Dashboard mounted, switching to matters view")
@@ -23,7 +34,7 @@ class DashboardApp(App):
 
     async def switch_view(self, view: str):
         logger.debug("Switching view to %s", view)
-        container = self.query_one("#main", expect_type=Widget)
+        container = self.query_one("#main", expect_type=Container)
         await container.remove_children()
         try:
             if view == "matters":
@@ -37,11 +48,6 @@ class DashboardApp(App):
         except Exception as e:
             logger.exception("Error mounting view '%s'", view)
             await container.mount(Static(f"⚠️ Failed to load {view}: {e}"))
-
-    def compose(self):
-        yield Header()
-        yield Static(id="main")
-        yield Footer()
 
     def on_key(self, event):
         key = event.key

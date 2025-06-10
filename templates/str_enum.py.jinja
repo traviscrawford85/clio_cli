@@ -1,0 +1,10 @@
+from enum import Enum
+
+class {{ enum.class_info.name }}(str, Enum):
+    {% for key, value in enum.values|dictsort(true) %}
+    {%- set safe_key = ("IDX_" + key) if key in ["I", "O"] else key %}
+    {{ safe_key }} = "{{ value }}"
+    {% endfor %}
+
+    def __str__(self) -> str:
+        return str(self.value)

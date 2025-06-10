@@ -1,0 +1,5906 @@
+- path: /activities.json
+  method: GET
+  crud_type: List
+  operation_id: Activity#index
+  summary: Return the data for all Activities
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Activities
+  tags:
+  - Activities
+  request_body_schema: null
+  query_parameters:
+  - activity_description_id
+  - calendar_entry_id
+  - communication_id
+  - contact_note_id
+  - created_since
+  - end_date
+  - expense_category_id
+  - fields
+  - flat_rate
+  - grant_transaction_id
+  - ids[]
+  - limit
+  - matter_id
+  - matter_note_id
+  - only_unaccounted_for
+  - order
+  - page_token
+  - query
+  - start_date
+  - status
+  - task_id
+  - type
+  - updated_since
+  - user_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /activities.json
+  method: POST
+  crud_type: Create
+  operation_id: Activity#create
+  summary: Create a new Activity
+  description: Outlines the parameters and data fields used when creating a new Activity
+  tags:
+  - Activities
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /activities/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Activity#destroy
+  summary: Delete a single Activity
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Activity
+  tags:
+  - Activities
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /activities/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Activity#show
+  summary: Return the data for a single Activity
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Activity
+  tags:
+  - Activities
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /activities/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Activity#update
+  summary: Update a single Activity
+  description: Outlines the parameters and data fields used when updating a single
+    Activity
+  tags:
+  - Activities
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /activity_descriptions.json
+  method: GET
+  crud_type: List
+  operation_id: ActivityDescription#index
+  summary: Return the data for all ActivityDescriptions
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ActivityDescriptions
+  tags:
+  - Activity Descriptions
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - flat_rate
+  - ids[]
+  - limit
+  - page_token
+  - rate_for[matter_id]
+  - rate_for[user_id]
+  - type
+  - updated_since
+  - user_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /activity_descriptions.json
+  method: POST
+  crud_type: Create
+  operation_id: ActivityDescription#create
+  summary: Create a new ActivityDescription
+  description: Outlines the parameters and data fields used when creating a new ActivityDescription
+  tags:
+  - Activity Descriptions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /activity_descriptions/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: ActivityDescription#destroy
+  summary: Delete a single ActivityDescription
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single ActivityDescription
+  tags:
+  - Activity Descriptions
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /activity_descriptions/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ActivityDescription#show
+  summary: Return the data for a single ActivityDescription
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ActivityDescription
+  tags:
+  - Activity Descriptions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /activity_descriptions/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: ActivityDescription#update
+  summary: Update a single ActivityDescription
+  description: Outlines the parameters and data fields used when updating a single
+    ActivityDescription
+  tags:
+  - Activity Descriptions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /activity_rates.json
+  method: GET
+  crud_type: List
+  operation_id: ActivityRate#index
+  summary: Return the data for all ActivityRates
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ActivityRates
+  tags:
+  - Activity Rates
+  request_body_schema: null
+  query_parameters:
+  - co_counsel_contact_id
+  - contact_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /activity_rates.json
+  method: POST
+  crud_type: Create
+  operation_id: ActivityRate#create
+  summary: Create a new ActivityRate
+  description: Outlines the parameters and data fields used when creating a new ActivityRate
+  tags:
+  - Activity Rates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /activity_rates/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: ActivityRate#destroy
+  summary: Delete a single ActivityRate
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single ActivityRate
+  tags:
+  - Activity Rates
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /activity_rates/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ActivityRate#show
+  summary: Return the data for a single ActivityRate
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ActivityRate
+  tags:
+  - Activity Rates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /activity_rates/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: ActivityRate#update
+  summary: Update a single ActivityRate
+  description: Outlines the parameters and data fields used when updating a single
+    ActivityRate
+  tags:
+  - Activity Rates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /allocations.json
+  method: GET
+  crud_type: List
+  operation_id: Allocation#index
+  summary: Return the data for all Allocations
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Allocations
+  tags:
+  - Allocations
+  request_body_schema: null
+  query_parameters:
+  - bill_id
+  - contact_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - parent_id
+  - parent_type
+  - status
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /allocations/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Allocation#show
+  summary: Return the data for a single Allocation
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Allocation
+  tags:
+  - Allocations
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /bank_accounts.json
+  method: GET
+  crud_type: List
+  operation_id: BankAccount#index
+  summary: Return the data for all BankAccounts
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all BankAccounts
+  tags:
+  - Bank Accounts
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - show_empty_accounts
+  - type
+  - updated_since
+  - user_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /bank_accounts.json
+  method: POST
+  crud_type: Create
+  operation_id: BankAccount#create
+  summary: Create a new BankAccount
+  description: Outlines the parameters and data fields used when creating a new BankAccount
+  tags:
+  - Bank Accounts
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /bank_accounts/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: BankAccount#destroy
+  summary: Delete a single BankAccount
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single BankAccount
+  tags:
+  - Bank Accounts
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /bank_accounts/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: BankAccount#show
+  summary: Return the data for a single BankAccount
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single BankAccount
+  tags:
+  - Bank Accounts
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /bank_accounts/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: BankAccount#update
+  summary: Update a single BankAccount
+  description: Outlines the parameters and data fields used when updating a single
+    BankAccount
+  tags:
+  - Bank Accounts
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /bank_transactions.json
+  method: GET
+  crud_type: List
+  operation_id: BankTransaction#index
+  summary: Return the data for all BankTransactions
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all BankTransactions
+  tags:
+  - Bank Transactions
+  request_body_schema: null
+  query_parameters:
+  - bank_account_id
+  - client_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - type
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /bank_transactions/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: BankTransaction#show
+  summary: Return the data for a single BankTransaction
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single BankTransaction
+  tags:
+  - Bank Transactions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /bank_transfers/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: BankTransfer#show
+  summary: Return the data for a single BankTransfer
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single BankTransfer
+  tags:
+  - Bank Transfers
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /bill_themes.json
+  method: GET
+  crud_type: List
+  operation_id: BillTheme#index
+  summary: Return the data for all BillThemes
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all BillThemes
+  tags:
+  - Bill Themes
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /bill_themes/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: BillTheme#update
+  summary: Update a single BillTheme
+  description: Outlines the parameters and data fields used when updating a single
+    BillTheme
+  tags:
+  - Bill Themes
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /billable_clients.json
+  method: GET
+  crud_type: List
+  operation_id: BillableClient#index
+  summary: Return the data for all BillableClients
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all BillableClients
+  tags:
+  - Billable Clients
+  request_body_schema: null
+  query_parameters:
+  - client_id
+  - custom_field_values
+  - end_date
+  - fields
+  - limit
+  - matter_id
+  - originating_attorney_id
+  - page_token
+  - query
+  - responsible_attorney_id
+  - start_date
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /billable_matters.json
+  method: GET
+  crud_type: List
+  operation_id: BillableMatter#index
+  summary: Return the data for all BillableMatters
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all BillableMatters
+  tags:
+  - Billable Matters
+  request_body_schema: null
+  query_parameters:
+  - client_id
+  - custom_field_values
+  - end_date
+  - fields
+  - limit
+  - matter_id
+  - originating_attorney_id
+  - page_token
+  - query
+  - responsible_attorney_id
+  - start_date
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /billable_matters/ids.json
+  method: GET
+  crud_type: List
+  operation_id: BillableMatter#ids
+  summary: Returns the unique identifiers of all BillableMatter
+  description: This data is retrieved asynchronously
+  tags:
+  - Billable Matters
+  request_body_schema: null
+  query_parameters:
+  - client_id
+  - custom_field_values
+  - end_date
+  - fields
+  - limit
+  - matter_id
+  - originating_attorney_id
+  - page_token
+  - query
+  - responsible_attorney_id
+  - start_date
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /bills.json
+  method: GET
+  crud_type: List
+  operation_id: Bill#index
+  summary: Return the data for all Bills
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Bills
+  tags:
+  - Bills
+  request_body_schema: null
+  query_parameters:
+  - client_id
+  - created_since
+  - custom_field_values
+  - due_after
+  - due_at
+  - due_before
+  - fields
+  - ids[]
+  - issued_after
+  - issued_before
+  - last_sent_end_date
+  - last_sent_start_date
+  - limit
+  - matter_id
+  - order
+  - originating_attorney_id
+  - overdue_only
+  - page_token
+  - query
+  - responsible_attorney_id
+  - state
+  - status
+  - type
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /bills/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Bill#destroy
+  summary: Delete or void a Bill
+  description: 'This endpoint will transition a bill to either its deleted or voided
+    state.
+
+    A bill can only be deleted or voided if it has no payments recorded
+
+    and its current state is one of the following:
+
+    * Draft
+
+    * Pending Approval
+
+    * Unpaid
+
+
+    A bill will automatically be moved to a deleted or void state based on its current
+    state.
+
+    The mappings for this are:
+
+    * Draft -> Deleted
+
+    * Pending Approval -> Deleted
+
+    * Unpaid -> Void
+
+    '
+  tags:
+  - Bills
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /bills/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Bill#show
+  summary: Return the data for a single Bill
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Bill
+  tags:
+  - Bills
+  request_body_schema: null
+  query_parameters:
+  - fields
+  - navigation.next
+  - navigation.previous
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /bills/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Bill#update
+  summary: Update a single Bill
+  description: Outlines the parameters and data fields used when updating a single
+    Bill
+  tags:
+  - Bills
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /bills/{id}/preview.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Bill#preview
+  summary: Returns the pre-rendered html for the Bill
+  description: 'This endpoint returns a pre-rendered HTML object that you can use
+    to view a preview of your bills.
+
+    The HTML provided contains all of the CSS rules it requires to show the bill correctly,
+
+    as well as the DOCTYPE setting it requires.
+
+    It''s best to use an iframe, or similar object, to render the results of this
+    endpoint.
+
+    '
+  tags:
+  - Bills
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /calendar_entries.json
+  method: GET
+  crud_type: List
+  operation_id: CalendarEntry#index
+  summary: Return the data for all CalendarEntries
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CalendarEntries
+  tags:
+  - Calendar Entries
+  request_body_schema: null
+  query_parameters:
+  - calendar_id
+  - created_since
+  - expanded
+  - external_property_name
+  - external_property_value
+  - fields
+  - from
+  - has_court_rule
+  - ids[]
+  - is_all_day
+  - limit
+  - matter_id
+  - owner_entries_across_all_users
+  - page_token
+  - query
+  - source
+  - to
+  - updated_since
+  - visible
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /calendar_entries.json
+  method: POST
+  crud_type: Create
+  operation_id: CalendarEntry#create
+  summary: Create a new CalendarEntry
+  description: Outlines the parameters and data fields used when creating a new CalendarEntry
+  tags:
+  - Calendar Entries
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /calendar_entries/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: CalendarEntry#destroy
+  summary: Delete a single CalendarEntry
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single CalendarEntry
+  tags:
+  - Calendar Entries
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /calendar_entries/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CalendarEntry#show
+  summary: Return the data for a single CalendarEntry
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CalendarEntry
+  tags:
+  - Calendar Entries
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /calendar_entries/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: CalendarEntry#update
+  summary: Update a single CalendarEntry
+  description: Outlines the parameters and data fields used when updating a single
+    CalendarEntry
+  tags:
+  - Calendar Entries
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /calendar_entry_event_types.json
+  method: GET
+  crud_type: List
+  operation_id: CalendarEntryEventType#index
+  summary: Return the data for all calendar entry event types
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CalendarEntryEventTypes
+  tags:
+  - Calendar Entry Event Types
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /calendar_entry_event_types.json
+  method: POST
+  crud_type: Create
+  operation_id: CalendarEntryEventType#create
+  summary: Create a new calendar entry event type
+  description: Outlines the parameters and data fields used when creating a new CalendarEntryEventType
+  tags:
+  - Calendar Entry Event Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /calendar_entry_event_types/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: CalendarEntryEventType#destroy
+  summary: Delete a single calendar entry event type
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single CalendarEntryEventType
+  tags:
+  - Calendar Entry Event Types
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /calendar_entry_event_types/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CalendarEntryEventType#show
+  summary: Return the data for a single calendar entry event type
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CalendarEntryEventType
+  tags:
+  - Calendar Entry Event Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /calendar_entry_event_types/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: CalendarEntryEventType#update
+  summary: Update a single calendar entry event type
+  description: Outlines the parameters and data fields used when updating a single
+    CalendarEntryEventType
+  tags:
+  - Calendar Entry Event Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /calendars.json
+  method: GET
+  crud_type: List
+  operation_id: Calendar#index
+  summary: Return the data for all Calendars
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Calendars
+  tags:
+  - Calendars
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - filter_inactive_users
+  - ids[]
+  - limit
+  - order
+  - owner
+  - page_token
+  - source
+  - type
+  - updated_since
+  - visible
+  - writeable
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /calendars.json
+  method: POST
+  crud_type: Create
+  operation_id: Calendar#create
+  summary: Create a new Calendar
+  description: Outlines the parameters and data fields used when creating a new Calendar
+  tags:
+  - Calendars
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /calendars/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Calendar#destroy
+  summary: Delete a single Calendar
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Calendar
+  tags:
+  - Calendars
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /calendars/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Calendar#show
+  summary: Return the data for a single Calendar
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Calendar
+  tags:
+  - Calendars
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /calendars/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Calendar#update
+  summary: Update a single Calendar
+  description: Outlines the parameters and data fields used when updating a single
+    Calendar
+  tags:
+  - Calendars
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /clio_payments/links.json
+  method: GET
+  crud_type: List
+  operation_id: ClioPaymentsLink#index
+  summary: Return the data for all ClioPaymentsLinks
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ClioPaymentsLinks
+  tags:
+  - Clio Payments Links
+  request_body_schema: null
+  query_parameters:
+  - active
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /clio_payments/links.json
+  method: POST
+  crud_type: Create
+  operation_id: ClioPaymentsLink#create
+  summary: Create a new ClioPaymentsLink
+  description: Outlines the parameters and data fields used when creating a new ClioPaymentsLink
+  tags:
+  - Clio Payments Links
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /clio_payments/links/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ClioPaymentsLink#show
+  summary: Return the data for a single ClioPaymentsLink
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ClioPaymentsLink
+  tags:
+  - Clio Payments Links
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /clio_payments/links/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: ClioPaymentsLink#update
+  summary: Update a single ClioPaymentsLink
+  description: Outlines the parameters and data fields used when updating a single
+    ClioPaymentsLink
+  tags:
+  - Clio Payments Links
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /clio_payments/payments.json
+  method: GET
+  crud_type: List
+  operation_id: ClioPaymentsPayment#index
+  summary: Return the data for all ClioPaymentsPayments
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ClioPaymentsPayments
+  tags:
+  - Clio Payments Payments
+  request_body_schema: null
+  query_parameters:
+  - bill_id
+  - contact_id
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - state
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /clio_payments/payments/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ClioPaymentsPayment#show
+  summary: Return the data for a single ClioPaymentsPayment
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ClioPaymentsPayment
+  tags:
+  - Clio Payments Payments
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /comments.json
+  method: GET
+  crud_type: List
+  operation_id: Comment#index
+  summary: Return the data for all Comments
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Comments
+  tags:
+  - Comments
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - item_id
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /comments.json
+  method: POST
+  crud_type: Create
+  operation_id: Comment#create
+  summary: Create a new Comment
+  description: Outlines the parameters and data fields used when creating a new Comment
+  tags:
+  - Comments
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /comments/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Comment#destroy
+  summary: Delete a single Comment
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Comment
+  tags:
+  - Comments
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /comments/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Comment#show
+  summary: Return the data for a single Comment
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Comment
+  tags:
+  - Comments
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /comments/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Comment#update
+  summary: Update a single Comment
+  description: Outlines the parameters and data fields used when updating a single
+    Comment
+  tags:
+  - Comments
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /communications.json
+  method: GET
+  crud_type: List
+  operation_id: Communication#index
+  summary: Return the data for all Communications
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Communications
+  tags:
+  - Communications
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - date
+  - external_property_name
+  - external_property_value
+  - fields
+  - having_time_entries
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - query
+  - received_at
+  - received_before
+  - received_since
+  - type
+  - updated_since
+  - user_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /communications.json
+  method: POST
+  crud_type: Create
+  operation_id: Communication#create
+  summary: Create a new Communication
+  description: Outlines the parameters and data fields used when creating a new Communication
+  tags:
+  - Communications
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /communications/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Communication#destroy
+  summary: Delete a single Communication
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Communication
+  tags:
+  - Communications
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /communications/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Communication#show
+  summary: Return the data for a single Communication
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Communication
+  tags:
+  - Communications
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /communications/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Communication#update
+  summary: Update a single Communication
+  description: Outlines the parameters and data fields used when updating a single
+    Communication
+  tags:
+  - Communications
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /contacts.json
+  method: GET
+  crud_type: List
+  operation_id: Contact#index
+  summary: Return the data for all Contacts
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Contacts
+  tags:
+  - Contacts
+  request_body_schema: null
+  query_parameters:
+  - client_only
+  - clio_connect_only
+  - created_since
+  - custom_field_ids[]
+  - custom_field_values
+  - email_only
+  - exclude_ids[]
+  - fields
+  - ids[]
+  - initial
+  - limit
+  - order
+  - page_token
+  - query
+  - shared_resource_id
+  - type
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /contacts.json
+  method: POST
+  crud_type: Create
+  operation_id: Contact#create
+  summary: Create a new Contact
+  description: Outlines the parameters and data fields used when creating a new Contact
+  tags:
+  - Contacts
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /contacts/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Contact#destroy
+  summary: Delete a single Contact
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Contact
+  tags:
+  - Contacts
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /contacts/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Contact#show
+  summary: Return the data for a single Contact
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Contact
+  tags:
+  - Contacts
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /contacts/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Contact#update
+  summary: Update a single Contact
+  description: Outlines the parameters and data fields used when updating a single
+    Contact
+  tags:
+  - Contacts
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /conversation_messages.json
+  method: GET
+  crud_type: List
+  operation_id: ConversationMessage#index
+  summary: Return the data for all ConversationMessages
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ConversationMessages
+  tags:
+  - Conversation Messages
+  request_body_schema: null
+  query_parameters:
+  - conversation_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /conversation_messages.json
+  method: POST
+  crud_type: Create
+  operation_id: ConversationMessage#create
+  summary: Create a new ConversationMessage
+  description: Outlines the parameters and data fields used when creating a new ConversationMessage
+  tags:
+  - Conversation Messages
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /conversation_messages/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ConversationMessage#show
+  summary: Return the data for a single ConversationMessage
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ConversationMessage
+  tags:
+  - Conversation Messages
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /conversations.json
+  method: GET
+  crud_type: List
+  operation_id: Conversation#index
+  summary: Return the data for all Conversations
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Conversations
+  tags:
+  - Conversations
+  request_body_schema: null
+  query_parameters:
+  - archived
+  - contact_id
+  - created_since
+  - date
+  - fields
+  - for_user
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - read_status
+  - time_entries
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /conversations/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Conversation#show
+  summary: Return the data for a single Conversation
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Conversation
+  tags:
+  - Conversations
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /conversations/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Conversation#update
+  summary: Update a single Conversation
+  description: Outlines the parameters and data fields used when updating a single
+    Conversation
+  tags:
+  - Conversations
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /court_rules/jurisdictions.json
+  method: GET
+  crud_type: List
+  operation_id: Jurisdiction#index
+  summary: Return the data for all jurisdictions
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Jurisdictions
+  tags:
+  - Jurisdictions
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - for_current_account
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /court_rules/jurisdictions/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Jurisdiction#show
+  summary: Return the data for the jurisdiction
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Jurisdiction
+  tags:
+  - Jurisdictions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /court_rules/jurisdictions/{jurisdiction_id}/triggers.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: JurisdictionsToTrigger#index
+  summary: Return the data for all triggers
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all JurisdictionsToTriggers
+  tags:
+  - Jurisdictions To Triggers
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - is_requirements_required
+  - is_served
+  - limit
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /court_rules/jurisdictions/{jurisdiction_id}/triggers/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: JurisdictionsToTrigger#show
+  summary: Return the data for the trigger
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single JurisdictionsToTrigger
+  tags:
+  - Jurisdictions To Triggers
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /court_rules/matter_dockets.json
+  method: GET
+  crud_type: List
+  operation_id: MatterDocket#index
+  summary: Return the data for all matter dockets
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all MatterDockets
+  tags:
+  - Matter Dockets
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - matter_status
+  - order
+  - page_token
+  - query
+  - service_type_id
+  - status
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /court_rules/matter_dockets.json
+  method: POST
+  crud_type: Create
+  operation_id: MatterDocket#create
+  summary: Creates a matter docket
+  description: Outlines the parameters and data fields used when creating a new MatterDocket
+  tags:
+  - Matter Dockets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /court_rules/matter_dockets/preview.json
+  method: GET
+  crud_type: List
+  operation_id: MatterDocket#preview
+  summary: Preview calendar dates for the docket
+  description: Preview calendar dates for the docket
+  tags:
+  - Matter Dockets
+  request_body_schema: null
+  query_parameters:
+  - event_prefix
+  - jurisdiction[id]
+  - service_type[id]
+  - start_date
+  - start_time
+  - trigger[id]
+  response_codes:
+  - '303'
+  - '400'
+  - '401'
+  - '404'
+  - '429'
+- path: /court_rules/matter_dockets/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: MatterDocket#destroy
+  summary: Deletes the requested matter docket
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single MatterDocket
+  tags:
+  - Matter Dockets
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /court_rules/matter_dockets/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: MatterDocket#show
+  summary: Return the data for the matter docket
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single MatterDocket
+  tags:
+  - Matter Dockets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /court_rules/service_types.json
+  method: GET
+  crud_type: List
+  operation_id: ServiceType#index
+  summary: Return the data for all service types
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ServiceTypes
+  tags:
+  - Service Types
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /court_rules/service_types/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ServiceType#show
+  summary: Return the data for the service type
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ServiceType
+  tags:
+  - Service Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /credit_memos.json
+  method: GET
+  crud_type: List
+  operation_id: CreditMemo#index
+  summary: Return the data for all CreditMemos
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CreditMemos
+  tags:
+  - Credit Memos
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /credit_memos/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CreditMemo#show
+  summary: Return the data for a single CreditMemo
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CreditMemo
+  tags:
+  - Credit Memos
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /currencies.json
+  method: GET
+  crud_type: List
+  operation_id: Currency#index
+  summary: Return the data for all Currencies
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Currencies
+  tags:
+  - Currencies
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /custom_actions.json
+  method: GET
+  crud_type: List
+  operation_id: CustomAction#index
+  summary: Return the data for all CustomActions
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CustomActions
+  tags:
+  - Custom Actions
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /custom_actions.json
+  method: POST
+  crud_type: Create
+  operation_id: CustomAction#create
+  summary: Create a new CustomAction
+  description: Outlines the parameters and data fields used when creating a new CustomAction
+  tags:
+  - Custom Actions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /custom_actions/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: CustomAction#destroy
+  summary: Delete a single CustomAction
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single CustomAction
+  tags:
+  - Custom Actions
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /custom_actions/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CustomAction#show
+  summary: Return the data for a single CustomAction
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CustomAction
+  tags:
+  - Custom Actions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /custom_actions/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: CustomAction#update
+  summary: Update a single CustomAction
+  description: Outlines the parameters and data fields used when updating a single
+    CustomAction
+  tags:
+  - Custom Actions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /custom_field_sets.json
+  method: GET
+  crud_type: List
+  operation_id: CustomFieldSet#index
+  summary: Return the data for all CustomFieldSets
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CustomFieldSets
+  tags:
+  - Custom Field Sets
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - displayed
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - parent_type
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /custom_field_sets.json
+  method: POST
+  crud_type: Create
+  operation_id: CustomFieldSet#create
+  summary: Create a new CustomFieldSet
+  description: Outlines the parameters and data fields used when creating a new CustomFieldSet
+  tags:
+  - Custom Field Sets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /custom_field_sets/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: CustomFieldSet#destroy
+  summary: Delete a single CustomFieldSet
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single CustomFieldSet
+  tags:
+  - Custom Field Sets
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /custom_field_sets/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CustomFieldSet#show
+  summary: Return the data for a single CustomFieldSet
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CustomFieldSet
+  tags:
+  - Custom Field Sets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /custom_field_sets/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: CustomFieldSet#update
+  summary: Update a single CustomFieldSet
+  description: Outlines the parameters and data fields used when updating a single
+    CustomFieldSet
+  tags:
+  - Custom Field Sets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /custom_fields.json
+  method: GET
+  crud_type: List
+  operation_id: CustomField#index
+  summary: Return the data for all CustomFields
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CustomFields
+  tags:
+  - Custom Fields
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - deleted
+  - field_type
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - parent_type
+  - query
+  - updated_since
+  - visible_and_required
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /custom_fields.json
+  method: POST
+  crud_type: Create
+  operation_id: CustomField#create
+  summary: Create a new CustomField
+  description: Outlines the parameters and data fields used when creating a new CustomField
+  tags:
+  - Custom Fields
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /custom_fields/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: CustomField#destroy
+  summary: Delete a single CustomField
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single CustomField
+  tags:
+  - Custom Fields
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /custom_fields/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CustomField#show
+  summary: Return the data for a single CustomField
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CustomField
+  tags:
+  - Custom Fields
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /custom_fields/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: CustomField#update
+  summary: Update a single CustomField
+  description: Outlines the parameters and data fields used when updating a single
+    CustomField
+  tags:
+  - Custom Fields
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /custom-field-values
+  method: POST
+  crud_type: Create
+  operation_id: createCustomFieldValue
+  summary: Create a CustomFieldValue
+  description: 'Outlines the parameters and data fields used when creating a new CustomFieldValue.
+
+    The `custom_field_id` is required, and the `value` field must match the type
+
+    of the CustomField.
+
+    '
+  tags:
+  - Custom Fields
+  request_body_schema: CustomFieldValue
+  query_parameters: []
+  response_codes:
+  - '201'
+- path: /damages.json
+  method: GET
+  crud_type: List
+  operation_id: Damage#index
+  summary: Return the data for all Damages
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Damages
+  tags:
+  - Damages
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /damages.json
+  method: POST
+  crud_type: Create
+  operation_id: Damage#create
+  summary: Creating a Damage
+  description: Outlines the parameters and data fields used when creating a new Damage
+  tags:
+  - Damages
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /damages/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Damage#destroy
+  summary: Deleting a Damage
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Damage
+  tags:
+  - Damages
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /damages/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Damage#show
+  summary: Return a specific Damage
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Damage
+  tags:
+  - Damages
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /damages/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Damage#update
+  summary: Updating a Damage
+  description: Outlines the parameters and data fields used when updating a single
+    Damage
+  tags:
+  - Damages
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /document_archives.json
+  method: POST
+  crud_type: Create
+  operation_id: DocumentArchive#create
+  summary: Create a new DocumentArchive
+  description: Outlines the parameters and data fields used when creating a new DocumentArchive
+  tags:
+  - Document Archives
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /document_archives/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentArchive#show
+  summary: Return the data for a single DocumentArchive
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single DocumentArchive
+  tags:
+  - Document Archives
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /document_archives/{id}/download.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentArchive#download
+  summary: Download the DocumentArchive
+  description: Download the DocumentArchive
+  tags:
+  - Document Archives
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '303'
+  - '404'
+- path: /document_automations.json
+  method: GET
+  crud_type: List
+  operation_id: DocumentAutomation#index
+  summary: Return the data for all DocumentAutomations
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all DocumentAutomations
+  tags:
+  - Document Automations
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /document_automations.json
+  method: POST
+  crud_type: Create
+  operation_id: DocumentAutomation#create
+  summary: Create a new DocumentAutomation
+  description: Outlines the parameters and data fields used when creating a new DocumentAutomation
+  tags:
+  - Document Automations
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /document_automations/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentAutomation#show
+  summary: Return the data for a single DocumentAutomation
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single DocumentAutomation
+  tags:
+  - Document Automations
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /document_categories.json
+  method: GET
+  crud_type: List
+  operation_id: DocumentCategory#index
+  summary: Return the data for all DocumentCategories
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all DocumentCategories
+  tags:
+  - Document Categories
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /document_categories.json
+  method: POST
+  crud_type: Create
+  operation_id: DocumentCategory#create
+  summary: Create a new DocumentCategory
+  description: Outlines the parameters and data fields used when creating a new DocumentCategory
+  tags:
+  - Document Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /document_categories/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: DocumentCategory#destroy
+  summary: Delete a single DocumentCategory
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single DocumentCategory
+  tags:
+  - Document Categories
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /document_categories/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentCategory#show
+  summary: Return the data for a single DocumentCategory
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single DocumentCategory
+  tags:
+  - Document Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /document_categories/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: DocumentCategory#update
+  summary: Update a single DocumentCategory
+  description: Outlines the parameters and data fields used when updating a single
+    DocumentCategory
+  tags:
+  - Document Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /document_templates.json
+  method: GET
+  crud_type: List
+  operation_id: DocumentTemplate#index
+  summary: Return the data for all DocumentTemplates
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all DocumentTemplates
+  tags:
+  - Document Templates
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /document_templates.json
+  method: POST
+  crud_type: Create
+  operation_id: DocumentTemplate#create
+  summary: Create a new DocumentTemplate
+  description: Outlines the parameters and data fields used when creating a new DocumentTemplate
+  tags:
+  - Document Templates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /document_templates/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: DocumentTemplate#destroy
+  summary: Delete a single DocumentTemplate
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single DocumentTemplate
+  tags:
+  - Document Templates
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /document_templates/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentTemplate#show
+  summary: Return the data for a single DocumentTemplate
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single DocumentTemplate
+  tags:
+  - Document Templates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /document_templates/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: DocumentTemplate#update
+  summary: Update a single DocumentTemplate
+  description: Outlines the parameters and data fields used when updating a single
+    DocumentTemplate
+  tags:
+  - Document Templates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /document_templates/{id}/download.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentTemplate#download
+  summary: Get the contents of the DocumentTemplate
+  description: Get the contents of the DocumentTemplate
+  tags:
+  - Document Templates
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '303'
+  - '404'
+- path: /documents.json
+  method: GET
+  crud_type: List
+  operation_id: Document#index
+  summary: Return the data for all Documents
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Documents
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - document_category_id
+  - external_property_name
+  - external_property_value
+  - fields
+  - ids[]
+  - include_deleted
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - parent_id
+  - query
+  - scope
+  - show_uncompleted
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /documents.json
+  method: POST
+  crud_type: Create
+  operation_id: Document#create
+  summary: Create a new Document
+  description: 'Create a Document, or Create Document Version to an existing Document.
+
+    '
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /documents/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Document#destroy
+  summary: Delete a single Document
+  description: 'Deleting a Document using this method will move it to the trash instead
+    of permanently deleting it. Trashed Documents are permanently deleted after 30
+    days. The following errors may be returned:
+
+
+    - `409 Conflict`: The Document (or one of its ancestor folders) is currently being
+    modified by another request, and cannot be trashed.
+
+    '
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '409'
+- path: /documents/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Document#show
+  summary: Return the data for a single Document
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Document
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /documents/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Document#update
+  summary: Update a single Document
+  description: 'Update Document, move Document to another Folder, and/or restore a
+    trashed Document.
+
+    '
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /documents/{id}/copy.json
+  method: POST
+  crud_type: Other
+  operation_id: Document#copy
+  summary: Copy a Document
+  description: 'Copies the latest document version of a Document into a new Document.
+    The parameters `filename` and `name` will be copied from the source Document if
+    none are provided.
+
+    '
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '404'
+- path: /documents/{id}/download.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Document#download
+  summary: Download the Document
+  description: Download the Document
+  tags:
+  - Documents
+  request_body_schema: null
+  query_parameters:
+  - document_version_id
+  response_codes:
+  - '303'
+  - '400'
+  - '404'
+- path: /documents/{id}/versions.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: DocumentVersion#index
+  summary: Return the data for all DocumentVersions
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all DocumentVersions
+  tags:
+  - Document Versions
+  request_body_schema: null
+  query_parameters:
+  - fields
+  - fully_uploaded
+  - id
+  - limit
+  - page_token
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /expense_categories.json
+  method: GET
+  crud_type: List
+  operation_id: ExpenseCategory#index
+  summary: Return the data for all ExpenseCategories
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ExpenseCategories
+  tags:
+  - Expense Categories
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - entry_type
+  - fields
+  - limit
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /expense_categories.json
+  method: POST
+  crud_type: Create
+  operation_id: ExpenseCategory#create
+  summary: Create a new ExpenseCategory
+  description: Outlines the parameters and data fields used when creating a new ExpenseCategory
+  tags:
+  - Expense Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /expense_categories/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: ExpenseCategory#destroy
+  summary: Delete a single ExpenseCategory
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single ExpenseCategory
+  tags:
+  - Expense Categories
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /expense_categories/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ExpenseCategory#show
+  summary: Return the data for a single ExpenseCategory
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ExpenseCategory
+  tags:
+  - Expense Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /expense_categories/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: ExpenseCategory#update
+  summary: Update a single ExpenseCategory
+  description: Outlines the parameters and data fields used when updating a single
+    ExpenseCategory
+  tags:
+  - Expense Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /folders.json
+  method: GET
+  crud_type: List
+  operation_id: Folder#index
+  summary: Return the data for all Folders
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Folders
+  tags:
+  - Folders
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - document_category_id
+  - external_property_name
+  - external_property_value
+  - fields
+  - ids[]
+  - include_deleted
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - parent_id
+  - query
+  - scope
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /folders.json
+  method: POST
+  crud_type: Create
+  operation_id: Folder#create
+  summary: Create a new Folder
+  description: 'Create a Folder to an existing folder.
+
+    '
+  tags:
+  - Folders
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /folders/list.json
+  method: GET
+  crud_type: List
+  operation_id: Folder#list
+  summary: Return the data of the contents of a Folder
+  description: 'Return the data of the contents of a Folder.
+
+    '
+  tags:
+  - Folders
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - document_category_id
+  - external_property_name
+  - external_property_value
+  - fields
+  - ids[]
+  - include_deleted
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - parent_id
+  - query
+  - scope
+  - show_uncompleted
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /folders/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Folder#destroy
+  summary: Delete a single Folder
+  description: "Deleting a Folder using this method will move it to the trash instead\
+    \ of permanently deleting it. Trashed Folders are permanently deleted after 30\
+    \ days. The following errors may be returned:\n\n- `400 Bad Request`: The Folder\
+    \ cannot be trashed. The `type` of the error will be `DeleteFailed` and the `message`\
+    \ of the error will be one of the following:\n  - `Delete failed: This folder\
+    \ contains more than 100,000 items and cannot be trashed. Please trash some of\
+    \ the items inside it before trying again.`\n  - `Delete failed: This item contains\
+    \ locked items and cannot be deleted.`\n  - `Delete failed: The root folder cannot\
+    \ be trashed`\n- `409 Conflict`: The Folder (or one of its descendants) is currently\
+    \ being modified by another request, and cannot be trashed.\n"
+  tags:
+  - Folders
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '400'
+  - '403'
+  - '409'
+- path: /folders/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Folder#show
+  summary: Return the data for a single Folder
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Folder
+  tags:
+  - Folders
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /folders/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Folder#update
+  summary: Update a single Folder
+  description: 'Update Folder, move Folder to another Folder, and/or restore a trashed
+    Folder.
+
+    '
+  tags:
+  - Folders
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /grant_funding_sources.json
+  method: GET
+  crud_type: List
+  operation_id: GrantFundingSource#index
+  summary: Return the data for all grant funding sources
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all GrantFundingSources
+  tags:
+  - Grant Funding Sources
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - name
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /grant_funding_sources.json
+  method: POST
+  crud_type: Create
+  operation_id: GrantFundingSource#create
+  summary: Create a new grant funding source
+  description: Outlines the parameters and data fields used when creating a new GrantFundingSource
+  tags:
+  - Grant Funding Sources
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /grant_funding_sources/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: GrantFundingSource#destroy
+  summary: Delete a single grant funding source
+  description: Outlines the parameters and data fields used when updating a single
+    GrantFundingSource
+  tags:
+  - Grant Funding Sources
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /grant_funding_sources/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: GrantFundingSource#update
+  summary: Update a single grant funding source
+  description: Outlines the parameters and data fields used when updating a single
+    GrantFundingSource
+  tags:
+  - Grant Funding Sources
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /grants.json
+  method: GET
+  crud_type: List
+  operation_id: Grant#index
+  summary: Return the data for all grants
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Grants
+  tags:
+  - Grants
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - name
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /grants.json
+  method: POST
+  crud_type: Create
+  operation_id: Grant#create
+  summary: Create a new grant
+  description: Outlines the parameters and data fields used when creating a new Grant
+  tags:
+  - Grants
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /grants/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Grant#destroy
+  summary: Deletes a single grant
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Grant
+  tags:
+  - Grants
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /grants/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Grant#show
+  summary: Return the data for a single grant
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Grant
+  tags:
+  - Grants
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /grants/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Grant#update
+  summary: Update a single grant
+  description: Outlines the parameters and data fields used when updating a single
+    Grant
+  tags:
+  - Grants
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /groups.json
+  method: GET
+  crud_type: List
+  operation_id: Group#index
+  summary: Return the data for all Groups
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Groups
+  tags:
+  - Groups
+  request_body_schema: null
+  query_parameters:
+  - archived
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - name
+  - order
+  - page_token
+  - query
+  - type
+  - updated_since
+  - user_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /groups.json
+  method: POST
+  crud_type: Create
+  operation_id: Group#create
+  summary: Create a new Group
+  description: Outlines the parameters and data fields used when creating a new Group
+  tags:
+  - Groups
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /groups/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Group#destroy
+  summary: Delete a single Group
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Group
+  tags:
+  - Groups
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /groups/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Group#show
+  summary: Return the data for a single Group
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Group
+  tags:
+  - Groups
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /groups/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Group#update
+  summary: Update a single Group
+  description: Outlines the parameters and data fields used when updating a single
+    Group
+  tags:
+  - Groups
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /interest_charges.json
+  method: GET
+  crud_type: List
+  operation_id: InterestCharge#index
+  summary: Return the data for all InterestCharges
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all InterestCharges
+  tags:
+  - Interest Charges
+  request_body_schema: null
+  query_parameters:
+  - bill_id
+  - created_since
+  - exclude_ids[]
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /interest_charges/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: InterestCharge#destroy
+  summary: Delete a single InterestCharge
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single InterestCharge
+  tags:
+  - Interest Charges
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /internal_notifications/event_metrics.json
+  method: GET
+  crud_type: List
+  operation_id: EventMetrics#index
+  summary: Unread in-app notification events
+  description: Outlines the parameters, optional and required, used when requesting
+    Event Metrics
+  tags:
+  - Event Metrics
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /internal_notifications/my_events.json
+  method: GET
+  crud_type: List
+  operation_id: MyEvent#index
+  summary: Return the data for all of my in-app notification events
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all MyEvents
+  tags:
+  - My Events
+  request_body_schema: null
+  query_parameters:
+  - fields
+  - limit
+  - page_token
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /internal_notifications/my_events/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: MyEvent#destroy
+  summary: Clear (delete) a single in-app notification event
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single MyEvent
+  tags:
+  - My Events
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /internal_notifications/my_events/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: MyEvent#update
+  summary: Mark a single in-app notification event as read/unread
+  description: Outlines the parameters and data fields used when updating a single
+    MyEvent
+  tags:
+  - My Events
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /lauk_civil_certificated_rates.json
+  method: GET
+  crud_type: List
+  operation_id: LaukCivilCertificatedRate#index
+  summary: List Civil Certificated Rates
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all LaukCivilCertificatedRates
+  tags:
+  - Civil Certificated Rates
+  request_body_schema: null
+  query_parameters:
+  - activity
+  - activity_sub_category
+  - attended_several_hearings_for_multiple_clients
+  - category_of_law
+  - change_of_solicitor
+  - court
+  - eligible_for_sqm
+  - fields
+  - first_conducting_solicitor
+  - key
+  - limit
+  - number_of_clients
+  - page_token
+  - party
+  - post_transfer_clients_represented
+  - rate_type
+  - region
+  - session_type
+  - user_type
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /lauk_civil_controlled_rates.json
+  method: GET
+  crud_type: List
+  operation_id: LaukCivilControlledRate#index
+  summary: List Civil Controlled Rates
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all LaukCivilControlledRates
+  tags:
+  - Civil Controlled Rates
+  request_body_schema: null
+  query_parameters:
+  - activity
+  - category_of_law
+  - fields
+  - key
+  - limit
+  - page_token
+  - rate_type
+  - region
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /lauk_criminal_controlled_rates.json
+  method: GET
+  crud_type: List
+  operation_id: LaukCriminalControlledRate#index
+  summary: List Criminal Controlled Rates
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all LaukCriminalControlledRates
+  tags:
+  - Criminal Controlled Rates
+  request_body_schema: null
+  query_parameters:
+  - activity
+  - category_of_law
+  - counsel
+  - court
+  - fields
+  - key
+  - limit
+  - page_token
+  - rate_type
+  - region
+  - solicitor_type
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /lauk_expense_categories.json
+  method: GET
+  crud_type: List
+  operation_id: LaukExpenseCategory#index
+  summary: List Expense Categories
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all LaukExpenseCategories
+  tags:
+  - Expense Categories
+  request_body_schema: null
+  query_parameters:
+  - fields
+  - key
+  - limit
+  - name
+  - page_token
+  - practice_area
+  - region
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /line_items.json
+  method: GET
+  crud_type: List
+  operation_id: LineItem#index
+  summary: Return the data for all LineItems
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all LineItems
+  tags:
+  - Line Items
+  request_body_schema: null
+  query_parameters:
+  - activity_id
+  - bill_id
+  - created_since
+  - display
+  - exclude_ids[]
+  - fields
+  - group_ordering
+  - ids[]
+  - kind
+  - limit
+  - matter_id
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /line_items/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: LineItem#destroy
+  summary: Delete a single LineItem
+  description: A LineItem can not be deleted if it's Bill is not editable
+  tags:
+  - Line Items
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /line_items/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: LineItem#update
+  summary: Update a single LineItem
+  description: Outlines the parameters and data fields used when updating a single
+    LineItem
+  tags:
+  - Line Items
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /log_entries.json
+  method: GET
+  crud_type: List
+  operation_id: LogEntry#index
+  summary: Return the data for all LogEntries
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all LogEntries
+  tags:
+  - Log Entries
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /matter_stages.json
+  method: GET
+  crud_type: List
+  operation_id: MatterStage#index
+  summary: Return the data for all MatterStages
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all MatterStages
+  tags:
+  - Matter Stages
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - practice_area_id
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /matters.json
+  method: GET
+  crud_type: List
+  operation_id: Matter#index
+  summary: Return the data for all Matters
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Matters
+  tags:
+  - Matters
+  request_body_schema: null
+  query_parameters:
+  - billable
+  - client_id
+  - close_date[]
+  - created_since
+  - custom_field_ids[]
+  - custom_field_values
+  - fields
+  - grant_id
+  - group_id
+  - ids[]
+  - limit
+  - open_date[]
+  - order
+  - originating_attorney_id
+  - page_token
+  - pending_date[]
+  - practice_area_id
+  - query
+  - responsible_attorney_id
+  - status
+  - subscriber_user_id
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /matters.json
+  method: POST
+  crud_type: Create
+  operation_id: Matter#create
+  summary: Create a new Matter
+  description: Outlines the parameters and data fields used when creating a new Matter
+  tags:
+  - Matters
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /matters/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Matter#destroy
+  summary: Delete a single Matter
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Matter
+  tags:
+  - Matters
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /matters/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Matter#show
+  summary: Return the data for a single Matter
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Matter
+  tags:
+  - Matters
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /matters/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Matter#update
+  summary: Update a single Matter
+  description: Outlines the parameters and data fields used when updating a single
+    Matter
+  tags:
+  - Matters
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /matters/{matter_id}/client.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Client#show
+  summary: Return the client data for a single matter
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Client
+  tags:
+  - Clients
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /matters/{matter_id}/contacts.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: MatterContacts#index
+  summary: Return the related contact data for a single matter
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all MatterContacts
+  tags:
+  - Matter Contacts
+  request_body_schema: null
+  query_parameters:
+  - custom_field_ids[]
+  - fields
+  - limit
+  - order
+  - page_token
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /matters/{matter_id}/related_contacts.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: RelatedContacts#index
+  summary: Return the related contact data for a single matter
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all RelatedContacts
+  tags:
+  - Related Contacts
+  request_body_schema: null
+  query_parameters:
+  - fields
+  - limit
+  - order
+  - page_token
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /medical_bills/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: MedicalBill#destroy
+  summary: Destroying a Medical Bill
+  description: 'Outlines the parameters, optional and required, used when deleting
+    the record for a single Medical Bill
+
+    '
+  tags:
+  - Medical Bills
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /medical_bills/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: MedicalBill#update
+  summary: Updating a Medical Bill
+  description: 'Outlines the parameters and data fields used when updating a single
+    Medical Bill
+
+    '
+  tags:
+  - Medical Bills
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /medical_records/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: MedicalRecord#destroy
+  summary: Destroying a Medical Record
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single MedicalRecord
+  tags:
+  - Medical Records
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /medical_records/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: MedicalRecord#update
+  summary: Updating a Medical Record
+  description: Outlines the parameters and data fields used when updating a single
+    MedicalRecord
+  tags:
+  - Medical Records
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /medical_records_details.json
+  method: GET
+  crud_type: List
+  operation_id: MedicalRecordsRequest#index
+  summary: Return the data for all Medical Records Details
+  description: 'Outlines the parameters, optional and required, used when requesting
+    the data for all Medical Records Details
+
+    '
+  tags:
+  - Medical Records Details
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - treatment_end_date
+  - treatment_start_date
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /medical_records_details.json
+  method: POST
+  crud_type: Create
+  operation_id: MedicalRecordsRequest#create
+  summary: Creating a Medical Records Detail, Medical Records and Medical Bills
+  description: 'This endpoint allows a creation of a Medical Records Detail, multiple
+    Medical Records and Medical Bills.
+
+    Medical Liens can also be created as a property under Medical Bills.
+
+
+    Reference the payload to see how the records are being passed in.
+
+    '
+  tags:
+  - Medical Records Details
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /medical_records_details/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: MedicalRecordsRequest#destroy
+  summary: Destroying a Medical Records Detail
+  description: 'When a Medical Records Detail is destroyed, the child records, such
+    as Medical Records, Medical Bills and Liens
+
+    will also be destroyed in the same transaction.
+
+    '
+  tags:
+  - Medical Records Details
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /medical_records_details/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: MedicalRecordsRequest#show
+  summary: Return the data for a single Medical Records Detail
+  description: 'Outlines the parameters, optional and required, used when requesting
+    the data for a single Medical Records Details
+
+    '
+  tags:
+  - Medical Records Details
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /medical_records_details/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: MedicalRecordsRequest#update
+  summary: Updating a Medical Records Detail
+  description: 'If there are records being passed into the Medical Records or Medical
+    Bills parameter they will be treated
+
+    as new records and new Medical Records / Medical Bills will be created.
+
+    '
+  tags:
+  - Medical Records Details
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /notes.json
+  method: GET
+  crud_type: List
+  operation_id: Note#index
+  summary: Return the data for all Notes
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Notes
+  tags:
+  - Notes
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - fields
+  - has_time_entries
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - query
+  - type
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /notes.json
+  method: POST
+  crud_type: Create
+  operation_id: Note#create
+  summary: Create a new Note
+  description: Outlines the parameters and data fields used when creating a new Note
+  tags:
+  - Notes
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /notes/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Note#destroy
+  summary: Delete a single Note
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Note
+  tags:
+  - Notes
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /notes/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Note#show
+  summary: Return the data for a single Note
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Note
+  tags:
+  - Notes
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /notes/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Note#update
+  summary: Update a single Note
+  description: Outlines the parameters and data fields used when updating a single
+    Note
+  tags:
+  - Notes
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /outstanding_client_balances.json
+  method: GET
+  crud_type: List
+  operation_id: OutstandingClientBalance#index
+  summary: Return the data for all OutstandingClientBalances
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all OutstandingClientBalances
+  tags:
+  - Outstanding Client Balances
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - fields
+  - last_paid_end_date
+  - last_paid_start_date
+  - limit
+  - newest_bill_due_end_date
+  - newest_bill_due_start_date
+  - originating_attorney_id
+  - page_token
+  - responsible_attorney_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /practice_areas.json
+  method: GET
+  crud_type: List
+  operation_id: PracticeArea#index
+  summary: Return the data for all PracticeAreas
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all PracticeAreas
+  tags:
+  - Practice Areas
+  request_body_schema: null
+  query_parameters:
+  - code
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - name
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /practice_areas.json
+  method: POST
+  crud_type: Create
+  operation_id: PracticeArea#create
+  summary: Create a new PracticeArea
+  description: Outlines the parameters and data fields used when creating a new PracticeArea
+  tags:
+  - Practice Areas
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /practice_areas/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: PracticeArea#destroy
+  summary: Delete a single PracticeArea
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single PracticeArea
+  tags:
+  - Practice Areas
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /practice_areas/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: PracticeArea#show
+  summary: Return the data for a single PracticeArea
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single PracticeArea
+  tags:
+  - Practice Areas
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /practice_areas/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: PracticeArea#update
+  summary: Update a single PracticeArea
+  description: Outlines the parameters and data fields used when updating a single
+    PracticeArea
+  tags:
+  - Practice Areas
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /relationships.json
+  method: GET
+  crud_type: List
+  operation_id: Relationship#index
+  summary: Return the data for all Relationships
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Relationships
+  tags:
+  - Relationships
+  request_body_schema: null
+  query_parameters:
+  - contact_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /relationships.json
+  method: POST
+  crud_type: Create
+  operation_id: Relationship#create
+  summary: Create a new Relationship
+  description: Outlines the parameters and data fields used when creating a new Relationship
+  tags:
+  - Relationships
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /relationships/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Relationship#destroy
+  summary: Delete a single Relationship
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Relationship
+  tags:
+  - Relationships
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /relationships/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Relationship#show
+  summary: Return the data for a single Relationship
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Relationship
+  tags:
+  - Relationships
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /relationships/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Relationship#update
+  summary: Update a single Relationship
+  description: Outlines the parameters and data fields used when updating a single
+    Relationship
+  tags:
+  - Relationships
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /reminders.json
+  method: GET
+  crud_type: List
+  operation_id: Reminder#index
+  summary: Return the data for all Reminders
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Reminders
+  tags:
+  - Reminders
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - notification_method_id
+  - order
+  - page_token
+  - state
+  - subject_id
+  - subject_type
+  - updated_since
+  - user_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /reminders.json
+  method: POST
+  crud_type: Create
+  operation_id: Reminder#create
+  summary: Create a new Reminder
+  description: Outlines the parameters and data fields used when creating a new Reminder
+  tags:
+  - Reminders
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /reminders/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Reminder#destroy
+  summary: Delete a single Reminder
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Reminder
+  tags:
+  - Reminders
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /reminders/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Reminder#show
+  summary: Return the data for a single Reminder
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Reminder
+  tags:
+  - Reminders
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /reminders/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Reminder#update
+  summary: Update a single Reminder
+  description: Outlines the parameters and data fields used when updating a single
+    Reminder
+  tags:
+  - Reminders
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /report_presets.json
+  method: GET
+  crud_type: List
+  operation_id: ReportPreset#index
+  summary: Return the data for all ReportPresets
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ReportPresets
+  tags:
+  - Report Presets
+  request_body_schema: null
+  query_parameters:
+  - category
+  - created_since
+  - fields
+  - has_schedule
+  - ids[]
+  - limit
+  - order
+  - output_format
+  - page_token
+  - query
+  - schedule_frequency
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /report_presets.json
+  method: POST
+  crud_type: Create
+  operation_id: ReportPreset#create
+  summary: Create a new ReportPreset
+  description: Outlines the parameters and data fields used when creating a new ReportPreset
+  tags:
+  - Report Presets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /report_presets/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: ReportPreset#destroy
+  summary: Delete a single ReportPreset
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single ReportPreset
+  tags:
+  - Report Presets
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /report_presets/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ReportPreset#show
+  summary: Return the data for a single ReportPreset
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ReportPreset
+  tags:
+  - Report Presets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /report_presets/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: ReportPreset#update
+  summary: Update a single ReportPreset
+  description: Outlines the parameters and data fields used when updating a single
+    ReportPreset
+  tags:
+  - Report Presets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /report_presets/{id}/generate_report.json
+  method: POST
+  crud_type: Other
+  operation_id: ReportPreset#generate_report
+  summary: Generate a new report for a given preset
+  description: Generate a new report for a given preset
+  tags:
+  - Report Presets
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /report_schedules.json
+  method: GET
+  crud_type: List
+  operation_id: ReportSchedule#index
+  summary: Return the data for all ReportSchedules
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all ReportSchedules
+  tags:
+  - Report Schedules
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /report_schedules.json
+  method: POST
+  crud_type: Create
+  operation_id: ReportSchedule#create
+  summary: Create a new ReportSchedule
+  description: Outlines the parameters and data fields used when creating a new ReportSchedule
+  tags:
+  - Report Schedules
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /report_schedules/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: ReportSchedule#destroy
+  summary: Delete a single ReportSchedule
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single ReportSchedule
+  tags:
+  - Report Schedules
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /report_schedules/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: ReportSchedule#show
+  summary: Return the data for a single ReportSchedule
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single ReportSchedule
+  tags:
+  - Report Schedules
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /report_schedules/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: ReportSchedule#update
+  summary: Update a single ReportSchedule
+  description: Outlines the parameters and data fields used when updating a single
+    ReportSchedule
+  tags:
+  - Report Schedules
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /reports.json
+  method: GET
+  crud_type: List
+  operation_id: Report#index
+  summary: Return the data for all Reports
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Reports
+  tags:
+  - Reports
+  request_body_schema: null
+  query_parameters:
+  - category
+  - created_before
+  - created_since
+  - fields
+  - ids[]
+  - kind
+  - limit
+  - output_format
+  - page_token
+  - query
+  - source
+  - state
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /reports.json
+  method: POST
+  crud_type: Create
+  operation_id: Report#create
+  summary: Create a new Report
+  description: Outlines the parameters and data fields used when creating a new Report
+  tags:
+  - Reports
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /reports/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Report#show
+  summary: Return the data for a single Report
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Report
+  tags:
+  - Reports
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /reports/{id}/download.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Report#download
+  summary: Download the completed Report
+  description: Download the completed Report
+  tags:
+  - Reports
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '303'
+  - '400'
+  - '401'
+  - '404'
+  - '429'
+- path: /settings/billing.json
+  method: GET
+  crud_type: List
+  operation_id: BillingSetting#show
+  summary: Return the billing settings
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single BillingSetting
+  tags:
+  - Billing Settings
+  request_body_schema: null
+  query_parameters:
+  - duration
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /settings/text_snippets.json
+  method: GET
+  crud_type: List
+  operation_id: TextSnippet#index
+  summary: Return all text snippets
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all TextSnippets
+  tags:
+  - Text Snippets
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /settings/text_snippets.json
+  method: POST
+  crud_type: Create
+  operation_id: TextSnippet#create
+  summary: Create a text snippet
+  description: Outlines the parameters and data fields used when creating a new TextSnippet
+  tags:
+  - Text Snippets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /settings/text_snippets/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: TextSnippet#destroy
+  summary: Destroy a text snippet
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single TextSnippet
+  tags:
+  - Text Snippets
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /settings/text_snippets/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: TextSnippet#show
+  summary: Return the data for the text snippet
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single TextSnippet
+  tags:
+  - Text Snippets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /settings/text_snippets/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: TextSnippet#update
+  summary: Update a text snippet
+  description: Outlines the parameters and data fields used when updating a single
+    TextSnippet
+  tags:
+  - Text Snippets
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /statutes-of-limitations/compute
+  method: POST
+  crud_type: Create
+  operation_id: computeStatuteOfLimitations
+  summary: Compute the statute of limitations due date
+  description: Computes the due date based on a provided incident date (e.g., for
+    Auto Accident matters).
+  tags:
+  - Statutes
+  request_body_schema: StatuteOfLimitationsComputeRequest
+  query_parameters: []
+  response_codes:
+  - '200'
+- path: /task_calendars.json
+  method: GET
+  crud_type: List
+  operation_id: CalendarVisibility#index
+  summary: Return the data for all CalendarVisibilities
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all CalendarVisibilities
+  tags:
+  - Calendar Visibilities
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /task_calendars/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: CalendarVisibility#show
+  summary: Return the data for a single CalendarVisibility
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single CalendarVisibility
+  tags:
+  - Calendar Visibilities
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /task_calendars/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: CalendarVisibility#update
+  summary: Update a single CalendarVisibility
+  description: Outlines the parameters and data fields used when updating a single
+    CalendarVisibility
+  tags:
+  - Calendar Visibilities
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /task_template_lists.json
+  method: GET
+  crud_type: List
+  operation_id: TaskTemplateList#index
+  summary: Return the data for all TaskTemplateLists
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all TaskTemplateLists
+  tags:
+  - Task Template Lists
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - empty
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - practice_area_id
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /task_template_lists.json
+  method: POST
+  crud_type: Create
+  operation_id: TaskTemplateList#create
+  summary: Create a new TaskTemplateList
+  description: Outlines the parameters and data fields used when creating a new TaskTemplateList
+  tags:
+  - Task Template Lists
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /task_template_lists/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: TaskTemplateList#destroy
+  summary: Delete a single TaskTemplateList
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single TaskTemplateList
+  tags:
+  - Task Template Lists
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /task_template_lists/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: TaskTemplateList#show
+  summary: Return the data for a single TaskTemplateList
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single TaskTemplateList
+  tags:
+  - Task Template Lists
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /task_template_lists/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: TaskTemplateList#update
+  summary: Update a single TaskTemplateList
+  description: Outlines the parameters and data fields used when updating a single
+    TaskTemplateList
+  tags:
+  - Task Template Lists
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /task_template_lists/{id}/copy.json
+  method: POST
+  crud_type: Other
+  operation_id: TaskTemplateList#copy
+  summary: Copy a TaskTemplateList
+  description: 'Creates a copy of the TaskTemplateList identified by the `id` path
+    parameter.
+
+    '
+  tags:
+  - Task Template Lists
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '404'
+- path: /task_templates.json
+  method: GET
+  crud_type: List
+  operation_id: TaskTemplate#index
+  summary: Return the data for all TaskTemplates
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all TaskTemplates
+  tags:
+  - Task Templates
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - priority
+  - query
+  - task_template_list_id
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /task_templates.json
+  method: POST
+  crud_type: Create
+  operation_id: TaskTemplate#create
+  summary: Create a new TaskTemplate
+  description: Outlines the parameters and data fields used when creating a new TaskTemplate
+  tags:
+  - Task Templates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /task_templates/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: TaskTemplate#destroy
+  summary: Delete a single TaskTemplate
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single TaskTemplate
+  tags:
+  - Task Templates
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /task_templates/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: TaskTemplate#show
+  summary: Return the data for a single TaskTemplate
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single TaskTemplate
+  tags:
+  - Task Templates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /task_templates/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: TaskTemplate#update
+  summary: Update a single TaskTemplate
+  description: Outlines the parameters and data fields used when updating a single
+    TaskTemplate
+  tags:
+  - Task Templates
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /task_types.json
+  method: GET
+  crud_type: List
+  operation_id: TaskType#index
+  summary: Return the data for all TaskTypes
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all TaskTypes
+  tags:
+  - Task Types
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - enabled
+  - fields
+  - ids[]
+  - limit
+  - name
+  - order
+  - page_token
+  - query
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /task_types.json
+  method: POST
+  crud_type: Create
+  operation_id: TaskType#create
+  summary: Create a new TaskType
+  description: Outlines the parameters and data fields used when creating a new TaskType
+  tags:
+  - Task Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /task_types/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: TaskType#show
+  summary: Return the data for a single TaskType
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single TaskType
+  tags:
+  - Task Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /task_types/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: TaskType#update
+  summary: Update a single TaskType
+  description: Outlines the parameters and data fields used when updating a single
+    TaskType
+  tags:
+  - Task Types
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /tasks.json
+  method: GET
+  crud_type: List
+  operation_id: Task#index
+  summary: Return the data for all Tasks
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Tasks
+  tags:
+  - Tasks
+  request_body_schema: null
+  query_parameters:
+  - assignee_id
+  - assignee_type
+  - assigner_id
+  - cascading_source_id
+  - client_id
+  - complete
+  - created_since
+  - due_at_from
+  - due_at_present
+  - due_at_to
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - permission
+  - priority
+  - query
+  - responsible_attorney_id
+  - status
+  - statuses[]
+  - statute_of_limitations
+  - task_type_id
+  - time_entries_present
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /tasks.json
+  method: POST
+  crud_type: Create
+  operation_id: Task#create
+  summary: Create a new Task
+  description: Outlines the parameters and data fields used when creating a new Task
+  tags:
+  - Tasks
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /tasks/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Task#destroy
+  summary: Delete a single Task
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Task
+  tags:
+  - Tasks
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /tasks/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Task#show
+  summary: Return the data for a single Task
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Task
+  tags:
+  - Tasks
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /tasks/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Task#update
+  summary: Update a single Task
+  description: Outlines the parameters and data fields used when updating a single
+    Task
+  tags:
+  - Tasks
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /timer.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Timer#destroy
+  summary: Delete a single Timer
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Timer
+  tags:
+  - Timers
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /timer.json
+  method: GET
+  crud_type: List
+  operation_id: Timer#show
+  summary: Return the data for a single Timer
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Timer
+  tags:
+  - Timers
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /timer.json
+  method: POST
+  crud_type: Create
+  operation_id: Timer#create
+  summary: Create a new Timer
+  description: Outlines the parameters and data fields used when creating a new Timer
+  tags:
+  - Timers
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /trust_line_items.json
+  method: GET
+  crud_type: List
+  operation_id: TrustLineItem#index
+  summary: Return the data for all TrustLineItems
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all TrustLineItems
+  tags:
+  - Trust Line Items
+  request_body_schema: null
+  query_parameters:
+  - bill_id
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - matter_id
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /trust_line_items/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: TrustLineItem#update
+  summary: Update a single TrustLineItem
+  description: Outlines the parameters and data fields used when updating a single
+    TrustLineItem
+  tags:
+  - Trust Line Items
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'
+- path: /trust_requests.json
+  method: POST
+  crud_type: Create
+  operation_id: TrustRequest#create
+  summary: Create a new TrustRequest
+  description: Outlines the parameters and data fields used when creating a new TrustRequest
+  tags:
+  - Trust Requests
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /users.json
+  method: GET
+  crud_type: List
+  operation_id: User#index
+  summary: Return the data for all Users
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Users
+  tags:
+  - Users
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - enabled
+  - fields
+  - ids[]
+  - include_co_counsel
+  - limit
+  - name
+  - order
+  - page_token
+  - pending_setup
+  - role
+  - subscription_type
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /users/who_am_i.json
+  method: GET
+  crud_type: List
+  operation_id: User#who_am_i
+  summary: Return the data for the current User
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single User
+  tags:
+  - Users
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /users/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: User#show
+  summary: Return the data for a single User
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single User
+  tags:
+  - Users
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /utbms/codes.json
+  method: GET
+  crud_type: List
+  operation_id: UtbmsCode#index
+  summary: Return the data for all UtbmsCodes
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all UtbmsCodes
+  tags:
+  - Utbms Codes
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - type
+  - updated_since
+  - utbms_set_id
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /utbms/codes/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: UtbmsCode#show
+  summary: Return the data for a single UtbmsCode
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single UtbmsCode
+  tags:
+  - Utbms Codes
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /utbms/sets.json
+  method: GET
+  crud_type: List
+  operation_id: UtbmsSet#index
+  summary: Return the data for all the utbms sets
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all UtbmsSets
+  tags:
+  - Utbms Sets
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /webhooks.json
+  method: GET
+  crud_type: List
+  operation_id: Webhook#index
+  summary: Return the data for all Webhooks
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for all Webhooks
+  tags:
+  - Webhooks
+  request_body_schema: null
+  query_parameters:
+  - created_since
+  - fields
+  - ids[]
+  - limit
+  - order
+  - page_token
+  - updated_since
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '429'
+- path: /webhooks.json
+  method: POST
+  crud_type: Create
+  operation_id: Webhook#create
+  summary: Create a new Webhook
+  description: Outlines the parameters and data fields used when creating a new Webhook
+  tags:
+  - Webhooks
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '201'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '422'
+  - '429'
+- path: /webhooks/matter-created
+  method: POST
+  crud_type: Create
+  operation_id: handleMatterCreatedWebhook
+  summary: Matter created event webhook
+  description: Webhook for when a new matter is created.
+  tags:
+  - Webhookss
+  request_body_schema: MatterCreatedWebhookEvent
+  query_parameters: []
+  response_codes:
+  - '200'
+- path: /webhooks/{id}.json
+  method: DELETE
+  crud_type: Delete
+  operation_id: Webhook#destroy
+  summary: Delete a single Webhook
+  description: Outlines the parameters, optional and required, used when deleting
+    the record for a single Webhook
+  tags:
+  - Webhooks
+  request_body_schema: null
+  query_parameters: []
+  response_codes:
+  - '204'
+  - '403'
+- path: /webhooks/{id}.json
+  method: GET
+  crud_type: Retrieve
+  operation_id: Webhook#show
+  summary: Return the data for a single Webhook
+  description: Outlines the parameters, optional and required, used when requesting
+    the data for a single Webhook
+  tags:
+  - Webhooks
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '304'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '429'
+- path: /webhooks/{id}.json
+  method: PATCH
+  crud_type: Update
+  operation_id: Webhook#update
+  summary: Update a single Webhook
+  description: Outlines the parameters and data fields used when updating a single
+    Webhook
+  tags:
+  - Webhooks
+  request_body_schema: null
+  query_parameters:
+  - fields
+  response_codes:
+  - '200'
+  - '400'
+  - '401'
+  - '403'
+  - '404'
+  - '412'
+  - '422'
+  - '429'

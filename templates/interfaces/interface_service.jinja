@@ -1,0 +1,15 @@
+"""
+{{ interface_name }} Interface
+"""
+from typing import Any, Protocol, Optional
+
+class I{{ interface_name }}Service(Protocol):
+    {% for method in methods %}
+    async def {{ method.operation_id | lower }}(
+        self
+        {% for param in method.parameters %}, {{ param.name }}: {{ param.type }}{% endfor %}
+        {% if method.request_model %}, data: {{ method.request_model }}{% endif %}
+    ) -> {{ method.response_model|default('Any') }}:
+        """{{ method.summary }}"""
+        ...
+    {% endfor %}

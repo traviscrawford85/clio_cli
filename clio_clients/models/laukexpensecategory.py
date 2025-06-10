@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.laukexpensecategorybase import LaukExpenseCategoryBase
+from .laukexpensecategorybase import LaukExpenseCategoryBase
 
 class LaukExpenseCategory(LaukExpenseCategoryBase):
     pass

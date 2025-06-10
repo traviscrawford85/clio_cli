@@ -1,0 +1,7 @@
+{% for resource in resources %}
+async def list_{{ resource.name|lower }}s(self, limit=5) -> List[{{ resource.name }}]:
+    logger.debug("Fetching {{ resource.name|lower }}s")
+    raw = await self.call("{{ resource.name }}#index", query_params={"limit": limit})
+    logger.debug("Raw {{ resource.name|lower }}s response: %s", raw)
+    return [{{ resource.name }}.model_validate(item) for item in raw["data"]]
+{% endfor %}

@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.contactbase import ContactBase
-from clio_clients.models.instantmessengerbase import InstantMessengerBase
+from .contactbase import ContactBase
+from .instantmessengerbase import InstantMessengerBase
 
 class Data(ContactBase, InstantMessengerBase):
     pass

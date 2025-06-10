@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.polymorphiccustomratebase import PolymorphicCustomRateBase
+from .polymorphiccustomratebase import PolymorphicCustomRateBase
 
 class PolymorphicCustomRate(PolymorphicCustomRateBase):
     activity_description: Optional[PolymorphicCustomRateActivityDescriptionBase] = None

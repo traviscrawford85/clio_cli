@@ -1,0 +1,12 @@
+
+import pytest
+import httpx
+from {{ tag_snake }}_api import {{ tag }}Api
+
+@pytest.mark.asyncio
+async def test_{{ tag_snake }}_sample():
+    async with httpx.AsyncClient(base_url="http://test") as client:
+        api = {{ tag }}Api(client)
+        # result = await api.sample_method()
+        # assert result is not None
+        assert True

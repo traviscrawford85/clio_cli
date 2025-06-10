@@ -1,0 +1,25 @@
+
+import httpx
+import asyncio
+from httpx import Request, Response
+from typing import Optional
+
+
+class RetryTransport(httpx.AsyncBaseTransport):
+    def __init__(self, wrapped: httpx.AsyncBaseTransport, retries: int = 3, backoff: float = 0.5):
+        self._wrapped = wrapped
+        self._retries = retries
+        self._backoff = backoff
+
+    async def handle_async_request(self, request: Request) -> Response:
+        for attempt in range(self._retries):
+            try:
+                response = await self._wrapped.handle_async_request(request)
+                if response.status_code < 500 and response.status_code != 429:
+                    return response
+                await asyncio.sleep(self._backoff * (2 ** attempt))
+            except httpx.HTTPError:
+                if attempt == self._retries - 1:
+                    raise
+                await asyncio.sleep(self._backoff * (2 ** attempt))
+        raise RuntimeError("Max retries exceeded")

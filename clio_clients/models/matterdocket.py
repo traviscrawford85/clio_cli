@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.matterdocketbase import MatterDocketBase
+from .matterdocketbase import MatterDocketBase
 
 class MatterDocket(MatterDocketBase):
     calendar_entries: Optional[List[CalendarEntryBase]] = Field(

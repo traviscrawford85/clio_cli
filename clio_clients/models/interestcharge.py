@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.interestchargebase import InterestChargeBase
+from .interestchargebase import InterestChargeBase
 
 class InterestCharge(InterestChargeBase):
     balances: Optional[List[BalanceBase]] = Field(None, description="Balance")

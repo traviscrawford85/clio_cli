@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.calendarentryeventtypebase import CalendarEntryEventTypeBase
+from .calendarentryeventtypebase import CalendarEntryEventTypeBase
 
 class CalendarEntryEventType(CalendarEntryEventTypeBase):
     pass

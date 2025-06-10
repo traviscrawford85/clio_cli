@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.mattercontactsbase import MatterContactsBase
+from .mattercontactsbase import MatterContactsBase
 
 class MatterContacts(MatterContactsBase):
     addresses: Optional[List[AddressBase]] = Field(None, description="Address")

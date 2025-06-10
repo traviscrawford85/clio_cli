@@ -9,27 +9,12 @@ from typing import Any
 from typing import Dict
 from typing import List
 from typing import Optional
-from datetime import date
+
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.status import status
+from .taskbase import TaskBase
+from .taskshow import TaskShow
 
-
-class MatterNested(BaseModel):
-    id: Optional[int] = None
-    display_number: Optional[str] = None
-
-
-class Task(BaseModel):
-    id: int
-    name: Optional[str] = None
-    assignee: Optional[str] = None
-    description: Optional[str] = None
-    due_at: Optional[date] = None
-    status: Optional[str] = None
-    matter: Optional[MatterNested] = None
-    etag: Optional[str] = None
-
-    class Config:
-        extra = "allow"
+class Task(TaskBase, TaskShow):
+    pass

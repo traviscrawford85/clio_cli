@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.contactbase import ContactBase
-from clio_clients.models.contactshow import ContactShow
+from .contactbase import ContactBase
+from .contactshow import ContactShow
 
 class Contact(ContactBase, ContactShow):
     pass

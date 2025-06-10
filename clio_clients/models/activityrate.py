@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.activityratebase import ActivityRateBase
+from .activityratebase import ActivityRateBase
 
 class ActivityRate(ActivityRateBase):
     group: Optional[GroupBase] = None

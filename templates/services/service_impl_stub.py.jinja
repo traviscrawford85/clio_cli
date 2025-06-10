@@ -1,0 +1,11 @@
+from {{ interface_module }} import {{ interface_class }}
+
+class {{ impl_class }}({{ interface_class }}):
+    def __init__(self):
+        pass
+
+    {% for method in methods %}
+    async def {{ method.name }}(self{% for param in method.params %}, {{ param.name }}: {{ param.type }}{% endfor %}) -> {{ method.returns }}:
+        # TODO: Implement {{ method.name }}
+        raise NotImplementedError("{{ method.name }} not implemented")
+    {% endfor %}

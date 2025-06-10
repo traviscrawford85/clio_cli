@@ -13,8 +13,5 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.user import User  # Adjust the import path as needed
-
-
 class UserShow(BaseModel):
     data: User = Field(..., description="User")

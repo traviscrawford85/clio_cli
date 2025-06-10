@@ -1,0 +1,32 @@
+
+import importlib
+import os
+from pathlib import Path
+from httpx import AsyncClient
+from .actions import Actions
+
+class ClioSDK:
+
+    @classmethod
+    def from_oauth(cls, oauth_client) -> "ClioSDK":
+        token = oauth_client.get_valid_token()
+        client = AsyncClient(
+            base_url="https://api.clio.com",
+            headers={"Authorization": f"Bearer {token}"}
+        )
+        return cls(client)
+    
+    def __init__(self, client: AsyncClient):
+        """
+        Initializes all tag group API modules and custom actions.
+        """
+        self.actions = Actions(client)
+
+        api_modules_dir = Path(__file__).parent
+        for fname in os.listdir(api_modules_dir):
+            if fname.endswith("_api.py") and not fname.startswith("__"):
+                mod_name = fname[:-3]
+                attr_name = mod_name.lower().replace("_api", "").replace("_", "")
+                module = importlib.import_module(f".{mod_name}", package=__package__)
+                api_class = [v for k, v in vars(module).items() if k.endswith("Api")][0]
+                setattr(self, attr_name, api_class(client))

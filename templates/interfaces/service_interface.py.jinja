@@ -1,0 +1,13 @@
+
+from abc import ABC, abstractmethod
+from typing import Any
+
+class {{ classname }}Service(ABC):
+    {% for op in operations %}
+    @abstractmethod
+    async def {{ op.operation_id | lower }}(
+        self{% if op.request_body %}, data: {{ op.request_model|default('Any') }}{% endif %}{% for param in op.parameters %}, {{ param.name }}: {{ param.type|default('str') }}{% endfor %}
+    ) -> {{ op.response_model|default('Any') }}:
+        """{{ op.summary }}"""
+        pass
+    {% endfor %}

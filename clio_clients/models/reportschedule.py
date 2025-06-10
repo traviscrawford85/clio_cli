@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.reportschedulebase import ReportScheduleBase
+from .reportschedulebase import ReportScheduleBase
 
 class ReportSchedule(ReportScheduleBase):
     pass

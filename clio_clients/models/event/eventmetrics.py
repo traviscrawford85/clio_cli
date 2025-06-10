@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.eventmetricsbase import EventMetricsBase
+from .eventmetricsbase import EventMetricsBase
 
 class EventMetrics(EventMetricsBase):
     pass

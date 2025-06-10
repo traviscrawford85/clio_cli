@@ -1,0 +1,11 @@
+from fastapi import APIRouter, Depends
+from clio_sdk_w_fastapi.dependencies import get_services
+from clio_sdk_w_fastapi.clio_services import ClioInternalServices
+
+router = APIRouter()
+
+{% for method in methods %}
+@router.post("/{{ method.name.replace('_', '-') }}")
+async def {{ method.name }}(services: ClioInternalServices = Depends(get_services)):
+    return await services.{{ service_name }}.{{ method.name }}()
+{% endfor %}

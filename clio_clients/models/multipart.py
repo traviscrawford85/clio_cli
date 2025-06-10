@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.multipartbase import MultipartBase
+from .multipartbase import MultipartBase
 
 class Multipart(MultipartBase):
     put_headers: Optional[List[MultipartHeaderBase]] = Field(

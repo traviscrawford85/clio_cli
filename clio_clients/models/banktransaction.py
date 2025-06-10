@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.banktransactionbase import BankTransactionBase
+from .banktransactionbase import BankTransactionBase
 
 class BankTransaction(BankTransactionBase):
     allocation: Optional[AllocationBase] = None

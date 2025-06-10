@@ -13,8 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.clientbase import ClientBase
-from clio_clients.models.clientshow import ClientShow
+from .clientbase import ClientBase
+from .clientshow import ClientShow
 
 class Client(ClientBase, ClientShow):
     pass

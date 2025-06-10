@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.activitydescriptionbase import ActivityDescriptionBase
+from .activitydescriptionbase import ActivityDescriptionBase
 
 class ActivityDescription(ActivityDescriptionBase):
     groups: Optional[List[GroupBase]] = Field(None, description="Group")

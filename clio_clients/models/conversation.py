@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.conversationbase import ConversationBase
+from .conversationbase import ConversationBase
 
 class Conversation(ConversationBase):
     documents: Optional[List[DocumentBase]] = Field(None, description="Document")

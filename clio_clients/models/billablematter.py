@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.billablematterbase import BillableMatterBase
+from .billablematterbase import BillableMatterBase
 
 class BillableMatter(BillableMatterBase):
     client: Optional[ContactBase] = None

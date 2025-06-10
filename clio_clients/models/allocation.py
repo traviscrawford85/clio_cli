@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.allocationbase import AllocationBase
+from .allocationbase import AllocationBase
 
 class Allocation(AllocationBase):
     bill: Optional[BillBase] = None

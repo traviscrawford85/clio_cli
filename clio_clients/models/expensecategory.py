@@ -13,7 +13,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
-from clio_clients.models.expensecategorybase import ExpenseCategoryBase
+from .expensecategorybase import ExpenseCategoryBase
 
 class ExpenseCategory(ExpenseCategoryBase):
     groups: Optional[List[GroupBase]] = Field(None, description="Group")
