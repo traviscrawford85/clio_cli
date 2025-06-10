@@ -1,37 +1,45 @@
 {
-  "clio_api": {
-    "notes": "Clio API integration guidance for auto-generated OpenAPI clients.",
+  "clio_textual_cli": {
+    "notes": "Guidance for integrating a dynamic Pydantic-based OpenAPI client in a Textual CLI app consuming the Clio API.",
     "quirks": [
       {
+        "title": "Textual Refresh Race Conditions",
+        "description": "Async data loading (e.g. `on_mount`) must ensure model parsing is complete before UI elements (like Static or DataTable) are mounted to avoid empty or flickering views.",
+        "example": "await self.client.list_tasks(); self.refresh()"
+      },
+      {
         "title": "Fields Parameter Required for Nested Objects",
-        "description": "Nested fields like 'matter.display_number' or 'assignee.name' must be explicitly included in the 'fields' query parameter.",
+        "description": "Nested fields like 'matter.display_number' or 'assignee.name' must be explicitly included in the 'fields' query parameter or they won’t appear in the response.",
         "example": "fields=\"id,description,matter{display_number},assignee{name}\""
       },
       {
         "title": "ETag Required for Updates",
-        "description": "Use the 'If-Match' header with the current ETag when updating any resource to avoid 412 errors.",
+        "description": "All resource updates must include the 'If-Match' header with the correct ETag to succeed.",
         "example": "headers = { \"If-Match\": etag }"
       },
       {
         "title": "Use Structured Payload for Updates",
-        "description": "Use Pydantic models like 'TaskUpdateRequest' instead of raw JSON/dict when calling OpenAPI-generated update methods.",
+        "description": "Prefer structured Pydantic wrappers (e.g., `TaskUpdateRequest`) over raw dictionaries to align with schema validation.",
         "example": "TaskUpdateRequest(data=TaskUpdateRequestData(status=\"complete\"))"
       },
       {
         "title": "Common Errors",
-        "description": "400 HTML responses typically mean malformed requests. 422 indicates a semantic error like wrong enum or type for a query param."
+        "description": "400 errors may return HTML instead of JSON, confusing parsers. 422 errors suggest enum mismatches or missing required parameters. Use `.text` and logging for inspection."
       }
     ],
     "best_practices": [
-      "Always use the correct OpenAPI model wrappers for request payloads.",
-      "Use Clio's field projection syntax for nested fields.",
-      "Strip quotes from etag headers when copying from API responses.",
-      "Default to using Clio's latest API version unless otherwise required."
+      "Defer widget mounting until after data fetch completes.",
+      "Wrap dynamic models with `.model_rebuild()` in startup if schema validation fails.",
+      "Use `Literal` over `str` subclasses for enum fields in Pydantic models.",
+      "Avoid blocking UI thread with synchronous code in async callbacks.",
+      "Log OpenAPI paths and parameters to help debug empty responses.",
+      "Run `await client.call(...)` inside `run_worker()` to avoid UI blocking."
     ],
     "links": {
       "api_docs": "https://docs.developers.clio.com/api-docs/",
       "fields_reference": "https://docs.developers.clio.com/api-docs/fields/",
-      "developer_slack": "https://join.slack.com/t/clio-public/shared_invite/zt-1bd5nfbiv-WloZR3ZjepoUTv28SI1ezw"
+      "developer_slack": "https://join.slack.com/t/clio-public/shared_invite/zt-1bd5nfbiv-WloZR3ZjepoUTv28SI1ezw",
+      "textual_docs": "https://textual.textualize.io/"
     }
   }
 }

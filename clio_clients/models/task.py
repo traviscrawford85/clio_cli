@@ -15,6 +15,12 @@ from pydantic import Field
 
 from .taskbase import TaskBase
 from .taskshow import TaskShow
+from .priority.priority1 import Priority1  # <-- Ensure this import is present
+from clio_clients.models.status.status2 import Status2
 
-class Task(TaskBase, TaskShow):
+
+class Task(TaskBase):
     pass
+
+
+Task.model_rebuild()  # <-- Add this at the end of the file

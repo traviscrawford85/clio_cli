@@ -125,13 +125,40 @@ class Allocation_List(BaseModel):
 class Allocation_Show(BaseModel):
     data: Allocation
 class Allocation_base(BaseModel):
-    amount: float = None    created_at: str = None    date: str = None    description: str = None    destroyable: bool = None    etag: str = None    has_online_payment: bool = None    id: int = None    interest: bool = None    payment_type: str = None    updated_at: str = None    voided_at: str = None
+    amount: float = None
+    created_at: str = None
+    date: str = None
+    description: str = None
+    destroyable: bool = None
+    etag: str = None
+    has_online_payment: bool = None
+    id: int = None
+    interest: bool = None
+    payment_type: str = None
+    updated_at: str = None
+    voided_at: str = None
 class Attendee_base(BaseModel):
-    created_at: str = None    email: str = None    enabled: bool = None    etag: str = None    id: int = None    name: str = None    type: str = None    updated_at: str = None
+    created_at: str = None
+    email: str = None
+    enabled: bool = None
+    etag: str = None
+    id: int = None
+    name: str = None
+    type: str = None
+    updated_at: str = None
 class Avatar_base(BaseModel):
-    _destroy: bool = None    created_at: str = None    etag: str = None    id: int = None    updated_at: str = None    url: str = None
+    _destroy: bool = None
+    created_at: str = None
+    etag: str = None
+    id: int = None
+    updated_at: str = None
+    url: str = None
 class Balance_base(BaseModel):
-    amount: float = None    due: float = None    id: int = None    interest_amount: float = None    type: str = None
+    amount: float = None
+    due: float = None
+    id: int = None
+    interest_amount: float = None
+    type: str = None
 class BankAccount(BaseModel):
     pass
 

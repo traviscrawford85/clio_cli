@@ -13,5 +13,8 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import Field
 
+from .contact import Contact
+
+
 class ContactList(BaseModel):
     data: List[Contact] = Field(..., description="Contact List Response")
