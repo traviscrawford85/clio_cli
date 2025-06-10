@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from typing import Optional
 
+from clio_clients.models.fieldtype import FieldType
+
 from pydantic import BaseModel, Field
 
 

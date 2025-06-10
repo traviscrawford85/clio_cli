@@ -5,7 +5,11 @@ from __future__ import annotations
 
 from typing import Optional
 
+from clio_clients.models.customfield import CustomField
 from clio_clients.models.customfieldvaluebase import CustomFieldValueBase
+from clio_clients.models.picklistoption import PicklistOption
+from clio_clients.models.matter import Matter
+from clio_clients.models.contact import Contact
 
 
 class CustomFieldValueExtended(CustomFieldValueBase):
@@ -13,3 +17,6 @@ class CustomFieldValueExtended(CustomFieldValueBase):
     picklist_option: Optional[PicklistOption] = None
     matter: Optional[Matter] = None
     contact: Optional[Contact] = None
+
+
+CustomFieldValueExtended.update_forward_refs()
