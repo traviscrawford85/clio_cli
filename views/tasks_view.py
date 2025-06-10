@@ -1,23 +1,40 @@
-# views/tasks_view.py
+import logging
 from textual.app import ComposeResult
 from textual.containers import VerticalScroll
 from textual.widget import Widget
 from textual.widgets import Static
+from clio_clients.models.task import Task
+from clio_clients.clio_dynamic_client import ClioDynamicClient
 
-from clio_client.clio_api_client import ClioApiClient
+logger = logging.getLogger(__name__)
 
 
 class TasksView(Widget):
-    def __init__(self, client: ClioApiClient):
+    def __init__(self, client: ClioDynamicClient):
         super().__init__()
         self.client = client
-        self.tasks = []
+        self.tasks: list[Task] = []
 
     async def on_mount(self):
-        self.tasks = await self.client.get_tasks()
+        logger.debug("TasksView mounted")
+        try:
+            self.tasks = await self.client.list_tasks()
+            logger.debug("Received %d tasks", len(self.tasks))
+        except Exception as e:
+            logger.exception("Error fetching tasks")
+            await self.mount(Static(f"⚠️ Error fetching tasks:\n{e}"))
         self.refresh()
 
     def compose(self) -> ComposeResult:
-        yield VerticalScroll(
-            *[Static(f"📋 {getattr(t, 'description', 'No description')}") for t in self.tasks]
-        )
+        if not self.tasks:
+            yield Static("📭 No tasks available.")
+        else:
+            yield VerticalScroll(
+                *[
+                    Static(
+                        f"📋 {t.name or t.description or 'Untitled Task'}\n"
+                        f"Status: {t.status or 'unknown'} | ID: {t.id}"
+                    )
+                    for t in self.tasks
+                ]
+            )

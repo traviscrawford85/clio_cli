@@ -32,6 +32,9 @@ def refresh_token(token_data: dict) -> dict:
         raise Exception(f"Failed to refresh token: {response.text}")
 
     token_response = response.json()
+    print("🔁 Refreshing token using refresh_token...")
+    print("📤 POST payload includes client_id and refresh_token")
+
     return {
         "access_token": token_response["access_token"],
         "refresh_token": token_response.get("refresh_token", refresh_token),

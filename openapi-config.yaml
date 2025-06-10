@@ -1,0 +1,9 @@
+project_name_override: clio_api_client
+package_name_override: clio_api_client
+class_overrides: {}
+field_overrides: {}
+http_client: httpx
+use_path_operation_summary: true
+allow_versioning: false
+include_tags: true
+meta: none

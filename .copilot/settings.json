@@ -1,0 +1,37 @@
+{
+  "clio_api": {
+    "notes": "Clio API integration guidance for auto-generated OpenAPI clients.",
+    "quirks": [
+      {
+        "title": "Fields Parameter Required for Nested Objects",
+        "description": "Nested fields like 'matter.display_number' or 'assignee.name' must be explicitly included in the 'fields' query parameter.",
+        "example": "fields=\"id,description,matter{display_number},assignee{name}\""
+      },
+      {
+        "title": "ETag Required for Updates",
+        "description": "Use the 'If-Match' header with the current ETag when updating any resource to avoid 412 errors.",
+        "example": "headers = { \"If-Match\": etag }"
+      },
+      {
+        "title": "Use Structured Payload for Updates",
+        "description": "Use Pydantic models like 'TaskUpdateRequest' instead of raw JSON/dict when calling OpenAPI-generated update methods.",
+        "example": "TaskUpdateRequest(data=TaskUpdateRequestData(status=\"complete\"))"
+      },
+      {
+        "title": "Common Errors",
+        "description": "400 HTML responses typically mean malformed requests. 422 indicates a semantic error like wrong enum or type for a query param."
+      }
+    ],
+    "best_practices": [
+      "Always use the correct OpenAPI model wrappers for request payloads.",
+      "Use Clio's field projection syntax for nested fields.",
+      "Strip quotes from etag headers when copying from API responses.",
+      "Default to using Clio's latest API version unless otherwise required."
+    ],
+    "links": {
+      "api_docs": "https://docs.developers.clio.com/api-docs/",
+      "fields_reference": "https://docs.developers.clio.com/api-docs/fields/",
+      "developer_slack": "https://join.slack.com/t/clio-public/shared_invite/zt-1bd5nfbiv-WloZR3ZjepoUTv28SI1ezw"
+    }
+  }
+}

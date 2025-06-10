@@ -1,0 +1,21 @@
+/* styles.css */
+
+Screen {
+  background: black;
+  color: white;
+}
+
+Header, Footer {
+  background: #202020;
+  color: white;
+}
+
+#main {
+  padding: 1 2;
+}
+
+.task-item {
+  padding: 1;
+  border: round gray;
+  margin: 0 0 1 0;
+}

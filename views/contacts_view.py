@@ -1,23 +1,41 @@
-# views/contacts_view.py
+# contacts_view.py
 from textual.app import ComposeResult
 from textual.containers import VerticalScroll
 from textual.widget import Widget
 from textual.widgets import Static
+from clio_clients.models.contact import Contact
+from clio_clients.clio_dynamic_client import ClioDynamicClient
+import logging
 
-from clio_client.clio_api_client import ClioApiClient
+logger = logging.getLogger(__name__)
 
 
 class ContactsView(Widget):
-    def __init__(self, client: ClioApiClient):
+    def __init__(self, client: ClioDynamicClient):
         super().__init__()
         self.client = client
-        self.contacts = []
+        self.contacts: list[Contact] = []
 
     async def on_mount(self):
-        self.contacts = await self.client.get_contacts()
+        logger.debug("ContactsView mounted")
+        try:
+            self.contacts = await self.client.list_contacts()
+            logger.debug("Fetched %d contacts", len(self.contacts))
+        except Exception as e:
+            logger.exception("Error fetching contacts")
+            self.contacts = []
+            await self.mount(Static(f"\u26a0\ufe0f Error fetching contacts: {e}"))
         self.refresh()
 
     def compose(self) -> ComposeResult:
-        yield VerticalScroll(
-            *[Static(f"👤 {getattr(c, 'first_name', '')} {getattr(c, 'last_name', '')}") for c in self.contacts]
-        )
+        if not self.contacts:
+            yield Static("\ud83d\udcb7 No contacts available.")
+        else:
+            yield VerticalScroll(
+                *[
+                    Static(
+                        f"\ud83d\udc64 {c.first_name or ''} {c.last_name or ''} — ID: {c.id or 'N/A'}"
+                    )
+                    for c in self.contacts
+                ]
+            )

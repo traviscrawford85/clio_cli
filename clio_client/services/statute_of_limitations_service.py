@@ -3,6 +3,7 @@ from typing import Optional
 
 from models import MatterUpdateRequestDataStatuteOfLimitations  # generated model
 
+
 class StatuteOfLimitationsService:
     """
     Service to handle computation and update of Statute of Limitations.
