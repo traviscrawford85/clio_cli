@@ -3,9 +3,20 @@
 
 from __future__ import annotations
 
+from typing import List, Optional
+
+from clio_clients.models.type.type10 import Type10
+
 from clio_clients.models.contactbase import ContactBase
 from clio_clients.models.contactshow import ContactShow
 
 
 class Contact(ContactBase, ContactShow):
+    """Combined Contact model with nested relationships."""
+
     pass
+
+
+# Rebuild models to resolve forward references
+Contact.model_rebuild()
+ContactShow.model_rebuild()

@@ -3,8 +3,17 @@
 
 from __future__ import annotations
 
-from pydantic import BaseModel
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from pydantic import BaseModel, Field
+
+if TYPE_CHECKING:  # pragma: no cover - used for type checkers only
+    from .contact import Contact
 
 
 class ContactShow(BaseModel):
-    data: Data
+    """Response wrapper containing a Contact."""
+
+    data: "Contact" = Field(..., description="Contact")
