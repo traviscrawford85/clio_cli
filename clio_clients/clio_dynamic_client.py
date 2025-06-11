@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Optional
 import httpx
 import yaml
 from clio_clients.models.contact import Contact
+from clio_clients.models.contactbase import ContactBase
 from clio_clients.models.matter import Matter
 from clio_clients.models.task import Task
 from database.token_storage import load_token_data
@@ -101,8 +102,11 @@ class ClioDynamicClient:
         logger.debug("Raw tasks response: %s", raw)
         return [Task.model_validate(t) for t in raw["data"]]
 
-    async def list_contacts(self, limit=5) -> List[Contact]:
+    async def list_contacts(self, limit=5, fields: str = None) -> list:
         logger.debug("Fetching contacts")
-        raw = await self.call("Contact#index", query_params={"limit": limit})
+        params = {"limit": limit}
+        if fields:
+            params["fields"] = fields
+        raw = await self.call("Contact#index", query_params=params)
         logger.debug("Raw contacts response: %s", raw)
-        return [Contact.model_validate(c) for c in raw["data"]]
+        return [ContactBase.model_validate(c) for c in raw["data"]]

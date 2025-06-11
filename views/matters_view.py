@@ -26,21 +26,25 @@ class MattersView(Widget):
             logger.exception("Error fetching matters")
             self.matters = []
             await self.mount(Static(f"\u26a0\ufe0f Error fetching matters: {e}"))
-        self.refresh()
+            return  # Don't continue if error
+        await self.update_view()
 
-    def compose(self) -> ComposeResult:
+    async def update_view(self):
+        await self.remove_children()
         if not self.matters:
-            yield Static("\ud83d\udccd No matters available.")
+            await self.mount(Static("\ud83d\udccd No matters available."))
         else:
-            yield VerticalScroll(
-                *[
-                    Static(
-                        f"\ud83d\udcc1 Title: {m.title or 'Untitled'}\n"
-                        f"\ud83d\udd22 ID: {m.id or 'N/A'}\n"
-                        f"\ud83d\udc82 Status: {m.status or 'N/A'}\n"
-                        f"\ud83d\udcc5 Created: {m.created_at or 'N/A'}\n"
-                        + "\u2500" * 40
-                    )
-                    for m in self.matters
-                ]
+            await self.mount(
+                VerticalScroll(
+                    *[
+                        Static(
+                            f"\ud83d\udcc1 Matter: {m.display_number or 'Untitled'}\n"
+                            f"\ud83d\udd22 ID: {m.id or 'N/A'}\n"
+                            f"\ud83d\udc82 Status: {getattr(m, 'status', 'N/A')}\n"
+                            f"\ud83d\udcc5 Created: {getattr(m, 'created_at', 'N/A')}\n"
+                            + "\u2500" * 40
+                        )
+                        for m in self.matters
+                    ]
+                )
             )

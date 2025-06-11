@@ -15,8 +15,3 @@ class Contact(ContactBase, ContactShow):
     """Combined Contact model with nested relationships."""
 
     pass
-
-
-# Resolve forward references for Pydantic v1
-ContactShow.update_forward_refs(Contact=Contact)
-Contact.update_forward_refs()

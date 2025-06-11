@@ -6,7 +6,11 @@ from __future__ import annotations
 from enum import Enum
 
 
-class Type10(Enum):
+class Type10(str, Enum):
     """
     The type of the *Contact*
     """
+
+    COMPANY = "Company"
+    PERSON = "Person"
+    # Add more types here if the API returns others

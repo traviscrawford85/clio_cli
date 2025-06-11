@@ -7,6 +7,8 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+from clio_clients.models.type.type10 import Type10
+
 
 class ContactBase(BaseModel):
     client_connect_user_id: Optional[int] = Field(
@@ -78,3 +80,5 @@ class ContactBase(BaseModel):
         None,
         description="The time the *Contact* was last updated (as a ISO-8601 timestamp)",
     )
+
+ContactBase.model_rebuild()

@@ -108,14 +108,17 @@ def run_oauth_flow():
         f"&redirect_uri={REDIRECT_URI}"
         f"&scope=all"
     )
-    print("\U0001f310 Opening browser for Clio OAuth...")
-    logger.info(f"Opening browser to: {auth_url}")
-    webbrowser.open(auth_url)
-
     with ReusableTCPServer(("", PORT), OAuthHandler) as httpd:
         print(f"\u23f3 Waiting for OAuth callback on port {PORT}...")
         logger.info(f"Waiting for OAuth callback on port {PORT}...")
+
+        # Open browser AFTER the server is ready
+        print("\U0001f310 Opening browser for Clio OAuth...")
+        logger.info(f"Opening browser to: {auth_url}")
+        webbrowser.open(auth_url)
+
         httpd.handle_request()
+
 
 
 if __name__ == "__main__":

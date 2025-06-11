@@ -23,19 +23,23 @@ class TasksView(Widget):
             logger.debug("Received %d tasks", len(self.tasks))
         except Exception as e:
             logger.exception("Error fetching tasks")
-            await self.mount(Static(f"⚠️ Error fetching tasks:\n{e}"))
-        self.refresh()
+            self.tasks = []
+            await self.mount(Static(f"\u26a0\ufe0f Error fetching tasks: {e}"))
+            return
+        await self.update_view()
 
-    def compose(self) -> ComposeResult:
+    async def update_view(self):
+        await self.remove_children()
         if not self.tasks:
-            yield Static("📭 No tasks available.")
+            await self.mount(Static("\ud83d\udcb7 No tasks available."))
         else:
-            yield VerticalScroll(
-                *[
-                    Static(
-                        f"📋 {t.name or t.description or 'Untitled Task'}\n"
-                        f"Status: {t.status or 'unknown'} | ID: {t.id}"
-                    )
-                    for t in self.tasks
-                ]
+            await self.mount(
+                VerticalScroll(
+                    *[
+                        Static(
+                            f"\ud83d\udc64 {t.name or t.description or 'Untitled Task'}\nStatus: {t.status or 'unknown'} | ID: {t.id}"
+                        )
+                        for t in self.tasks
+                    ]
+                )
             )

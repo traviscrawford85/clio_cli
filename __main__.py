@@ -10,6 +10,8 @@ logging.basicConfig(
     level=logging.DEBUG,
     format="[%(asctime)s] %(levelname)-8s %(name)s: %(message)s",
     datefmt="%H:%M:%S",
+    filename="clio_dashboard.log",  # Add this line
+    filemode="a",                   # Optional: append mode
 )
 logger = logging.getLogger("clio_dashboard")
 

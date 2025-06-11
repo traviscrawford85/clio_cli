@@ -20,23 +20,31 @@ class ContactsView(Widget):
     async def on_mount(self):
         logger.debug("ContactsView mounted")
         try:
-            self.contacts = await self.client.list_contacts()
+            from clio_clients.models.contactbase import ContactBase
+            response = await self.client.list_contacts()
+            # response is already a list
+            self.contacts = [ContactBase.model_validate(c) for c in response]
             logger.debug("Fetched %d contacts", len(self.contacts))
         except Exception as e:
             logger.exception("Error fetching contacts")
             self.contacts = []
             await self.mount(Static(f"\u26a0\ufe0f Error fetching contacts: {e}"))
-        self.refresh()
+            return
+        await self.update_view()
 
-    def compose(self) -> ComposeResult:
+
+    async def update_view(self):
+        await self.remove_children()
         if not self.contacts:
-            yield Static("\ud83d\udcb7 No contacts available.")
+            await self.mount(Static("\ud83d\udcb7 No contacts available."))
         else:
-            yield VerticalScroll(
-                *[
-                    Static(
-                        f"\ud83d\udc64 {c.first_name or ''} {c.last_name or ''} — ID: {c.id or 'N/A'}"
-                    )
-                    for c in self.contacts
-                ]
+            await self.mount(
+                VerticalScroll(
+                    *[
+                        Static(
+                            f"\ud83d\udc64 {(c.first_name or '')} {(c.last_name or '')}{c.name if not (c.first_name or c.last_name) else ''} — ID: {c.id or 'N/A'}"
+                        )
+                        for c in self.contacts
+                    ]
+                )
             )

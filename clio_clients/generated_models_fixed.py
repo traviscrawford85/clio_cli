@@ -1,4 +1,3 @@
-
 from datetime import date, datetime
 from typing import Any, List, Optional
 
@@ -869,7 +868,6 @@ class ErrorDetail(BaseModel):
     type: str = None
 
 
-Error.update_forward_refs()
 class EventMetrics(BaseModel):
     pass
 
