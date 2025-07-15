@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from clio_clients.models.eventmetricsbase import EventMetricsBase
+from clio_clients.models.event.eventmetricsbase import EventMetricsBase
 
 
 class EventMetrics(EventMetricsBase):
