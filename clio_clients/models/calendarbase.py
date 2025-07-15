@@ -6,6 +6,11 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.color.color2 import Color2
+from clio_clients.models.lightcolor.lightcolor import LightColor
+from clio_clients.models.permission.permission import Permission
+from clio_clients.models.source.source import Source
+from clio_clients.models.type.type6 import Type6
 
 
 class CalendarBase(BaseModel):

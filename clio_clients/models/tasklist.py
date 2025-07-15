@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import List
 
 from pydantic import BaseModel, Field
+from clio_clients.models.task import Task
 
 
 class TaskList(BaseModel):

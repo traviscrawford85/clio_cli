@@ -6,6 +6,9 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.category1 import Category1
+from clio_clients.models.format.format import Format
+from clio_clients.models.kind.kind2 import Kind2
 
 
 class ReportPresetBase(BaseModel):

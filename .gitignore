@@ -11,3 +11,5 @@ generated_server/
 clean_openapi.yaml
 final_openapi.yaml
 fix_enums_and_tags.py
+clio_client/
+clio_clients/

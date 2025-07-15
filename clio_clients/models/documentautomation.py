@@ -7,6 +7,9 @@ from typing import List, Optional
 
 from clio_clients.models.documentautomationbase import DocumentAutomationBase
 from pydantic import Field
+from clio_clients.models.documenttemplatebase import DocumentTemplateBase
+from clio_clients.models.documentbase import DocumentBase
+from clio_clients.models.matterbase import MatterBase
 
 
 class DocumentAutomation(DocumentAutomationBase):

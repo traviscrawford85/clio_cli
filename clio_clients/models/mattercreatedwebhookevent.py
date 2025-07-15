@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel
+from clio_clients.models.event.event import Event
+from clio_clients.models.payload import Payload
 
 
 class MatterCreatedWebhookEvent(BaseModel):

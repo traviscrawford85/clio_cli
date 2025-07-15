@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.billingmethod import BillingMethod
+from clio_clients.models.status.status import Status
 
 
 class MatterBase(BaseModel):

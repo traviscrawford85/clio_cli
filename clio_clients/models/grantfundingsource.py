@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.grantfundingsourcebase import GrantFundingSourceBase
 from pydantic import Field
+from clio_clients.models.grantbase import GrantBase
 
 
 class GrantFundingSource(GrantFundingSourceBase):

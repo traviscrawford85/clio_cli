@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.type.type24 import Type24
 
 
 class ParticipantBase(BaseModel):

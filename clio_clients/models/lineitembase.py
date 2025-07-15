@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.kind.kind1 import Kind1
+from clio_clients.models.type.type17 import Type17
 
 
 class LineItemBase(BaseModel):

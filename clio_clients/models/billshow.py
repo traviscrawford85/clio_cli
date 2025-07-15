@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from pydantic import BaseModel
+from clio_clients.models.bill import Bill
 
 
 class BillShow(BaseModel):

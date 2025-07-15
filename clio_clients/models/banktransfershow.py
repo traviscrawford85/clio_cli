@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from pydantic import BaseModel
+from clio_clients.models.banktransfer import BankTransfer
 
 
 class BankTransferShow(BaseModel):

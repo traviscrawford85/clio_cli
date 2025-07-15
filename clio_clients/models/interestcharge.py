@@ -7,6 +7,9 @@ from typing import List, Optional
 
 from clio_clients.models.interestchargebase import InterestChargeBase
 from pydantic import Field
+from clio_clients.models.balancebase import BalanceBase
+from clio_clients.models.billbase import BillBase
+from clio_clients.models.matterbase import MatterBase
 
 
 class InterestCharge(InterestChargeBase):

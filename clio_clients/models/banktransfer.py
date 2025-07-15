@@ -6,6 +6,10 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.banktransferbase import BankTransferBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.bankaccountbase import BankAccountBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.bankaccountbase import BankAccountBase
 
 
 class BankTransfer(BankTransferBase):

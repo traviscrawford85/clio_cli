@@ -7,6 +7,10 @@ from typing import List, Optional
 
 from clio_clients.models.activitydescriptionbase import ActivityDescriptionBase
 from pydantic import Field
+from clio_clients.models.groupbase import GroupBase
+from clio_clients.models.activitydescriptionratebase import ActivityDescriptionRateBase
+from clio_clients.models.utbmscodebase import UtbmsCodeBase
+from clio_clients.models.utbmscodebase import UtbmsCodeBase
 
 
 class ActivityDescription(ActivityDescriptionBase):

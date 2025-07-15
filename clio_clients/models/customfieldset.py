@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.customfieldsetbase import CustomFieldSetBase
 from pydantic import Field
+from clio_clients.models.customfieldbase import CustomFieldBase
 
 
 class CustomFieldSet(CustomFieldSetBase):

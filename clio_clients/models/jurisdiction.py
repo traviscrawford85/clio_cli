@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.jurisdictionbase import JurisdictionBase
 from pydantic import Field
+from clio_clients.models.servicetypebase import ServiceTypeBase
 
 
 class Jurisdiction(JurisdictionBase):

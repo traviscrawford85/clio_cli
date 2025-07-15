@@ -7,6 +7,10 @@ from typing import List, Optional
 
 from clio_clients.models.medicalrecordsrequestbase import MedicalRecordsRequestBase
 from pydantic import Field
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.medicalbillbase import MedicalBillBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.medicalrecordbase import MedicalRecordBase
 
 
 class MedicalRecordsRequest(MedicalRecordsRequestBase):

@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.category import Category
 
 
 class PracticeAreaBase(BaseModel):

@@ -6,6 +6,9 @@ from __future__ import annotations
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.event.event1 import Event1
+from clio_clients.models.model.model import Model
+from clio_clients.models.status.status3 import Status3
 
 
 class WebhookBase(BaseModel):

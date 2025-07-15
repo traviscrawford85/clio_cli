@@ -7,6 +7,12 @@ from typing import List, Optional
 
 from clio_clients.models.tasktemplatebase import TaskTemplateBase
 from pydantic import Field
+from clio_clients.models.userbase import UserBase
+from clio_clients.models.cascadingtasktemplatebase import CascadingTaskTemplateBase
+from clio_clients.models.remindertemplatebase import ReminderTemplateBase
+from clio_clients.models.tasktemplatelistbase import TaskTemplateListBase
+from clio_clients.models.tasktypebase import TaskTypeBase
+from clio_clients.models.userbase import UserBase
 
 
 class TaskTemplate(TaskTemplateBase):

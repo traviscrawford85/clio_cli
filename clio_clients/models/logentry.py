@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.logentrybase import LogEntryBase
+from clio_clients.models.polymorphicobjectbase import PolymorphicObjectBase
+from clio_clients.models.userbase import UserBase
 
 
 class LogEntry(LogEntryBase):

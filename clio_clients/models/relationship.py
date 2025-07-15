@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.relationshipbase import RelationshipBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.matterbase import MatterBase
 
 
 class Relationship(RelationshipBase):

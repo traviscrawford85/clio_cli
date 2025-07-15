@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.bankaccountbase import BankAccountBase
+from clio_clients.models.userbase import UserBase
 
 
 class BankAccount(BankAccountBase):

@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.subscriptiontype1 import SubscriptionType1
 
 
 class UserBase(BaseModel):

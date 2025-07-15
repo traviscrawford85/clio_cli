@@ -6,6 +6,9 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.polymorphiccustomratebase import PolymorphicCustomRateBase
+from clio_clients.models.polymorphiccustomrateactivitydescriptionbase import PolymorphicCustomRateActivityDescriptionBase
+from clio_clients.models.polymorphiccustomrategroupbase import PolymorphicCustomRateGroupBase
+from clio_clients.models.polymorphiccustomrateuserbase import PolymorphicCustomRateUserBase
 
 
 class PolymorphicCustomRate(PolymorphicCustomRateBase):

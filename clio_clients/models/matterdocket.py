@@ -7,6 +7,11 @@ from typing import List, Optional
 
 from clio_clients.models.matterdocketbase import MatterDocketBase
 from pydantic import Field
+from clio_clients.models.calendarentrybase import CalendarEntryBase
+from clio_clients.models.jurisdictionbase import JurisdictionBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.servicetypebase import ServiceTypeBase
+from clio_clients.models.jurisdictionstotriggerbase import JurisdictionsToTriggerBase
 
 
 class MatterDocket(MatterDocketBase):

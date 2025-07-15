@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.groupbase import GroupBase
 from pydantic import Field
+from clio_clients.models.userbase import UserBase
 
 
 class Group(GroupBase):

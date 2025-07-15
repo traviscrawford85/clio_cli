@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.conversationmembershipbase import ConversationMembershipBase
+from clio_clients.models.unredactedparticipantbase import UnredactedParticipantBase
 
 
 class ConversationMembership(ConversationMembershipBase):

@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.commentbase import CommentBase
+from clio_clients.models.userbase import UserBase
+from clio_clients.models.documentversionbase import DocumentVersionBase
 
 
 class Comment(CommentBase):

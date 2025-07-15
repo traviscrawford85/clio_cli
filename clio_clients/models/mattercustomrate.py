@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.mattercustomratebase import MatterCustomRateBase
 from pydantic import Field
+from clio_clients.models.polymorphiccustomrate import PolymorphicCustomRate
 
 
 class MatterCustomRate(MatterCustomRateBase):

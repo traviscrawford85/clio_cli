@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.reminderbase import ReminderBase
+from clio_clients.models.notificationmethodbase import NotificationMethodBase
+from clio_clients.models.polymorphicobjectbase import PolymorphicObjectBase
 
 
 class Reminder(ReminderBase):

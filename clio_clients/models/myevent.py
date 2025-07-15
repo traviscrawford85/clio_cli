@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.myeventbase import MyEventBase
+from clio_clients.models.event.eventbase import EventBase
 
 
 class MyEvent(MyEventBase):

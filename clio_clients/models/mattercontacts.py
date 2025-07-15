@@ -7,6 +7,18 @@ from typing import List, Optional
 
 from clio_clients.models.mattercontactsbase import MatterContactsBase
 from pydantic import Field
+from clio_clients.models.addressbase import AddressBase
+from clio_clients.models.avatarbase import AvatarBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.customfieldvaluebase import CustomFieldValueBase
+from clio_clients.models.emailaddressbase import EmailAddressBase
+from clio_clients.models.phonenumberbase import PhoneNumberBase
+from clio_clients.models.addressbase import AddressBase
+from clio_clients.models.websitebase import WebSiteBase
+from clio_clients.models.relationshipbase import RelationshipBase
+from clio_clients.models.addressbase import AddressBase
+from clio_clients.models.websitebase import WebSiteBase
+from clio_clients.models.websitebase import WebSiteBase
 
 
 class MatterContacts(MatterContactsBase):

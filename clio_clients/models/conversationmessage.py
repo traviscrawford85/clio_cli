@@ -7,6 +7,10 @@ from typing import List, Optional
 
 from clio_clients.models.conversationmessagebase import ConversationMessageBase
 from pydantic import Field
+from clio_clients.models.conversationbase import ConversationBase
+from clio_clients.models.documentbase import DocumentBase
+from clio_clients.models.unredactedparticipantbase import UnredactedParticipantBase
+from clio_clients.models.unredactedparticipantbase import UnredactedParticipantBase
 
 
 class ConversationMessage(ConversationMessageBase):

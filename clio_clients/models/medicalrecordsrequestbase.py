@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.billsstatus import BillsStatus
+from clio_clients.models.recordsstatus import RecordsStatus
 
 
 class MedicalRecordsRequestBase(BaseModel):

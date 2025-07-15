@@ -7,6 +7,15 @@ from typing import List, Optional
 
 from clio_clients.models.communicationbase import CommunicationBase
 from pydantic import Field
+from clio_clients.models.communicationemlfilebase import CommunicationEmlFileBase
+from clio_clients.models.documentbase import DocumentBase
+from clio_clients.models.externalpropertybase import ExternalPropertyBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.notificationeventsubscriberbase import NotificationEventSubscriberBase
+from clio_clients.models.participant import Participant
+from clio_clients.models.participant import Participant
+from clio_clients.models.activitybase import ActivityBase
+from clio_clients.models.userbase import UserBase
 
 
 class Communication(CommunicationBase):

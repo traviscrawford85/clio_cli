@@ -7,6 +7,14 @@ from typing import List, Optional
 
 from clio_clients.models.folderbase import FolderBase
 from pydantic import Field
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.cliocreatorbase import ClioCreatorBase
+from clio_clients.models.documentcategorybase import DocumentCategoryBase
+from clio_clients.models.externalpropertybase import ExternalPropertyBase
+from clio_clients.models.groupbase import GroupBase
+from clio_clients.models.documentversionbase import DocumentVersionBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.linkedfolderbase import LinkedFolderBase
 
 
 class Folder(FolderBase):

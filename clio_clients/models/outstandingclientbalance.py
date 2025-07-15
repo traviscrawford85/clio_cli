@@ -7,6 +7,9 @@ from typing import List, Optional
 
 from clio_clients.models.outstandingclientbalancebase import OutstandingClientBalanceBase
 from pydantic import Field
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.currencybase import CurrencyBase
+from clio_clients.models.billbase import BillBase
 
 
 class OutstandingClientBalance(OutstandingClientBalanceBase):

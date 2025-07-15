@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.reportpresetbase import ReportPresetBase
+from clio_clients.models.reportschedulebase import ReportScheduleBase
 
 
 class ReportPreset(ReportPresetBase):

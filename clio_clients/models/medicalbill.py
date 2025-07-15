@@ -7,6 +7,8 @@ from typing import List, Optional
 
 from clio_clients.models.medicalbillbase import MedicalBillBase
 from pydantic import Field
+from clio_clients.models.lienbase import LienBase
+from clio_clients.models.matterbase import MatterBase
 
 
 class MedicalBill(MedicalBillBase):

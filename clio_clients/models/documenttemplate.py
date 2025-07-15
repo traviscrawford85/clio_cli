@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.documenttemplatebase import DocumentTemplateBase
+from clio_clients.models.documentcategorybase import DocumentCategoryBase
+from clio_clients.models.userbase import UserBase
 
 
 class DocumentTemplate(DocumentTemplateBase):

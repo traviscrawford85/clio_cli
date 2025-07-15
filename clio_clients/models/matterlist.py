@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import List
 
 from pydantic import BaseModel, Field
+from clio_clients.models.matter1 import Matter1
 
 
 class MatterList(BaseModel):

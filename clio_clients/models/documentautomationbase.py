@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.exportformats import ExportFormats
+from clio_clients.models.state3 import State3
 
 
 class DocumentAutomationBase(BaseModel):

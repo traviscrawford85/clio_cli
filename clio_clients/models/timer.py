@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.timerbase import TimerBase
+from clio_clients.models.activitybase import ActivityBase
 
 
 class Timer(TimerBase):

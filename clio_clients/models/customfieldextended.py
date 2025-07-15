@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import List, Optional
 
 from clio_clients.models.customfieldbase import CustomFieldBase
+from clio_clients.models.picklistoption import PicklistOption
 
 
 class CustomFieldExtended(CustomFieldBase):

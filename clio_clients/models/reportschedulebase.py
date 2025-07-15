@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+from clio_clients.models.frequency import Frequency
+from clio_clients.models.status.status1 import Status1
 
 
 class ReportScheduleBase(BaseModel):

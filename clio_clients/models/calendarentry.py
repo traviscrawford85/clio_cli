@@ -7,6 +7,16 @@ from typing import List, Optional
 
 from clio_clients.models.calendarentrybase import CalendarEntryBase
 from pydantic import Field
+from clio_clients.models.attendeebase import AttendeeBase
+from clio_clients.models.calendarentryeventtypebase import CalendarEntryEventTypeBase
+from clio_clients.models.calendarbase import CalendarBase
+from clio_clients.models.calendarbase import CalendarBase
+from clio_clients.models.conferencemeetingbase import ConferenceMeetingBase
+from clio_clients.models.externalpropertybase import ExternalPropertyBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.matterdocketbase import MatterDocketBase
+from clio_clients.models.reminderbase import ReminderBase
+from clio_clients.models.activitybase import ActivityBase
 
 
 class CalendarEntry(CalendarEntryBase):

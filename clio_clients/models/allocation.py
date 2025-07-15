@@ -6,6 +6,12 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.allocationbase import AllocationBase
+from clio_clients.models.billbase import BillBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.bankaccountbase import BankAccountBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.polymorphicobjectbase import PolymorphicObjectBase
+from clio_clients.models.bankaccountbase import BankAccountBase
 
 
 class Allocation(AllocationBase):

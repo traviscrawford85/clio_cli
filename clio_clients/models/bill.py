@@ -7,6 +7,20 @@ from typing import List, Optional
 
 from clio_clients.models.billbase import BillBase
 from pydantic import Field
+from clio_clients.models.balancebase import BalanceBase
+from clio_clients.models.billthemebase import BillThemeBase
+from clio_clients.models.billingsettingbase import BillingSettingBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.addressbase import AddressBase
+from clio_clients.models.currencybase import CurrencyBase
+from clio_clients.models.bankaccountbase import BankAccountBase
+from clio_clients.models.discountbase import DiscountBase
+from clio_clients.models.groupbase import GroupBase
+from clio_clients.models.interestbase import InterestBase
+from clio_clients.models.legalaidukbillbase import LegalAidUkBillBase
+from clio_clients.models.matterbalancebase import MatterBalanceBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.userbase import UserBase
 
 
 class Bill(BillBase):

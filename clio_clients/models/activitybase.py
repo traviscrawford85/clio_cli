@@ -8,6 +8,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 from clio_clients.models.taxsetting import TaxSetting
+from clio_clients.models.type.type1 import Type1
 
 
 class ActivityBase(BaseModel):

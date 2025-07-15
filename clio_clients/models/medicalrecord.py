@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.medicalrecordbase import MedicalRecordBase
+from clio_clients.models.matterbase import MatterBase
 
 
 class MedicalRecord(MedicalRecordBase):

@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.tasktemplatelistbase import TaskTemplateListBase
+from clio_clients.models.userbase import UserBase
+from clio_clients.models.practiceareabase import PracticeAreaBase
 
 
 class TaskTemplateList(TaskTemplateListBase):

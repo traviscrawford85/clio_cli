@@ -6,6 +6,12 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.lineitembase import LineItemBase
+from clio_clients.models.activitybase import ActivityBase
+from clio_clients.models.billbase import BillBase
+from clio_clients.models.discountbase import DiscountBase
+from clio_clients.models.lineitemtotalsbase import LineItemTotalsBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.userbase import UserBase
 
 
 class LineItem(LineItemBase):

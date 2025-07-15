@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.participantbase import ParticipantBase
+from clio_clients.models.avatarbase import AvatarBase
 
 
 class Participant(ParticipantBase):

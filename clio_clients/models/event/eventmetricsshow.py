@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from pydantic import BaseModel
+from clio_clients.models.event.eventmetrics import EventMetrics
 
 
 class EventMetricsShow(BaseModel):

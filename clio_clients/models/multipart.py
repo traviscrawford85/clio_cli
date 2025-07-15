@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.multipartbase import MultipartBase
 from pydantic import Field
+from clio_clients.models.multipartheaderbase import MultipartHeaderBase
 
 
 class Multipart(MultipartBase):

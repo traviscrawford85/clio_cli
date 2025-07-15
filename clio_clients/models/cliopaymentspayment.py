@@ -7,6 +7,14 @@ from typing import List, Optional
 
 from clio_clients.models.cliopaymentspaymentbase import ClioPaymentsPaymentBase
 from pydantic import Field
+from clio_clients.models.allocationbase import AllocationBase
+from clio_clients.models.banktransactionbase import BankTransactionBase
+from clio_clients.models.billbase import BillBase
+from clio_clients.models.cliopaymentslinkbase import ClioPaymentsLinkBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.bankaccountbase import BankAccountBase
+from clio_clients.models.matterbase import MatterBase
+from clio_clients.models.userbase import UserBase
 
 
 class ClioPaymentsPayment(ClioPaymentsPaymentBase):

@@ -7,6 +7,9 @@ from typing import List, Optional
 
 from clio_clients.models.creditmemobase import CreditMemoBase
 from pydantic import Field
+from clio_clients.models.allocationbase import AllocationBase
+from clio_clients.models.contactbase import ContactBase
+from clio_clients.models.userbase import UserBase
 
 
 class CreditMemo(CreditMemoBase):

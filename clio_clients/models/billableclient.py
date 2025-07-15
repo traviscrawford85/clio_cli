@@ -7,6 +7,7 @@ from typing import List, Optional
 
 from clio_clients.models.billableclientbase import BillableClientBase
 from pydantic import Field
+from clio_clients.models.billablematterbase import BillableMatterBase
 
 
 class BillableClient(BillableClientBase):

@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.matterbillrecipientbase import MatterBillRecipientBase
+from clio_clients.models.contactbase import ContactBase
 
 
 class MatterBillRecipient(MatterBillRecipientBase):

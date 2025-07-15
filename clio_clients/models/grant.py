@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.grantbase import GrantBase
+from clio_clients.models.grantfundingsourcebase import GrantFundingSourceBase
 
 
 class Grant(GrantBase):

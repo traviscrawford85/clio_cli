@@ -6,6 +6,8 @@ from __future__ import annotations
 from typing import Optional
 
 from clio_clients.models.activityratebase import ActivityRateBase
+from clio_clients.models.groupbase import GroupBase
+from clio_clients.models.userbase import UserBase
 
 
 class ActivityRate(ActivityRateBase):

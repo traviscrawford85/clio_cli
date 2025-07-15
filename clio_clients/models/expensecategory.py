@@ -7,6 +7,8 @@ from typing import List, Optional
 
 from clio_clients.models.expensecategorybase import ExpenseCategoryBase
 from pydantic import Field
+from clio_clients.models.groupbase import GroupBase
+from clio_clients.models.utbmscodebase import UtbmsCodeBase
 
 
 class ExpenseCategory(ExpenseCategoryBase):
